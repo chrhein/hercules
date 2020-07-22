@@ -4,7 +4,7 @@
   "description": "Gatsby v2 starter to create a top notch portfolio!",
   "main": "index.js",
   "scripts": {
-    "pre-build": "node scripts/get-about",
+    "pre-build": "echo 'beta version drops receiving data from Contentful'",
     "build": "yarn pre-build && gatsby build",
     "develop": "yarn pre-build && gatsby develop",
     "start": "yarn develop",
@@ -14,7 +14,8 @@
     "setup": "node ./bin/setup.js",
     "test": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress run",
     "test:open": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress open",
-    "test:ci": "DETERMINISTIC=true start-server-and-test 8000"
+    "test:ci": "DETERMINISTIC=true start-server-and-test 8000",
+    "deploy:github": "yarn build && node ./scripts/deploy-github"
   },
   "repository": {
     "type": "git",
@@ -77,6 +78,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.3",
+    "gh-pages": "^3.1.0",
     "inquirer": "^7.3.2",
     "prettier": "^2.0.5",
     "start-server-and-test": "^1.11.2"

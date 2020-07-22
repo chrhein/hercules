@@ -10,8 +10,8 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: `${about.name} Portfolio`,
-      short_name: `${about.name} Portfolio`,
+      name: `${about.name}`,
+      short_name: `${about.name}`,
       start_url: '/',
       background_color: colors.background,
       theme_color: colors.primary,
@@ -29,12 +29,6 @@ const plugins = [
   },
   'gatsby-transformer-remark',
   'gatsby-plugin-offline',
-  {
-    resolve: 'gatsby-source-medium',
-    options: {
-      username: about.mediumUser || '@medium',
-    },
-  },
 ];
 
 if (ANALYTICS_ID) {

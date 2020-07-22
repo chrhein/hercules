@@ -48,19 +48,8 @@ const Header = () => (
     >
       <SectionLinks>
         {({ allLinks }) => {
-          const { home, links } = formatLinks(allLinks);
-
-          const homeLink = home && (
-            <Image
-              src={Logo}
-              width="50px"
-              alt="Portfolio Logo"
-              onClick={home.onClick}
-              style={{
-                cursor: 'pointer',
-              }}
-            />
-          );
+          const { links } = formatLinks(allLinks);
+          console.log(links);
           const navLinks = links.map(({ name, value }) => (
             <RouteLink
               key={name}
@@ -72,7 +61,7 @@ const Header = () => (
 
           return (
             <Fragment>
-              {homeLink}
+              {/*homeLink*/}
               <Flex mr={[0, 3, 5]}>{navLinks}</Flex>
             </Fragment>
           );
