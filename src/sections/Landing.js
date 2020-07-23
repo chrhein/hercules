@@ -12,7 +12,7 @@ const Background = () => (
   <div>
     <Triangle
       color="backgroundDark"
-      height={['35vh', '80vh']}
+      height={['35vh', '75vh']}
       width={['95vw', '60vw']}
     />
 
@@ -105,7 +105,7 @@ const LandingPage = () => (
                 </Box>
               ))}
             </Flex>
-            <SectionLink section="about">
+            <SectionLink section="om meg">
               {({ onClick }) => <MouseIcon onClick={onClick} />}
             </SectionLink>
           </Fragment>

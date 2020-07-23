@@ -19,6 +19,7 @@ const main = async () => {
 
   console.log('Entries:', entries);
   console.log('About:', about);
+  console.log('Client:', client);
 
   fs.writeFileSync(
     path.join(process.cwd(), 'about.json'),

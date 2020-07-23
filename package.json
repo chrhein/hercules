@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-mate",
-  "version": "2.5.3",
-  "description": "Gatsby v2 starter to create a top notch portfolio!",
+  "name": "Hercules",
+  "version": "1",
+  "description": "'This is me'-nettside for meg selv",
   "main": "index.js",
   "scripts": {
-    "pre-build": "echo 'beta version drops receiving data from Contentful'",
+    "pre-build": "node scripts/get-about",
     "build": "yarn pre-build && gatsby build",
     "develop": "yarn pre-build && gatsby develop",
     "start": "yarn develop",
@@ -21,15 +21,6 @@
     "type": "git",
     "url": "git+https://github.com/EmaSuriano/gatsby-starter-mate.git"
   },
-  "keywords": [
-    "gatsby",
-    "starter",
-    "contentful",
-    "PWA",
-    "portfolio"
-  ],
-  "author": "Ema Suriano",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/EmaSuriano/gatsby-starter-mate/issues"
   },
