@@ -4,6 +4,7 @@ import { Flex, Image } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
 import RouteLink from './RouteLink';
+import Logo from './Logo/Portfolio.svg';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -11,11 +12,9 @@ const HeaderContainer = styled(Headroom)`
   * {
     transition: background-color 0.1s ease;
   }
-
   .headroom--pinned {
     background-color: ${(props) => props.theme.colors.primaryDark};
   }
-
   position: absolute;
   width: 100%;
 `;
@@ -47,8 +46,16 @@ const Header = () => (
     >
       <SectionLinks>
         {({ allLinks }) => {
-          const { links } = formatLinks(allLinks);
-          console.log(links);
+          const { home, links } = formatLinks(allLinks);
+
+          const homeLink = home && (
+            <RouteLink
+              key={'hjem'}
+              onClick={home.onClick}
+              selected={home.isSelected}
+              name={'Hjem'}
+            />
+          );
           const navLinks = links.map(({ name, value }) => (
             <RouteLink
               key={name}
@@ -60,6 +67,7 @@ const Header = () => (
 
           return (
             <Fragment>
+              {homeLink}
               <Flex mr={[0, 3, 5]}>{navLinks}</Flex>
             </Fragment>
           );
