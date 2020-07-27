@@ -97,7 +97,6 @@ const LandingPage = () => (
                   ))}
               </TextLoop>
             </Heading>
-
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
               {socialLinks.map(({ id, ...rest }) => (
                 <Box mx={3} fontSize={[5, 6, 6]} key={id}>
@@ -105,9 +104,6 @@ const LandingPage = () => (
                 </Box>
               ))}
             </Flex>
-            <SectionLink section="om meg">
-              {({ onClick }) => <MouseIcon onClick={onClick} />}
-            </SectionLink>
           </Fragment>
         );
       }}
