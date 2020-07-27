@@ -1,11 +1,8 @@
 import React, { Fragment } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { Heading, Flex, Box, Text } from 'rebass/styled-components';
+import { Heading, Text } from 'rebass/styled-components';
 import TextLoop from 'react-text-loop';
-import { SectionLink } from 'react-scroll-section';
 import Section from '../components/Section';
-import SocialLink from '../components/SocialLink';
-import MouseIcon from '../components/MouseIcon';
 import Triangle from '../components/Triangle';
 
 const Background = () => (
@@ -97,13 +94,6 @@ const LandingPage = () => (
                   ))}
               </TextLoop>
             </Heading>
-            <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
-              {socialLinks.map(({ id, ...rest }) => (
-                <Box mx={3} fontSize={[5, 6, 6]} key={id}>
-                  <SocialLink {...rest} />
-                </Box>
-              ))}
-            </Flex>
           </Fragment>
         );
       }}

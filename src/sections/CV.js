@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image, Flex } from 'rebass/styled-components';
+import { Box, Flex } from 'rebass/styled-components';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
@@ -8,6 +8,15 @@ import { Component } from 'react';
 import Education from '../cv/Education';
 import Experience from '../cv/Experience';
 import Positions from '../cv/Positions';
+
+import styled from 'styled-components';
+
+const MarkdownParagraph = styled.p`
+  line-height: 2em;
+  &:first-child {
+    margin-top: 0em;
+  }
+`;
 
 const Background = () => (
   <div>
@@ -42,12 +51,14 @@ class CV extends Component {
         <Section.Header name="CV" icon="🙋‍♂️" label="person" />
         <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
           <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
-            <Education />
-            <br />
-            <Experience />
-            <br />
-            <Positions />
-            <br />
+            <MarkdownParagraph>
+              <Education />
+              <br />
+              <Experience />
+              <br />
+              <Positions />
+              <br />
+            </MarkdownParagraph>
           </Box>
           <Box
             width={[1, 1, 2 / 6]}

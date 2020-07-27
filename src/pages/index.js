@@ -5,6 +5,7 @@ import About from '../sections/About';
 import Projects from '../sections/Projects';
 import Header from '../components/Header';
 import CV from '../sections/CV';
+import Footer from '../components/Footer';
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <About />
     <Projects />
     <CV />
+    <Footer />
   </Layout>
 );
 
