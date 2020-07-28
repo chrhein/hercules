@@ -26,9 +26,7 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query FooterQuery {
-        contentfulAbout {
-          name
-          roles
+        landingInfoJson {
           socialLinks {
             id
             url
@@ -39,7 +37,7 @@ const Footer = () => (
       }
     `}
     render={(data) => {
-      const { socialLinks } = data.contentfulAbout;
+      const { socialLinks } = data.landingInfoJson;
 
       return (
         <Box p={[2, 3]} backgroundColor="primaryDark" id="footer">

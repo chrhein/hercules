@@ -1,25 +1,31 @@
 [
   {
-      "id": "chein",
-      "name": "Christian",
-      "roles": [
-        "Student 👨🏻‍🎓",
-        "Globetrotter 🌎",
-        "Aviation enthusiast ✈️"
-      ],
-      "socialLinks": [
-        {
-          "id": "f09ca1ec-8bc7-575f-ad47-e3ccb0d449f6",
-          "url": "https://github.com/chrhein",
-          "name": "Github",
-          "fontAwesomeIcon": "github"
-        },
-        {
-          "id": "0e2988b3-e931-5849-88cc-95dd63329b26",
-          "url": "https://instagram.com/christianhein",
-          "name": "Instagram",
-          "fontAwesomeIcon": "instagram"
-        }
-      ]
-    }
+    "name": "Christian",
+    "roles": [
+      "Student 👨🏻‍🎓",
+      "Aviation enthusiast ✈️",
+      "Outdoor person 🏔",
+      "Social & Outgoing 🗣"
+    ],
+    "socialLinks": [
+      {
+        "id": "f09ca1ec-8bc7-575f-ad47-e3ccb0d449f6",
+        "url": "https://github.com/chrhein",
+        "name": "Github",
+        "fontAwesomeIcon": "github"
+      },
+      {
+        "id": "a39ad8a7-a637-5cb9-b907-3bb4b7d8c20a",
+        "url": "https://www.linkedin.com/in/christianshein/",
+        "name": "LinkedIn",
+        "fontAwesomeIcon": "linkedin"
+      },
+      {
+        "id": "0e2988b3-e931-5849-88cc-95dd63329b26",
+        "url": "https://instagram.com/christianhein",
+        "name": "Instagram",
+        "fontAwesomeIcon": "instagram"
+      }
+    ]
+  }
 ]
