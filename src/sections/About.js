@@ -69,6 +69,7 @@ const About = () => (
       `}
       render={(data) => {
         const { aboutMe } = data.contentfulAbout;
+
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>

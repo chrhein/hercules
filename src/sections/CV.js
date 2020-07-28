@@ -8,6 +8,7 @@ import { Component } from 'react';
 import Education from '../cv/Education';
 import Experience from '../cv/Experience';
 import Positions from '../cv/Positions';
+import EduTest from '../cv/EduTest';
 
 import styled from 'styled-components';
 
@@ -58,6 +59,7 @@ class CV extends Component {
               <br />
               <Positions />
               <br />
+              <EduTest />
             </StyledParagraph>
           </Box>
           <Box
