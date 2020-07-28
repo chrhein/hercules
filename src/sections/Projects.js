@@ -15,14 +15,12 @@ const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Background = () => (
   <div>
-    <Hide query={MEDIA_QUERY_SMALL}>
-      <Triangle
-        color="secondaryLight"
-        height={['80vh', '80vh']}
-        width={['100vw', '100vw']}
-        invertX
-      />
-    </Hide>
+    <Triangle
+      color="secondaryLight"
+      height={['80vh', '80vh']}
+      width={['100vw', '100vw']}
+      invertX
+    />
 
     <Triangle
       color="background"

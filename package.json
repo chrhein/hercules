@@ -40,6 +40,7 @@
     "gatsby-source-contentful": "^2.3.27",
     "gatsby-source-filesystem": "^2.3.23",
     "gatsby-source-medium": "^2.3.10",
+    "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-remark": "^2.8.27",
     "html-loader": "^1.1.0",
     "markdown-it": "^11.0.0",

@@ -1,0 +1,25 @@
+[
+  {
+      "id": "chein",
+      "name": "Christian",
+      "roles": [
+        "Student 👨🏻‍🎓",
+        "Globetrotter 🌎",
+        "Aviation enthusiast ✈️"
+      ],
+      "socialLinks": [
+        {
+          "id": "f09ca1ec-8bc7-575f-ad47-e3ccb0d449f6",
+          "url": "https://github.com/chrhein",
+          "name": "Github",
+          "fontAwesomeIcon": "github"
+        },
+        {
+          "id": "0e2988b3-e931-5849-88cc-95dd63329b26",
+          "url": "https://instagram.com/christianhein",
+          "name": "Instagram",
+          "fontAwesomeIcon": "instagram"
+        }
+      ]
+    }
+]

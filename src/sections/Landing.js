@@ -42,27 +42,15 @@ const LandingPage = () => (
   <Section.Container id="home" Background={Background}>
     <StaticQuery
       query={graphql`
-        query SiteTitleQuery {
-          contentfulAbout {
+        query LandingInfoQuery {
+          landingInfoJson {
             name
             roles
-            socialLinks {
-              id
-              url
-              name
-              fontAwesomeIcon
-            }
-          }
-          site {
-            siteMetadata {
-              deterministicBehaviour
-            }
           }
         }
       `}
-      render={({ contentfulAbout, site }) => {
-        const { name, roles } = contentfulAbout;
-        const { deterministicBehaviour } = site.siteMetadata;
+      render={({ landingInfoJson }) => {
+        const { name, roles } = landingInfoJson;
 
         return (
           <Fragment>
@@ -86,7 +74,7 @@ const LandingPage = () => (
             >
               <TextLoop interval={5000}>
                 {roles
-                  .sort(() => deterministicBehaviour || Math.random() - 0.5)
+                  .sort(() => false || Math.random() - 0.5)
                   .map((text) => (
                     <Text width={[300, 500]} key={text} color="primaryLight">
                       {text}
