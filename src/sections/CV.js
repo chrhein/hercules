@@ -7,8 +7,7 @@ import Triangle from '../components/Triangle';
 import { Component } from 'react';
 import Education from '../cv/Education';
 import Experience from '../cv/Experience';
-import Positions from '../cv/Positions';
-import EduTest from '../cv/EduTest';
+import VolunteerEx from '../cv/VolunteerEx';
 
 import styled from 'styled-components';
 
@@ -57,9 +56,8 @@ class CV extends Component {
               <br />
               <Experience />
               <br />
-              <Positions />
+              <VolunteerEx />
               <br />
-              <EduTest />
             </StyledParagraph>
           </Box>
           <Box
