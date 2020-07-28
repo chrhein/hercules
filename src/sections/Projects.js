@@ -11,14 +11,18 @@ import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
 import Hide from '../components/Hide';
 
+const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
+
 const Background = () => (
   <div>
-    <Triangle
-      color="secondaryLight"
-      height={['80vh', '80vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
+    <Hide query={MEDIA_QUERY_SMALL}>
+      <Triangle
+        color="secondaryLight"
+        height={['80vh', '80vh']}
+        width={['100vw', '100vw']}
+        invertX
+      />
+    </Hide>
 
     <Triangle
       color="background"
@@ -46,14 +50,12 @@ const Background = () => (
 
 const CARD_HEIGHT = '200px';
 
-const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
-
 const Title = styled(Text)`
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${(props) => props.theme.colors.primary} 5px solid;
+  border-bottom: ${(props) => props.theme.colors.secondary} 2px solid;
 `;
 
 const TextContainer = styled.div`
@@ -176,8 +178,8 @@ Project.propTypes = {
 };
 
 const Projects = () => (
-  <Section.Container id="prosjekter" Background={Background}>
-    <Section.Header name="Prosjekter" icon="💻" label="notebook" />
+  <Section.Container id="projects" Background={Background}>
+    <Section.Header name="Projects" icon="💻" label="notebook" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {

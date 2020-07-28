@@ -4,11 +4,11 @@ const LinkAnimated = styled.span`
   text-decoration: none;
   position: relative;
   margin-bottom: 0;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
   color: inherit;
   ${(props) =>
     props.selected &&
-    `border-bottom:  5px solid ${props.theme.colors.primaryLight}`};
+    `border-bottom:  4px solid ${props.theme.colors.primaryLight}`};
   transition: 0.4s;
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
 
@@ -17,9 +17,9 @@ const LinkAnimated = styled.span`
     position: absolute;
     right: 0;
     width: 0;
-    bottom: -5px;
+    bottom: -4px;
     background: ${(props) => props.theme.colors.secondaryLight};
-    height: 5px;
+    height: 4px;
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;

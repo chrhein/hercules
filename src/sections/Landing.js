@@ -61,7 +61,7 @@ const LandingPage = () => (
         }
       `}
       render={({ contentfulAbout, site }) => {
-        const { name, socialLinks, roles } = contentfulAbout;
+        const { name, roles } = contentfulAbout;
         const { deterministicBehaviour } = site.siteMetadata;
 
         return (
@@ -73,7 +73,7 @@ const LandingPage = () => (
               fontSize={[6, 7]}
               mb={[3, 4, 5]}
             >
-              {`Hei, jeg er ${name}!`}
+              {`Hi, I'm ${name}!`}
             </Heading>
 
             <Heading

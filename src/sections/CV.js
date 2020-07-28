@@ -11,7 +11,7 @@ import Positions from '../cv/Positions';
 
 import styled from 'styled-components';
 
-const MarkdownParagraph = styled.p`
+const StyledParagraph = styled.p`
   line-height: 2em;
   &:first-child {
     margin-top: 0em;
@@ -48,17 +48,17 @@ class CV extends Component {
   render() {
     return (
       <Section.Container id="CV" Background={Background}>
-        <Section.Header name="CV" icon="🙋‍♂️" label="person" />
+        <Section.Header name="CV" icon="👨🏻‍🎓" label="person" />
         <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
           <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
-            <MarkdownParagraph>
+            <StyledParagraph>
               <Education />
               <br />
               <Experience />
               <br />
               <Positions />
               <br />
-            </MarkdownParagraph>
+            </StyledParagraph>
           </Box>
           <Box
             width={[1, 1, 2 / 6]}

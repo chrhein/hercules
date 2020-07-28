@@ -7,15 +7,20 @@ import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
+import Hide from '../components/Hide';
+
+const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Background = () => (
   <div>
-    <Triangle
-      color="secondaryLight"
-      height={['50vh', '20vh']}
-      width={['50vw', '50vw']}
-      invertY
-    />
+    <Hide query={MEDIA_QUERY_SMALL}>
+      <Triangle
+        color="secondaryLight"
+        height={['50vh', '20vh']}
+        width={['50vw', '50vw']}
+        invertY
+      />
+    </Hide>
 
     <Triangle
       color="primaryDark"
@@ -42,8 +47,8 @@ const ProfilePicture = styled(Image)`
 `;
 
 const About = () => (
-  <Section.Container id="om meg" Background={Background}>
-    <Section.Header name="Om meg" icon="🙋‍♂️" label="person" />
+  <Section.Container id="about me" Background={Background}>
+    <Section.Header name="About me" icon="🙋🏻‍♂️" label="person" />
     <StaticQuery
       query={graphql`
         query AboutMeQuery {
@@ -63,7 +68,7 @@ const About = () => (
         }
       `}
       render={(data) => {
-        const { aboutMe, profile } = data.contentfulAbout;
+        const { aboutMe } = data.contentfulAbout;
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
@@ -81,8 +86,8 @@ const About = () => (
             >
               <Fade right>
                 <ProfilePicture
-                  src={profile.image.src}
-                  alt={profile.title}
+                  src={require('../assets/images/pb.png')}
+                  alt={'Christian Hein'}
                   mt={[4, 4, 0]}
                   ml={[0, 0, 1]}
                 />

@@ -1,16 +1,15 @@
 import React, { Fragment } from 'react';
 import Headroom from 'react-headroom';
-import { Flex, Image } from 'rebass/styled-components';
+import { Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
 import RouteLink from './RouteLink';
-import Logo from './Logo/Portfolio.svg';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
   * {
-    transition: background-color 0.1s ease;
+    transition: background-color 0.5s ease;
   }
   .headroom--pinned {
     background-color: ${(props) => props.theme.colors.primaryDark};
@@ -50,10 +49,10 @@ const Header = () => (
 
           const homeLink = home && (
             <RouteLink
-              key={'hjem'}
+              key={'home'}
               onClick={home.onClick}
               selected={home.isSelected}
-              name={'Hjem'}
+              name={'Home'}
             />
           );
 
