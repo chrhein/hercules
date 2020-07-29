@@ -7,9 +7,6 @@ import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
-import Hide from '../components/Hide';
-
-const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Background = () => (
   <div>
@@ -45,23 +42,23 @@ const ProfilePicture = styled(Image)`
 `;
 
 const About = () => (
-  <Section.Container id="about me" Background={Background}>
+  <Section.Container id="about" Background={Background}>
     <Section.Header name="About me" icon="🙋🏻‍♂️" label="person" />
     <StaticQuery
       query={graphql`
-        {
+        query aboutQuery {
           markdownRemark(frontmatter: { mdName: { eq: "aboutmd" } }) {
             rawMarkdownBody
           }
         }
       `}
-      render={(data) => {
+      render={(aboutQuery) => {
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
               <Fade bottom>
                 <ReactMarkdown
-                  source={data.markdownRemark.rawMarkdownBody}
+                  source={aboutQuery.markdownRemark.rawMarkdownBody}
                   renderers={markdownRenderer}
                 />
               </Fade>

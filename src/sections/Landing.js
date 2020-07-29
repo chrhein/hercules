@@ -2,10 +2,8 @@ import React, { Fragment } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Heading, Flex, Box, Text } from 'rebass/styled-components';
 import TextLoop from 'react-text-loop';
-import { SectionLink } from 'react-scroll-section';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
-import MouseIcon from '../components/MouseIcon';
 import Triangle from '../components/Triangle';
 
 const Background = () => (
@@ -62,6 +60,8 @@ const LandingPage = () => (
         const { name, socialLinks, roles } = landingInfoJson;
         const { deterministicBehaviour } = Math.random < 0.5 ? true : false;
 
+        console.log(roles);
+
         return (
           <Fragment>
             <Heading
@@ -82,7 +82,7 @@ const LandingPage = () => (
               textAlign="center"
               style={centerHorizontally}
             >
-              <TextLoop interval={5000}>
+              <TextLoop interval={3000}>
                 {roles
                   .sort(() => deterministicBehaviour || Math.random() - 0.5)
                   .map((text) => (
