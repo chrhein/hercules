@@ -5,6 +5,9 @@ mdName: educationmd
 
 # Education
 
+#### Master's Degree in Informatics specializing in Visualization, University of Bergen - 08.2020-present
+A Master's Degree that results in great knowledge and advanced skills in visualization, computer graphics and interactive techniques, as well as good skills in related programming.
+
 #### Bachelor's Degree in Computer Security, University of Bergen - 08.2017-06.2020
 The Bachelor's Degree included both the general Computer Science subjects offered by the University of Bergen, as well as a specialization in Computer Security.
 

@@ -8,14 +8,25 @@ import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
 
+const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
+
 const Background = () => (
   <div>
-    <Triangle
-      color="secondaryLight"
-      height={['50vh', '20vh']}
-      width={['50vw', '50vw']}
-      invertY
-    />
+    {MEDIA_QUERY_SMALL ? (
+      <Triangle
+        color="backgroundDark"
+        height={['50vh', '20vh']}
+        width={['50vw', '50vw']}
+        invertY
+      />
+    ) : (
+      <Triangle
+        color="secondaryLight"
+        height={['50vh', '20vh']}
+        width={['50vw', '50vw']}
+        invertY
+      />
+    )}
 
     <Triangle
       color="primaryDark"
@@ -55,7 +66,11 @@ const About = () => (
       render={(aboutQuery) => {
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-            <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
+            <Box
+              width={[1, 1, 3 / 6]}
+              px={[1, 2, 4]}
+              style={{ maxWidth: '750px' }}
+            >
               <Fade bottom>
                 <ReactMarkdown
                   source={aboutQuery.markdownRemark.rawMarkdownBody}
@@ -63,10 +78,6 @@ const About = () => (
                 />
               </Fade>
             </Box>
-            <Box
-              width={[1, 1, 1 / 6]}
-              style={{ maxWidth: '300px', margin: 'auto' }}
-            ></Box>
 
             <Box
               width={[1, 1, 2 / 6]}

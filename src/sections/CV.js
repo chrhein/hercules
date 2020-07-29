@@ -18,14 +18,25 @@ const StyledParagraph = styled.p`
   }
 `;
 
+const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
+
 const Background = () => (
   <div>
-    <Triangle
-      color="backgroundDark"
-      height={['15vh', '10vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
+    {MEDIA_QUERY_SMALL ? (
+      <Triangle
+        color="secondaryLight"
+        height={['15vh', '10vh']}
+        width={['100vw', '100vw']}
+        invertX
+      />
+    ) : (
+      <Triangle
+        color="backgroundDark"
+        height={['15vh', '10vh']}
+        width={['100vw', '100vw']}
+        invertX
+      />
+    )}
 
     <Triangle
       color="secondaryLight"

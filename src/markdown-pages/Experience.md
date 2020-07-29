@@ -12,7 +12,7 @@ Guided students in the subject "INF102 - Algorithms, Data Structures and Program
 Class Leader for the first-year Computer Security students. Helped guide and give the students a good and relevant start to their studies.
 
 #### Student Representative - *Åpen dag*, University of Bergen - 02.2018-03.2018
-Learned students from secondary schools visiting the university to program robots using simple code and iPads during the "Åpen dag 2018" events.
+I taught students from secondary schools visiting the university to program robots using simple code blocks and tablets during the "Åpen dag 2018" events.
 
 #### Event Staff, Natvigs Minde, Stavanger - 04.2013-07.2020
 Helped arrange everything from weddings to confirmations and teambuildings.

@@ -15,12 +15,21 @@ const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Background = () => (
   <div>
-    <Triangle
-      color="secondaryLight"
-      height={['80vh', '80vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
+    {MEDIA_QUERY_SMALL ? (
+      <Triangle
+        color="backgroundDark"
+        height={['80vh', '80vh']}
+        width={['100vw', '100vw']}
+        invertX
+      />
+    ) : (
+      <Triangle
+        color="secondaryLight"
+        height={['80vh', '80vh']}
+        width={['100vw', '100vw']}
+        invertX
+      />
+    )}
 
     <Triangle
       color="background"
@@ -37,12 +46,21 @@ const Background = () => (
       invertY
     />
 
-    <Triangle
-      color="backgroundDark"
-      height={['25vh', '20vh']}
-      width={['100vw', '100vw']}
-      invertY
-    />
+    {MEDIA_QUERY_SMALL ? (
+      <Triangle
+        color="secondaryLight"
+        height={['25vh', '20vh']}
+        width={['100vw', '100vw']}
+        invertY
+      />
+    ) : (
+      <Triangle
+        color="backgroundDark"
+        height={['25vh', '20vh']}
+        width={['100vw', '100vw']}
+        invertY
+      />
+    )}
   </div>
 );
 

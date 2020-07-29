@@ -13,7 +13,7 @@ The [*Institute Council*](https://www.uib.no/node/132777/styrer-og-r%C3%A5d#inst
 *Bedkom* is a sub-group of the student association [*echo*](https://echo.uib.no/om/undergrupper/ "about echo's sub-groups"), and offers assistance with planning, marketing and organizing various corporate events for the students.
 
 #### Student Representative on Social Media, Bergen - 11.2019-present
-Posting photos to show present and future students what it is like to be a student. Out Instagram account can be found [*here*](https://www.instagram.com/informatikk_uib/ "@informatikk_uib").
+Posting photos to show present and future students what it is like to be a student. Our Instagram account can be found [*here*](https://www.instagram.com/informatikk_uib/ "@informatikk_uib").
 
 #### Board Member - *Tilde*, Bergen, 01.2019-present
 *Tilde* is a sub-group of the student association [*echo*](https://echo.uib.no/om/undergrupper/ "about echo's sub-groups"), and is responsible for events for the students at the Institute of Informatics. My job is to plan and conduct events, and achieve our goal to strengthen the social environment among the students.
