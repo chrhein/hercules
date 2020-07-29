@@ -3,22 +3,15 @@ const about = require('./about.json');
 
 require('dotenv').config();
 
-const {
-  ACCESS_TOKEN,
-  SPACE_ID,
-  ANALYTICS_ID,
-  DETERMINISTIC,
-  FULL_NAME,
-  FIRST_NAME,
-} = process.env;
+const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC } = process.env;
 
 const plugins = [
   'gatsby-plugin-react-helmet',
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: FULL_NAME,
-      short_name: FULL_NAME,
+      name: 'Christian Hein',
+      short_name: 'Christian Hein',
       start_url: '/',
       background_color: colors.background,
       theme_color: colors.primary,
@@ -26,6 +19,7 @@ const plugins = [
       icon: 'src/assets/images/ch.png',
     },
   },
+  `gatsby-transformer-remark`,
   'gatsby-plugin-styled-components',
   {
     resolve: 'gatsby-source-contentful',
@@ -42,7 +36,6 @@ const plugins = [
       path: `${__dirname}/src/markdown-pages`,
     },
   },
-  `gatsby-transformer-remark`,
   'gatsby-transformer-json',
   {
     resolve: `gatsby-source-filesystem`,

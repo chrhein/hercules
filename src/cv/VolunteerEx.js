@@ -7,17 +7,17 @@ import markdownRenderer from '../components/MarkdownRenderer';
 const VolunteerEx = () => (
   <StaticQuery
     query={graphql`
-      {
+      query volexQuery {
         markdownRemark(frontmatter: { mdName: { eq: "volexmd" } }) {
           rawMarkdownBody
         }
       }
     `}
-    render={(data) => {
+    render={(volexQuery) => {
       return (
         <Fade bottom>
           <ReactMarkdown
-            source={data.markdownRemark.rawMarkdownBody}
+            source={volexQuery.markdownRemark.rawMarkdownBody}
             renderers={markdownRenderer}
           />
         </Fade>

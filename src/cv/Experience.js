@@ -7,17 +7,17 @@ import markdownRenderer from '../components/MarkdownRenderer';
 const Experience = () => (
   <StaticQuery
     query={graphql`
-      {
+      query exQuery {
         markdownRemark(frontmatter: { mdName: { eq: "experiencemd" } }) {
           rawMarkdownBody
         }
       }
     `}
-    render={(data) => {
+    render={(exQuery) => {
       return (
         <Fade bottom>
           <ReactMarkdown
-            source={data.markdownRemark.rawMarkdownBody}
+            source={exQuery.markdownRemark.rawMarkdownBody}
             renderers={markdownRenderer}
           />
         </Fade>

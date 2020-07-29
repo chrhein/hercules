@@ -25,7 +25,7 @@ const FooterContainer = styled.div`
 const Footer = () => (
   <StaticQuery
     query={graphql`
-      query FooterQuery {
+      query footerQuery {
         landingInfoJson {
           socialLinks {
             id
@@ -36,8 +36,8 @@ const Footer = () => (
         }
       }
     `}
-    render={(data) => {
-      const { socialLinks } = data.landingInfoJson;
+    render={(footerQuery) => {
+      const { socialLinks } = footerQuery.landingInfoJson;
 
       return (
         <Box p={[2, 3]} backgroundColor="primaryDark" id="footer">

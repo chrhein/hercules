@@ -7,17 +7,17 @@ import markdownRenderer from '../components/MarkdownRenderer';
 const Education = () => (
   <StaticQuery
     query={graphql`
-      {
+      query eduQuery {
         markdownRemark(frontmatter: { mdName: { eq: "educationmd" } }) {
           rawMarkdownBody
         }
       }
     `}
-    render={(data) => {
+    render={(eduQuery) => {
       return (
         <Fade bottom>
           <ReactMarkdown
-            source={data.markdownRemark.rawMarkdownBody}
+            source={eduQuery.markdownRemark.rawMarkdownBody}
             renderers={markdownRenderer}
           />
         </Fade>
