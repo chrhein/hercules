@@ -58,7 +58,6 @@ const LandingPage = () => (
       `}
       render={({ landingInfoJson }) => {
         const { name, socialLinks, roles } = landingInfoJson;
-        const { deterministicBehaviour } = Math.random < 0.5 ? true : false;
 
         console.log(roles);
 
@@ -68,7 +67,7 @@ const LandingPage = () => (
               textAlign="center"
               as="h1"
               color="primary"
-              fontSize={[6, 7]}
+              fontSize={[5, 7]}
               mb={[3, 4, 5]}
             >
               {`Hi, I'm ${name}!`}
@@ -77,19 +76,17 @@ const LandingPage = () => (
             <Heading
               as="h2"
               color="primaryLight"
-              fontSize={[5, 5]}
+              fontSize={[3, 5]}
               mb={[3, 5]}
               textAlign="center"
               style={centerHorizontally}
             >
-              <TextLoop interval={3000}>
-                {roles
-                  .sort(() => deterministicBehaviour || Math.random() - 0.5)
-                  .map((text) => (
-                    <Text width={[300, 500]} key={text}>
-                      {text}
-                    </Text>
-                  ))}
+              <TextLoop interval={5000}>
+                {roles.map((text) => (
+                  <Text width={[300, 500]} key={text}>
+                    {text}
+                  </Text>
+                ))}
               </TextLoop>
             </Heading>
 

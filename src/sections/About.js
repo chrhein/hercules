@@ -55,7 +55,7 @@ const About = () => (
       render={(aboutQuery) => {
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-            <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
+            <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
               <Fade bottom>
                 <ReactMarkdown
                   source={aboutQuery.markdownRemark.rawMarkdownBody}
@@ -63,6 +63,10 @@ const About = () => (
                 />
               </Fade>
             </Box>
+            <Box
+              width={[1, 1, 1 / 6]}
+              style={{ maxWidth: '300px', margin: 'auto' }}
+            ></Box>
 
             <Box
               width={[1, 1, 2 / 6]}

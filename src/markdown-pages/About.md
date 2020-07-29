@@ -5,7 +5,7 @@ mdName: aboutmd
 
 Hello 👋
 
-I'm Christian, a visualization student at the University of Bergen.
+I'm Christian, a visualization student who's passionate about programming, working on hobby projects and learning new technologies.
 
 
 
