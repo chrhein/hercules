@@ -8,7 +8,18 @@ import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
 
-const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
+var screenWidth = 0;
+
+if (typeof window !== 'undefined') {
+  screenWidth = window.screen.width;
+}
+
+const MEDIA_QUERY_SMALL = screenWidth < 400 ? true : false;
+
+const MEDIA_QUERY_LARGE = screenWidth > 1200 ? true : false;
+
+const MEDIA_QUERY_MEDIUM =
+  !MEDIA_QUERY_SMALL && !MEDIA_QUERY_LARGE ? true : false;
 
 const Background = () => (
   <div>
@@ -28,12 +39,21 @@ const Background = () => (
       />
     )}
 
-    <Triangle
-      color="primaryDark"
-      height={['20vh', '40vh']}
-      width={['75vw', '70vw']}
-      invertX
-    />
+    {MEDIA_QUERY_MEDIUM ? (
+      <Triangle
+        color="secondaryLight"
+        height={['20vh', '40vh']}
+        width={['75vw', '70vw']}
+        invertX
+      />
+    ) : (
+      <Triangle
+        color="primaryDark"
+        height={['20vh', '40vh']}
+        width={['75vw', '70vw']}
+        invertX
+      />
+    )}
 
     <Triangle
       color="backgroundDark"

@@ -18,11 +18,17 @@ const StyledParagraph = styled.p`
   }
 `;
 
-const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
+var screenWidth = 0;
+
+if (typeof window !== 'undefined') {
+  screenWidth = window.screen.width;
+}
+
+const MEDIA_QUERY_S = screenWidth < 400 ? true : false;
 
 const Background = () => (
   <div>
-    {MEDIA_QUERY_SMALL ? (
+    {MEDIA_QUERY_S ? (
       <Triangle
         color="secondaryLight"
         height={['15vh', '10vh']}

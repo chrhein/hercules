@@ -11,11 +11,19 @@ import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
 import Hide from '../components/Hide';
 
+var screenWidth = 0;
+
+if (typeof window !== 'undefined') {
+  screenWidth = window.screen.width;
+}
+
+const MEDIA_QUERY_S = screenWidth < 400 ? true : false;
+
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Background = () => (
   <div>
-    {MEDIA_QUERY_SMALL ? (
+    {MEDIA_QUERY_S ? (
       <Triangle
         color="backgroundDark"
         height={['80vh', '80vh']}
@@ -46,7 +54,7 @@ const Background = () => (
       invertY
     />
 
-    {MEDIA_QUERY_SMALL ? (
+    {MEDIA_QUERY_S ? (
       <Triangle
         color="secondaryLight"
         height={['25vh', '20vh']}
