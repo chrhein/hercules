@@ -12,56 +12,81 @@ import VolunteerEx from '../cv/VolunteerEx';
 import styled from 'styled-components';
 
 class CV extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      windowWidth: null,
+    };
+  }
+
+  componentWillMount = () => {
+    this.windowWidth;
+  };
+
   componentDidMount = () => {
     if (typeof window !== undefined) {
       this.setState({ windowWidth: window.innerWidth });
-      var screenWidth = window.innerWidth;
-      var MEDIA_QUERY_S = screenWidth < 400 ? true : false;
+      console.log('Screenwidth CV:', this.state.windowWidth);
     }
   };
 
+  Background = () => {
+    var screenWidth = this.state.windowWidth;
+    var MEDIA_QUERY_SMALL = screenWidth < 400 ? true : false;
+    var MEDIA_QUERY_LARGE = screenWidth > 1200 ? true : false;
+    var MEDIA_QUERY_MEDIUM =
+      !MEDIA_QUERY_SMALL && !MEDIA_QUERY_LARGE ? true : false;
+
+    console.log('MEDIA_QUERY_SMALL:', MEDIA_QUERY_SMALL);
+    console.log('MEDIA_QUERY_MEDIUM:', MEDIA_QUERY_MEDIUM);
+    console.log('MEDIA_QUERY_LARGE:', MEDIA_QUERY_LARGE);
+
+    return (
+      <div>
+        {this.MEDIA_QUERY_SMALL ? (
+          <Triangle
+            color="secondaryLight"
+            height={['15vh', '10vh']}
+            width={['100vw', '100vw']}
+            invertX
+          />
+        ) : (
+          <Triangle
+            color="backgroundDark"
+            height={['15vh', '10vh']}
+            width={['100vw', '100vw']}
+            invertX
+          />
+        )}
+
+        <Triangle
+          color="secondaryLight"
+          height={['8vh', '10vh']}
+          width={['70vw', '40vw']}
+          invertY
+        />
+
+        <Triangle
+          color="primaryDark"
+          height={['10vh', '15vh']}
+          width={['100vw', '100vw']}
+          invertX
+          invertY
+        />
+      </div>
+    );
+  };
   StyledParagraph = styled.p`
     line-height: 2em;
     &:first-child {
       margin-top: 0em;
     }
   `;
-
-  Background = () => (
-    <div>
-      {this.MEDIA_QUERY_S ? (
-        <Triangle
-          color="secondaryLight"
-          height={['15vh', '10vh']}
-          width={['100vw', '100vw']}
-          invertX
-        />
-      ) : (
-        <Triangle
-          color="backgroundDark"
-          height={['15vh', '10vh']}
-          width={['100vw', '100vw']}
-          invertX
-        />
-      )}
-
-      <Triangle
-        color="secondaryLight"
-        height={['8vh', '10vh']}
-        width={['70vw', '40vw']}
-        invertY
-      />
-
-      <Triangle
-        color="primaryDark"
-        height={['10vh', '15vh']}
-        width={['100vw', '100vw']}
-        invertX
-        invertY
-      />
-    </div>
-  );
   render() {
+    if (!this.state.windowWidth) {
+      return <div>Loading</div>;
+    }
     return (
       <Section.Container id="CV" Background={this.Background}>
         <Section.Header name="CV" icon="👨🏻‍🎓" label="person" />
