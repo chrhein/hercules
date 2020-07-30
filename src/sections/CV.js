@@ -11,71 +11,70 @@ import VolunteerEx from '../cv/VolunteerEx';
 
 import styled from 'styled-components';
 
-const StyledParagraph = styled.p`
-  line-height: 2em;
-  &:first-child {
-    margin-top: 0em;
-  }
-`;
+class CV extends Component {
+  componentDidMount = () => {
+    if (typeof window !== undefined) {
+      this.setState({ windowWidth: window.innerWidth });
+      var screenWidth = window.innerWidth;
+      var MEDIA_QUERY_S = screenWidth < 400 ? true : false;
+    }
+  };
 
-var screenWidth = 0;
+  StyledParagraph = styled.p`
+    line-height: 2em;
+    &:first-child {
+      margin-top: 0em;
+    }
+  `;
 
-if (typeof window !== 'undefined') {
-  screenWidth = window.screen.width;
-}
+  Background = () => (
+    <div>
+      {this.MEDIA_QUERY_S ? (
+        <Triangle
+          color="secondaryLight"
+          height={['15vh', '10vh']}
+          width={['100vw', '100vw']}
+          invertX
+        />
+      ) : (
+        <Triangle
+          color="backgroundDark"
+          height={['15vh', '10vh']}
+          width={['100vw', '100vw']}
+          invertX
+        />
+      )}
 
-const MEDIA_QUERY_S = screenWidth < 400 ? true : false;
-
-const Background = () => (
-  <div>
-    {MEDIA_QUERY_S ? (
       <Triangle
         color="secondaryLight"
-        height={['15vh', '10vh']}
-        width={['100vw', '100vw']}
-        invertX
+        height={['8vh', '10vh']}
+        width={['70vw', '40vw']}
+        invertY
       />
-    ) : (
+
       <Triangle
-        color="backgroundDark"
-        height={['15vh', '10vh']}
+        color="primaryDark"
+        height={['10vh', '15vh']}
         width={['100vw', '100vw']}
         invertX
+        invertY
       />
-    )}
-
-    <Triangle
-      color="secondaryLight"
-      height={['8vh', '10vh']}
-      width={['70vw', '40vw']}
-      invertY
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['10vh', '15vh']}
-      width={['100vw', '100vw']}
-      invertX
-      invertY
-    />
-  </div>
-);
-
-class CV extends Component {
+    </div>
+  );
   render() {
     return (
-      <Section.Container id="CV" Background={Background}>
+      <Section.Container id="CV" Background={this.Background}>
         <Section.Header name="CV" icon="👨🏻‍🎓" label="person" />
         <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
           <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
-            <StyledParagraph>
+            <this.StyledParagraph>
               <Education />
               <br />
               <Experience />
               <br />
               <VolunteerEx />
               <br />
-            </StyledParagraph>
+            </this.StyledParagraph>
           </Box>
           <Box
             width={[1, 1, 2 / 6]}
