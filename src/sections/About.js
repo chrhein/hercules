@@ -85,7 +85,7 @@ class AboutMe extends Component {
           return (
             <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
               <Box
-                width={[1, 1, 3 / 6]}
+                width={[3 / 6, 1, 4 / 6]}
                 px={[1, 2, 4]}
                 style={{ maxWidth: '750px' }}
               >
