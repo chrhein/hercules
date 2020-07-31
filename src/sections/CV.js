@@ -31,52 +31,33 @@ class CV extends Component {
     }
   };
 
-  Background = () => {
-    var screenWidth = this.state.windowWidth;
-    var MEDIA_QUERY_SMALL = screenWidth < 400 ? true : false;
-    var MEDIA_QUERY_LARGE = screenWidth > 1200 ? true : false;
-    var MEDIA_QUERY_MEDIUM =
-      !MEDIA_QUERY_SMALL && !MEDIA_QUERY_LARGE ? true : false;
+  Background = () => (
+    <div>
+      <Triangle
+        id="secondaryLightOnTabletAndMobile"
+        color="backgroundDark"
+        height={['15vh', '10vh']}
+        width={['100vw', '100vw']}
+        invertX
+      />
 
-    console.log('MEDIA_QUERY_SMALL:', MEDIA_QUERY_SMALL);
-    console.log('MEDIA_QUERY_MEDIUM:', MEDIA_QUERY_MEDIUM);
-    console.log('MEDIA_QUERY_LARGE:', MEDIA_QUERY_LARGE);
+      <Triangle
+        color="secondaryLight"
+        height={['8vh', '10vh']}
+        width={['70vw', '40vw']}
+        invertY
+      />
 
-    return (
-      <div>
-        {this.MEDIA_QUERY_SMALL ? (
-          <Triangle
-            color="secondaryLight"
-            height={['15vh', '10vh']}
-            width={['100vw', '100vw']}
-            invertX
-          />
-        ) : (
-          <Triangle
-            color="backgroundDark"
-            height={['15vh', '10vh']}
-            width={['100vw', '100vw']}
-            invertX
-          />
-        )}
+      <Triangle
+        color="primaryDark"
+        height={['10vh', '15vh']}
+        width={['100vw', '100vw']}
+        invertX
+        invertY
+      />
+    </div>
+  );
 
-        <Triangle
-          color="secondaryLight"
-          height={['8vh', '10vh']}
-          width={['70vw', '40vw']}
-          invertY
-        />
-
-        <Triangle
-          color="primaryDark"
-          height={['10vh', '15vh']}
-          width={['100vw', '100vw']}
-          invertX
-          invertY
-        />
-      </div>
-    );
-  };
   StyledParagraph = styled.p`
     line-height: 2em;
     &:first-child {

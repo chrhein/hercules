@@ -27,55 +27,31 @@ class AboutMe extends Component {
     }
   };
 
-  Background = () => {
-    var screenWidth = this.state.windowWidth;
-    var MEDIA_QUERY_SMALL = screenWidth < 400 ? true : false;
-    var MEDIA_QUERY_LARGE = screenWidth > 1200 ? true : false;
-    var MEDIA_QUERY_MEDIUM =
-      !MEDIA_QUERY_SMALL && !MEDIA_QUERY_LARGE ? true : false;
-    console.log('Screenwidth about:', screenWidth);
-    return (
-      <div>
-        {this.MEDIA_QUERY_SMALL ? (
-          <Triangle
-            color="backgroundDark"
-            height={['50vh', '20vh']}
-            width={['50vw', '50vw']}
-            invertY
-          />
-        ) : (
-          <Triangle
-            color="secondaryLight"
-            height={['50vh', '20vh']}
-            width={['50vw', '50vw']}
-            invertY
-          />
-        )}
+  Background = () => (
+    <div>
+      <Triangle
+        id="backgroundDarkOnTablet"
+        color="secondaryLight"
+        height={['50vh', '20vh']}
+        width={['50vw', '50vw']}
+        invertY
+      />
 
-        {this.MEDIA_QUERY_MEDIUM ? (
-          <Triangle
-            color="secondaryLight"
-            height={['20vh', '40vh']}
-            width={['75vw', '70vw']}
-            invertX
-          />
-        ) : (
-          <Triangle
-            color="primaryDark"
-            height={['20vh', '40vh']}
-            width={['75vw', '70vw']}
-            invertX
-          />
-        )}
+      <Triangle
+        id="secondaryLightOnTablet"
+        color="primaryDark"
+        height={['20vh', '20vh']}
+        width={['75vw', '70vw']}
+        invertX
+      />
 
-        <Triangle
-          color="backgroundDark"
-          height={['25vh', '20vh']}
-          width={['100vw', '100vw']}
-        />
-      </div>
-    );
-  };
+      <Triangle
+        color="backgroundDark"
+        height={['25vh', '20vh']}
+        width={['100vw', '100vw']}
+      />
+    </div>
+  );
 
   ProfilePicture = styled(Image)`
     border-radius: 50%;

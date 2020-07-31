@@ -7,20 +7,57 @@ const Triangle = styled.div`
   z-index: -2;
 
   ${(props) => {
-    const color = props.theme.colors[props.color] || props.color;
-    const border = `${props.height[0]} solid ${color};`;
-    return props.invertY
-      ? `border-bottom: ${border}; bottom: 0;`
-      : `border-top: ${border};`;
-  }}
-
-  ${(props) => {
     const border = `${props.width[0]} solid transparent;`;
     return props.invertX
       ? `border-left: ${border}; right: 0;`
       : `border-right: ${border};`;
   }}
 
+  @media (min-width: 768px) and (min-width: 1199px) {
+    ${(props) => {
+      const color = props.theme.colors[props.color] || props.color;
+      const border = `${props.height[0]} solid ${color};`;
+      return props.invertY
+        ? `border-bottom: ${border}; bottom: 0;`
+        : `border-top: ${border};`;
+    }}
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    ${(props) => {
+      let color;
+      if (props.id == 'backgroundDarkOnTablet') {
+        color = props.theme.colors['backgroundDark'] || 'backgroundDark';
+      } else if (props.id == 'secondaryLightOnTablet') {
+        color = props.theme.colors['secondaryLight'] || 'secondaryLight';
+      } else if (props.id == 'secondaryLightOnTabletAndMobile') {
+        color = props.theme.colors['secondaryLight'] || 'secondaryLight';
+      } else {
+        color = props.theme.colors[props.color] || props.color;
+      }
+      const border = `${props.height[0]} solid ${color};`;
+      return props.invertY
+        ? `border-bottom: ${border}; bottom: 0;`
+        : `border-top: ${border};`;
+    }}
+  }
+
+  @media (max-width: 767px) {
+    ${(props) => {
+      let color;
+      if (props.id == 'secondaryLightOnTabletAndMobile') {
+        color = props.theme.colors['secondaryLight'] || 'secondaryLight';
+      } else if (props.id == 'backgroundDarkOnTablet') {
+        color = props.theme.colors['backgroundDark'] || 'backgroundDark';
+      } else {
+        color = props.theme.colors[props.color] || props.color;
+      }
+      const border = `${props.height[0]} solid ${color};`;
+      return props.invertY
+        ? `border-bottom: ${border}; bottom: 0;`
+        : `border-top: ${border};`;
+    }}
+  }
 
   @media only screen and (min-width: 768px) {
     ${(props) => {

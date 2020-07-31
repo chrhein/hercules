@@ -25,64 +25,40 @@ class Projects extends Component {
     }
   };
 
-  Background = () => {
-    var screenWidth = this.state.windowWidth;
-    var MEDIA_QUERY_SMALL = screenWidth < 400 ? true : false;
-    var MEDIA_QUERY_LARGE = screenWidth > 1200 ? true : false;
-    var MEDIA_QUERY_MEDIUM =
-      !MEDIA_QUERY_SMALL && !MEDIA_QUERY_LARGE ? true : false;
-    console.log('Screenwidth projects:', screenWidth);
-    return (
-      <div>
-        {this.MEDIA_QUERY_SMALL ? (
-          <Triangle
-            color="backgroundDark"
-            height={['80vh', '80vh']}
-            width={['100vw', '100vw']}
-            invertX
-          />
-        ) : (
-          <Triangle
-            color="secondaryLight"
-            height={['80vh', '80vh']}
-            width={['100vw', '100vw']}
-            invertX
-          />
-        )}
+  Background = () => (
+    <div>
+      <Triangle
+        id="backgroundDarkOnTablet"
+        color="secondaryLight"
+        height={['80vh', '80vh']}
+        width={['100vw', '100vw']}
+        invertX
+      />
 
-        <Triangle
-          color="background"
-          height={['50vh', '20vh']}
-          width={['50vw', '50vw']}
-          invertX
-        />
+      <Triangle
+        color="background"
+        height={['50vh', '20vh']}
+        width={['50vw', '50vw']}
+        invertX
+      />
 
-        <Triangle
-          color="primaryDark"
-          height={['25vh', '40vh']}
-          width={['75vw', '60vw']}
-          invertX
-          invertY
-        />
+      <Triangle
+        color="primaryDark"
+        height={['25vh', '40vh']}
+        width={['75vw', '60vw']}
+        invertX
+        invertY
+      />
 
-        {this.MEDIA_QUERY_SMALL ? (
-          <Triangle
-            color="secondaryLight"
-            height={['25vh', '20vh']}
-            width={['100vw', '100vw']}
-            invertY
-          />
-        ) : (
-          <Triangle
-            color="backgroundDark"
-            height={['25vh', '20vh']}
-            width={['100vw', '100vw']}
-            invertY
-          />
-        )}
-      </div>
-    );
-  };
+      <Triangle
+        id="secondaryLightOnTabletAndMobile"
+        color="backgroundDark"
+        height={['25vh', '20vh']}
+        width={['100vw', '100vw']}
+        invertY
+      />
+    </div>
+  );
 
   render() {
     if (!this.state.windowWidth) {
