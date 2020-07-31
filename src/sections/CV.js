@@ -11,76 +11,55 @@ import VolunteerEx from '../cv/VolunteerEx';
 
 import styled from 'styled-components';
 
-class CV extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      windowWidth: null,
-    };
+const StyledParagraph = styled.p`
+  line-height: 2em;
+  &:first-child {
+    margin-top: 0em;
   }
+`;
 
-  componentWillMount = () => {
-    this.windowWidth;
-  };
+const Background = () => (
+  <div>
+    <Triangle
+      id="secondaryLightOnTabletAndMobile"
+      color="backgroundDark"
+      height={['15vh', '10vh']}
+      width={['100vw', '100vw']}
+      invertX
+    />
 
-  componentDidMount = () => {
-    if (typeof window !== undefined) {
-      this.setState({ windowWidth: window.innerWidth });
-      console.log('Screenwidth CV:', this.state.windowWidth);
-    }
-  };
+    <Triangle
+      color="secondaryLight"
+      height={['8vh', '10vh']}
+      width={['70vw', '40vw']}
+      invertY
+    />
 
-  Background = () => (
-    <div>
-      <Triangle
-        id="secondaryLightOnTabletAndMobile"
-        color="backgroundDark"
-        height={['15vh', '10vh']}
-        width={['100vw', '100vw']}
-        invertX
-      />
+    <Triangle
+      color="primaryDark"
+      height={['10vh', '15vh']}
+      width={['100vw', '100vw']}
+      invertX
+      invertY
+    />
+  </div>
+);
 
-      <Triangle
-        color="secondaryLight"
-        height={['8vh', '10vh']}
-        width={['70vw', '40vw']}
-        invertY
-      />
-
-      <Triangle
-        color="primaryDark"
-        height={['10vh', '15vh']}
-        width={['100vw', '100vw']}
-        invertX
-        invertY
-      />
-    </div>
-  );
-
-  StyledParagraph = styled.p`
-    line-height: 2em;
-    &:first-child {
-      margin-top: 0em;
-    }
-  `;
+class CV extends Component {
   render() {
-    if (!this.state.windowWidth) {
-      return <div>Loading</div>;
-    }
     return (
-      <Section.Container id="CV" Background={this.Background}>
+      <Section.Container id="CV" Background={Background}>
         <Section.Header name="CV" icon="👨🏻‍🎓" label="person" />
         <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
           <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
-            <this.StyledParagraph>
+            <StyledParagraph>
               <Education />
               <br />
               <Experience />
               <br />
               <VolunteerEx />
               <br />
-            </this.StyledParagraph>
+            </StyledParagraph>
           </Box>
           <Box
             width={[1, 1, 2 / 6]}
