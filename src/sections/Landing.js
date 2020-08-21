@@ -59,8 +59,6 @@ const LandingPage = () => (
       render={({ landingInfoJson }) => {
         const { name, socialLinks, roles } = landingInfoJson;
 
-        console.log(roles);
-
         return (
           <Fragment>
             <Heading
