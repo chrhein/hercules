@@ -6,7 +6,7 @@ mdName: experiencemd
 # Experience
 
 #### Student Mentor, University of Bergen - 08.2020-present
-Student Mentor for the first-year Computer Security students. Helped the students become academically and socially integrated in their studies and in the study environment, and made the transition from upper secondary school to the university easier.
+Student Mentor for the first-year Computer Security students. Helped the students become academically and socially integrated with their studies and in the study environment, and made the transition from upper secondary school to the university easier.
 
 #### Teacher Assistant - *Algorithms, Data Structures and Programming*, University of Bergen - 10.2019-12.2019
 Guided students in the subject "INF102 - Algorithms, Data Structures and Programming" by helping them program in Java and correct their mandatory assignments. 

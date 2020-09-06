@@ -44,6 +44,14 @@ const plugins = [
       path: `${__dirname}/src/data/`,
     },
   },
+  {
+    resolve: 'gatsby-plugin-react-svg',
+    options: {
+      rule: {
+        include: `${__dirname}/src/assets/svgs/`, // See below to configure properly
+      },
+    },
+  },
 ];
 
 if (ANALYTICS_ID) {

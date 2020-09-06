@@ -10,6 +10,8 @@ import Experience from '../cv/Experience';
 import VolunteerEx from '../cv/VolunteerEx';
 
 import styled from 'styled-components';
+import Aircraft from '../assets/svgs/aircraft.svg';
+import Code from '../assets/svgs/code_history.svg';
 
 const StyledParagraph = styled.p`
   line-height: 2em;
