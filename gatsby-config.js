@@ -52,6 +52,7 @@ const plugins = [
       },
     },
   },
+  'gatsby-plugin-cname',
 ];
 
 if (ANALYTICS_ID) {
@@ -68,5 +69,6 @@ module.exports = {
   siteMetadata: {
     isMediumUserDefined: !!about.mediumUser,
     deterministicBehaviour: !!DETERMINISTIC,
+    siteUrl: 'http://christianhein.no/',
   },
 };

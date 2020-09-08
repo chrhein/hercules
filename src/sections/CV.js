@@ -10,7 +10,7 @@ import Experience from '../cv/Experience';
 import VolunteerEx from '../cv/VolunteerEx';
 
 import styled from 'styled-components';
-import Aircraft from '../assets/svgs/aircraft.svg';
+import Aircraft from '../assets/svgs/aircraft.js';
 import Code from '../assets/svgs/code_history.svg';
 
 const StyledParagraph = styled.p`
@@ -67,7 +67,9 @@ class CV extends Component {
             width={[1, 1, 2 / 6]}
             style={{ maxWidth: '300px', margin: 'auto' }}
           >
-            <Fade right></Fade>
+            <Fade right>
+              <Aircraft />
+            </Fade>
           </Box>
         </Flex>
       </Section.Container>

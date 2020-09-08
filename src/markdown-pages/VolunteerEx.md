@@ -5,8 +5,8 @@ mdName: volexmd
 
 # Volunteer Experience
 
-#### Volunteer Developer - *echo karriere dev*, Bergen, 09.2020-present
-[*echo karriere dev*](https://docs.echokarriere.no/ "echo karriere dev") develops and maintains the [*echo karriere*](https://www.echokarriere.no/ "echo karriere") website.
+#### Volunteer Developer - *echo karriere*, Bergen, 09.2020-present
+[*echo karriere*](https://www.echokarriere.no/ "echo karriere") is the student organization behind the career day for IT students in Bergen. Develops a full-stack solution for handling the career day, as well as the website for echo karriere.
 
 #### Student Deputy Member - *Institute Council at the Department of Informatics*, Bergen, 08.2020-present
 The [*Institute Council*](https://www.uib.no/node/132777/styrer-og-r%C3%A5d#instituttr-d "Instituttrådet") has the opportunity to influence the subjects and study programs in the department.
