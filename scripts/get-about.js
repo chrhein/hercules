@@ -16,6 +16,7 @@ const getAboutEntry = (entry) => entry.sys.contentType.sys.id === 'about';
 const main = async () => {
   const entries = await client.getEntries();
   const about = entries.items.find(getAboutEntry).fields;
+
   fs.writeFileSync(
     path.join(process.cwd(), 'about.json'),
     JSON.stringify(about, null, 2),
