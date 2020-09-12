@@ -1,17 +1,14 @@
 import React from 'react';
 import { Box, Flex } from 'rebass/styled-components';
 import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
-
-import { Component } from 'react';
 import Education from '../cv/Education';
 import Experience from '../cv/Experience';
 import VolunteerEx from '../cv/VolunteerEx';
 
-import styled from 'styled-components';
-import Aircraft from '../assets/svgs/aircraft.js';
-import Code from '../assets/svgs/code_history.svg';
+import Aircraft from '../assets/svgs/aircraft';
 
 const StyledParagraph = styled.p`
   line-height: 2em;
@@ -47,34 +44,32 @@ const Background = () => (
   </div>
 );
 
-class CV extends Component {
-  render() {
-    return (
-      <Section.Container id="CV" Background={Background}>
-        <Section.Header name="CV" icon="👨🏻‍🎓" label="person" />
-        <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-          <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
-            <StyledParagraph>
-              <Education />
-              <br />
-              <Experience />
-              <br />
-              <VolunteerEx />
-              <br />
-            </StyledParagraph>
-          </Box>
-          <Box
-            width={[1, 1, 2 / 6]}
-            style={{ maxWidth: '300px', margin: 'auto' }}
-          >
-            <Fade right>
-              <Aircraft />
-            </Fade>
-          </Box>
-        </Flex>
-      </Section.Container>
-    );
-  }
+function CV() {
+  return (
+    <Section.Container id="CV" Background={Background}>
+      <Section.Header name="CV" icon="👨🏻‍🎓" label="person" />
+      <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+        <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
+          <StyledParagraph>
+            <Education />
+            <br />
+            <Experience />
+            <br />
+            <VolunteerEx />
+            <br />
+          </StyledParagraph>
+        </Box>
+        <Box
+          width={[1, 1, 2 / 6]}
+          style={{ maxWidth: '300px', margin: 'auto' }}
+        >
+          <Fade right>
+            <Aircraft />
+          </Fade>
+        </Box>
+      </Flex>
+    </Section.Container>
+  );
 }
 
 export default CV;

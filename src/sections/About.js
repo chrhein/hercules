@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Image, Flex } from 'rebass/styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import { Box, Flex, Image } from 'rebass/styled-components';
+import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
@@ -65,11 +65,7 @@ const About = () => (
                 />
               </Fade>
             </Box>
-            <Box
-              width={[1, 1, 1 / 6]}
-              style={{ maxWidth: '300px', margin: 'auto' }}
-            ></Box>
-
+            <Box width={[1, 1, 1 / 6]} style={{ maxWidth: '300px', margin: 'auto' }} />
             <Box
               width={[1, 1, 2 / 6]}
               style={{ maxWidth: '300px', margin: 'auto' }}

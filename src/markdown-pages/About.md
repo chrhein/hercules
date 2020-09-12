@@ -5,7 +5,7 @@ mdName: aboutmd
 
 Hello 👋
 
-I'm Christian, a visualization student who's passionate about programming, working on hobby projects, and learning new technologies.
+My name is Christian Hein. I'm a visualization student who's passionate about programming, working on hobby projects, and learning new technologies.
 
 
 

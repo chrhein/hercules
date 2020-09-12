@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import { Heading, Flex, Box, Text } from 'rebass/styled-components';
+import { graphql, StaticQuery } from 'gatsby';
+import { Box, Flex, Heading, Text } from 'rebass/styled-components';
 import TextLoop from 'react-text-loop';
+import styled from 'styled-components';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import Triangle from '../components/Triangle';
@@ -37,6 +38,31 @@ const Background = () => (
   </div>
 );
 
+const Delay = styled.div`
+  @include fade-in('5000ms');
+  @mixin fade-in($waitTime) {
+    animation: wait #{$waitTime}, fade-in 1000ms #{$waitTime};
+  }
+
+  @keyframes wait {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
 const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 
 const LandingPage = () => (
@@ -58,7 +84,7 @@ const LandingPage = () => (
       `}
       render={({ landingInfoJson }) => {
         const { name, socialLinks, roles } = landingInfoJson;
-
+        const fixedOrder = false;
         return (
           <Fragment>
             <Heading
@@ -68,7 +94,7 @@ const LandingPage = () => (
               fontSize={[5, 7]}
               mb={[3, 4, 5]}
             >
-              {`Hi, I'm ${name}!`}
+              {`Hi, I'm ${name}.`}
             </Heading>
 
             <Heading
@@ -79,8 +105,10 @@ const LandingPage = () => (
               textAlign="center"
               style={centerHorizontally}
             >
-              <TextLoop interval={5000}>
-                {roles.map((text) => (
+              <TextLoop interval={4000}>
+                {roles
+                  .sort(() => fixedOrder || Math.random() - 0.5)
+                  .map((text) => (
                   <Text width={[300, 500]} key={text}>
                     {text}
                   </Text>

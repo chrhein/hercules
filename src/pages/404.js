@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heading, Box } from 'rebass/styled-components';
+import { Box, Heading } from 'rebass/styled-components';
+import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
@@ -29,6 +30,29 @@ const Background = () => (
   </div>
 );
 
+const LoadingTrailingDots = styled.div`
+    .appendMovingDots:after {
+        content: ' .';
+        animation: dots 3s steps(1, end) infinite;
+    }
+    @keyframes dots {
+        0%, 20% {
+            opacity: 0;
+        }
+        40% {
+            opacity: 1;
+        }
+        60% {
+            text-shadow: .5em 0;
+        }
+        80% {
+            text-shadow: .5em 0, 1em 0;
+        }
+        100% {
+            text-shadow: .5em 0, 1em 0;
+        }
+`;
+
 const NotFoundPage = () => (
   <Layout>
     <Section.Container id="404" Background={Background}>
@@ -41,7 +65,9 @@ const NotFoundPage = () => (
           404
         </Heading>
         <Heading color="secondary" fontSize={['4rem', '5rem', '6rem']} as="h2">
-          Something went wrong...
+          <LoadingTrailingDots>
+            <span className="appendMovingDots">Something went wrong</span>
+          </LoadingTrailingDots>
         </Heading>
       </Box>
     </Section.Container>

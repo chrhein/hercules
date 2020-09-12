@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, Text, Flex, Box } from 'rebass/styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import { Box, Flex, Image, Text } from 'rebass/styled-components';
+import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
-import { CardContainer, Card } from '../components/Card';
+import { Card, CardContainer } from '../components/Card';
 import SocialLink from '../components/SocialLink';
 import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
@@ -106,14 +106,14 @@ const ProjectTag = styled.div`
 `;
 
 const Project = ({
-  name,
-  description,
-  projectUrl,
-  repositoryUrl,
-  type,
-  publishedDate,
-  logo,
-}) => (
+                   name,
+                   description,
+                   projectUrl,
+                   repositoryUrl,
+                   type,
+                   publishedDate,
+                   logo,
+                 }) => (
   <Card p={0}>
     <Flex style={{ height: CARD_HEIGHT }}>
       <TextContainer>
