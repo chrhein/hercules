@@ -1,7 +1,6 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
-import Fade from 'react-reveal/Fade';
 import markdownRenderer from '../components/MarkdownRenderer';
 
 const Education = () => (
@@ -15,12 +14,10 @@ const Education = () => (
     `}
     render={(eduQuery) => {
       return (
-        <Fade bottom>
-          <ReactMarkdown
-            source={eduQuery.markdownRemark.rawMarkdownBody}
-            renderers={markdownRenderer}
-          />
-        </Fade>
+        <ReactMarkdown
+          source={eduQuery.markdownRemark.rawMarkdownBody}
+          renderers={markdownRenderer}
+        />
       );
     }}
   />

@@ -9,6 +9,7 @@ import Experience from '../cv/Experience';
 import VolunteerEx from '../cv/VolunteerEx';
 
 import Aircraft from '../assets/svgs/aircraft';
+import Clouds from '../assets/svgs/clouds';
 
 const StyledParagraph = styled.p`
   line-height: 2em;
@@ -16,6 +17,35 @@ const StyledParagraph = styled.p`
     margin-top: 0em;
   }
 `;
+
+const AircraftDiv = styled.div`
+  position: absolute;
+  left: 10%;
+  right: -10%;
+  z-index: 0;  
+  height: 100%;
+  @media (max-width: 1026px) {
+    bottom: 13%;
+  }
+`;
+
+const CloudDiv = styled.div`
+  position: absolute;
+  z-index: -1;
+  left: -5%;
+  right: 5%;
+  height: 100%;
+  @media (max-width: 1026px) {
+    bottom: 13%;
+  }
+`;
+
+const SvgWrapper = styled.div`
+  position: relative;
+  max-width: 400px;
+  min-height: 200px;
+`;
+
 
 const Background = () => (
   <div>
@@ -63,9 +93,16 @@ function CV() {
           width={[1, 1, 2 / 6]}
           style={{ maxWidth: '300px', margin: 'auto' }}
         >
-          <Fade right>
-            <Aircraft />
-          </Fade>
+          <SvgWrapper>
+            <CloudDiv>
+              <Clouds />
+            </CloudDiv>
+            <AircraftDiv>
+              <Fade right>
+                <Aircraft />
+              </Fade>
+            </AircraftDiv>
+          </SvgWrapper>
         </Box>
       </Flex>
     </Section.Container>
