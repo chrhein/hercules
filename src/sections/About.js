@@ -12,7 +12,7 @@ const Background = () => (
   <div>
     <Triangle
       id="backgroundDarkOnTablet"
-      color="secondaryLight"
+      color={({ theme }) => theme.secondaryLight}
       height={['50vh', '20vh']}
       width={['50vw', '50vw']}
       invertY
@@ -20,14 +20,14 @@ const Background = () => (
 
     <Triangle
       id="secondaryLightOnTablet"
-      color="primaryDark"
+      color={({ theme }) => theme.primaryDark}
       height={['20vh', '20vh']}
       width={['75vw', '70vw']}
       invertX
     />
 
     <Triangle
-      color="backgroundDark"
+      color={({ theme }) => theme.backgroundDark}
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
     />

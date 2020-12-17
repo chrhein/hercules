@@ -10,26 +10,26 @@ import Triangle from '../components/Triangle';
 const Background = () => (
   <div>
     <Triangle
-      color="backgroundDark"
+      color={({ theme }) => theme.backgroundDark}
       height={['35vh', '75vh']}
       width={['95vw', '60vw']}
     />
 
     <Triangle
-      color="secondary"
+      color={({ theme }) => theme.secondary}
       height={['38vh', '80vh']}
       width={['50vw', '35vw']}
     />
 
     <Triangle
-      color="primaryDark"
+      color={({ theme }) => theme.primaryDark}
       height={['25vh', '35vh']}
       width={['75vw', '60vw']}
       invertX
     />
 
     <Triangle
-      color="backgroundDark"
+      color={({ theme }) => theme.backgroundDark}
       height={['20vh', '20vh']}
       width={['100vw', '100vw']}
       invertX
@@ -90,7 +90,7 @@ const LandingPage = () => (
             <Heading
               textAlign="center"
               as="h1"
-              color="primary"
+              color={({ theme }) => theme.primary}
               fontSize={[5, 7]}
               mb={[3, 4, 5]}
             >
@@ -99,7 +99,7 @@ const LandingPage = () => (
 
             <Heading
               as="h2"
-              color="primaryLight"
+              color={({ theme }) => theme.primaryLight}
               fontSize={[3, 5]}
               mb={[3, 5]}
               textAlign="center"

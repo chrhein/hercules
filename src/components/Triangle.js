@@ -25,7 +25,8 @@ const Triangle = styled.div`
 
   @media (min-width: 768px) and (max-width: 1199px) {
     ${(props) => {
-      let color;
+      let color = props.theme.colors[props.color] || props.color;
+      /*
       if (props.id == 'backgroundDarkOnTablet') {
         color = props.theme.colors['backgroundDark'] || 'backgroundDark';
       } else if (props.id == 'secondaryLightOnTablet') {
@@ -35,6 +36,8 @@ const Triangle = styled.div`
       } else {
         color = props.theme.colors[props.color] || props.color;
       }
+      
+       */
       const border = `${props.height[0]} solid ${color};`;
       return props.invertY
         ? `border-bottom: ${border}; bottom: 0;`
@@ -44,7 +47,8 @@ const Triangle = styled.div`
 
   @media (max-width: 767px) {
     ${(props) => {
-      let color;
+      let color = props.theme.colors[props.color] || props.color;
+      /*
       if (props.id == 'secondaryLightOnTabletAndMobile') {
         color = props.theme.colors['secondaryLight'] || 'secondaryLight';
       } else if (props.id == 'backgroundDarkOnTablet') {
@@ -52,6 +56,8 @@ const Triangle = styled.div`
       } else {
         color = props.theme.colors[props.color] || props.color;
       }
+      
+       */
       const border = `${props.height[0]} solid ${color};`;
       return props.invertY
         ? `border-bottom: ${border}; bottom: 0;`

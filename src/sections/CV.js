@@ -51,21 +51,21 @@ const Background = () => (
   <div>
     <Triangle
       id="secondaryLightOnTabletAndMobile"
-      color="backgroundDark"
+      color={({ theme }) => theme.backgroundDark}
       height={['15vh', '10vh']}
       width={['100vw', '100vw']}
       invertX
     />
 
     <Triangle
-      color="secondaryLight"
+      color={({ theme }) => theme.secondaryLight}
       height={['8vh', '10vh']}
       width={['70vw', '40vw']}
       invertY
     />
 
     <Triangle
-      color="primaryDark"
+      color={({ theme }) => theme.primaryDark}
       height={['10vh', '15vh']}
       width={['100vw', '100vw']}
       invertX

@@ -6,7 +6,12 @@ import config from 'react-reveal/globals';
 import preset from '@rebass/preset';
 import colors from '../../colors';
 import Helmet from './Helmet';
+import { GlobalStyles } from "./Globalstyles";
+import { lightTheme, darkTheme } from "./Theme";
+import  {useDarkMode} from "./useDarkMode";
+import Toggle from './Toggler';
 
+/*
 const GlobalStyle = createGlobalStyle`
   *,
   *::after,
@@ -24,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.text};
   }
 `;
+*/
 
 config({ ssrFadeout: true });
 
@@ -35,6 +41,7 @@ const loadScript = (src) => {
   document.getElementsByTagName('body')[0].appendChild(tag);
 };
 
+/*
 const theme = {
   ...preset,
   colors,
@@ -44,19 +51,25 @@ const theme = {
     monospace: 'monospace',
   },
 };
+*/
 
 const Layout = ({ children }) => {
   useEffect(() => {
     loadScript('https://use.fontawesome.com/fd58d214b9.js');
   }, []);
 
+  const [theme, themeToggler, mountedComponent] = useDarkMode();
+
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  if(!mountedComponent) return <div/>
   return (
     <main>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
+      <ThemeProvider theme={themeMode}>
+        <GlobalStyles />
         <ScrollingProvider>
           <Helmet />
           {children}
+          <Toggle theme={theme} toggleTheme={themeToggler} />
         </ScrollingProvider>
       </ThemeProvider>
     </main>

@@ -67,3 +67,5 @@ netlify.toml
 .DS_Store
 .vscode/
 about.json
+
+.idea

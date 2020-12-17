@@ -12,7 +12,7 @@ const HeaderContainer = styled(Headroom)`
     transition: background-color 0.5s ease;
   }
   .headroom--pinned {
-    background-color: ${(props) => props.theme.colors.primaryDark};
+    background-color: ${({ theme }) => theme.primaryDark};
   }
   position: absolute;
   width: 100%;
