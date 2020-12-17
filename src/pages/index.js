@@ -6,16 +6,22 @@ import Projects from '../sections/Projects';
 import Header from '../components/Header';
 import CV from '../sections/CV';
 import Footer from '../components/Footer';
+import { useDarkMode } from '../components/useDarkMode';
 
-const IndexPage = () => (
-  <Layout>
-    <Header />
-    <Landing />
-    <About />
-    <Projects />
-    <CV />
-    <Footer />
-  </Layout>
-);
+
+const IndexPage = () => {
+  const [theme, themeToggler, mountedComponent] = useDarkMode();
+
+  return (
+    <Layout theme={theme}>
+      <Header theme={theme} themeToggler={themeToggler} />
+      <Landing />
+      <About />
+      <Projects />
+      <CV />
+      <Footer />
+    </Layout>
+  );
+};
 
 export default IndexPage;

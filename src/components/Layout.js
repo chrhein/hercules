@@ -1,15 +1,12 @@
 import React, { useEffect } from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import { ScrollingProvider } from 'react-scroll-section';
 import config from 'react-reveal/globals';
-import preset from '@rebass/preset';
-import colors from '../../colors';
 import Helmet from './Helmet';
-import { GlobalStyles } from "./Globalstyles";
-import { lightTheme, darkTheme } from "./Theme";
-import  {useDarkMode} from "./useDarkMode";
-import Toggle from './Toggler';
+import { GlobalStyles } from './Globalstyles';
+import { darkTheme, lightTheme } from './Theme';
+import { useDarkMode } from './useDarkMode';
 
 /*
 const GlobalStyle = createGlobalStyle`
@@ -53,15 +50,12 @@ const theme = {
 };
 */
 
-const Layout = ({ children }) => {
+const Layout = ({ theme,  toggleTheme, children }) => {
   useEffect(() => {
     loadScript('https://use.fontawesome.com/fd58d214b9.js');
   }, []);
 
-  const [theme, themeToggler, mountedComponent] = useDarkMode();
-
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-  if(!mountedComponent) return <div/>
   return (
     <main>
       <ThemeProvider theme={themeMode}>
@@ -69,7 +63,6 @@ const Layout = ({ children }) => {
         <ScrollingProvider>
           <Helmet />
           {children}
-          <Toggle theme={theme} toggleTheme={themeToggler} />
         </ScrollingProvider>
       </ThemeProvider>
     </main>

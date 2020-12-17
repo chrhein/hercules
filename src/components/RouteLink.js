@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box } from 'rebass/styled-components';
+import { Box, Flex } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
 import LinkAnimated from './LinkAnimated';
+import Toggle from './Toggler';
 
 const RouteLink = ({ onClick, selected, name }) => (
   <Box ml={[2, 3]} color="background" fontSize={[2, 3]}>

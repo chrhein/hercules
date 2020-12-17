@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import Headroom from 'react-headroom';
-import { Flex } from 'rebass/styled-components';
+import { Box, Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
 import RouteLink from './RouteLink';
+import Toggle from './Toggler';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -13,6 +14,7 @@ const HeaderContainer = styled(Headroom)`
   }
   .headroom--pinned {
     background-color: ${({ theme }) => theme.primaryDark};
+    color: ${({ theme }) => theme.text};
   }
   position: absolute;
   width: 100%;
@@ -35,7 +37,7 @@ const formatLinks = (allLinks) =>
     { links: [], home: null },
   );
 
-const Header = () => (
+const Header = ({theme, themeToggler}) => (
   <HeaderContainer>
     <Flex
       flexWrap="wrap"
@@ -65,10 +67,19 @@ const Header = () => (
             />
           ));
 
+          const toggle = (
+            <Box ml={[2, 3]} color="background" fontSize={[2, 3]}>
+              <Toggle theme={theme} toggleTheme={themeToggler} />
+            </Box>
+          );
+
           return (
             <Fragment>
               {homeLink}
-              <Flex mr={[0, 3, 5]}>{navLinks}</Flex>
+              <Flex mr={[0, 3, 4]}>
+                {navLinks}
+                {toggle}
+              </Flex>
             </Fragment>
           );
         }}
