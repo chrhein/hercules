@@ -46,26 +46,25 @@ const SvgWrapper = styled.div`
   min-height: 200px;
 `;
 
-
 const Background = () => (
   <div>
     <Triangle
       id="secondaryLightOnTabletAndMobile"
-      color={({ theme }) => theme.backgroundDark}
+      color="backgroundDark"
       height={['15vh', '10vh']}
       width={['100vw', '100vw']}
       invertX
     />
 
     <Triangle
-      color={({ theme }) => theme.secondaryLight}
+      color="secondaryLight"
       height={['8vh', '10vh']}
       width={['70vw', '40vw']}
       invertY
     />
 
     <Triangle
-      color={({ theme }) => theme.primaryDark}
+      color="primaryDark"
       height={['10vh', '15vh']}
       width={['100vw', '100vw']}
       invertX

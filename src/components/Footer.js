@@ -40,14 +40,14 @@ const Footer = () => (
       const { socialLinks } = footerQuery.landingInfoJson;
 
       return (
-        <Box p={[2, 3]} backgroundColor={({ theme }) => theme.primaryDark} id="footer">
+        <Box p={[2, 3]} backgroundColor='primaryDark' id="footer">
           <FooterContainer>
             <Fade left></Fade>
             <Flex>
               <Fade right>
                 {socialLinks.map(({ id, ...rest }) => (
                   <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
-                    <SocialLink {...rest} color={({ theme }) => theme.background} />
+                    <SocialLink {...rest} color='red' />
                   </Box>
                 ))}
               </Fade>

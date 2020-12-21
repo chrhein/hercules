@@ -5,11 +5,18 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 const Toggle = ({theme,  toggleTheme}) => {
     return (
       <DarkModeSwitch
-        style={{ marginBottom: '2rem' }}
+        style={
+          {
+            marginBottom: '-5px',
+            marginTop: '-4px',
+            marginLeft: '3px',
+            marginRight: '3px'
+          }
+        }
         checked={theme === "light"}
         onChange={toggleTheme}
-        moonColor={'black'}
-        sunColor={'white'}
+        sunColor={'#e2e6eb'}
+        moonColor={'#e2e6eb'}
       />
       );
 };

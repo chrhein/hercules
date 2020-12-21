@@ -3,8 +3,9 @@ import Headroom from 'react-headroom';
 import { Box, Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
-import RouteLink from './RouteLink';
+import RouteLink, { DarkToggler } from './RouteLink';
 import Toggle from './Toggler';
+import LinkAnimated from './LinkAnimated';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -13,8 +14,8 @@ const HeaderContainer = styled(Headroom)`
     transition: background-color 0.5s ease;
   }
   .headroom--pinned {
-    background-color: ${({ theme }) => theme.primaryDark};
-    color: ${({ theme }) => theme.text};
+    background-color: ${({ theme }) => theme.colors.primaryDark};
+    color: red;
   }
   position: absolute;
   width: 100%;
@@ -26,18 +27,18 @@ const formatLinks = (allLinks) =>
       const isHome = key === 'home';
       return isHome
         ? {
-            ...acc,
-            home: value,
-          }
+          ...acc,
+          home: value,
+        }
         : {
-            ...acc,
-            links: [...acc.links, { name: capitalize(key), value }],
-          };
+          ...acc,
+          links: [...acc.links, { name: capitalize(key), value }],
+        };
     },
     { links: [], home: null },
   );
 
-const Header = ({theme, themeToggler}) => (
+const Header = ({ theme, themeToggler }) => (
   <HeaderContainer>
     <Flex
       flexWrap="wrap"
@@ -50,12 +51,12 @@ const Header = ({theme, themeToggler}) => (
           const { home, links } = formatLinks(allLinks);
 
           const homeLink = home && (
-            <RouteLink
-              key={'home'}
-              onClick={home.onClick}
-              selected={home.isSelected}
-              name={'Home'}
-            />
+              <RouteLink
+                key={'home'}
+                onClick={home.onClick}
+                selected={home.isSelected}
+                name={'Home'}
+              />
           );
 
           const navLinks = links.map(({ name, value }) => (
@@ -67,18 +68,22 @@ const Header = ({theme, themeToggler}) => (
             />
           ));
 
+          /*
           const toggle = (
-            <Box ml={[2, 3]} color="background" fontSize={[2, 3]}>
-              <Toggle theme={theme} toggleTheme={themeToggler} />
+            <Box ml={[2, 3]} color='#e2e6eb' fontSize={[2, 3]}>
+              <LinkAnimated onClick={onClick} selected={selected} tabIndex={0}>
+                <Toggle theme={theme} toggleTheme={themeToggler} />
+              </LinkAnimated>
             </Box>
           );
+           */
 
           return (
             <Fragment>
               {homeLink}
               <Flex mr={[0, 3, 4]}>
                 {navLinks}
-                {toggle}
+                <DarkToggler theme={theme} toggle={themeToggler}/>
               </Flex>
             </Fragment>
           );

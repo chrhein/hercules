@@ -9,24 +9,23 @@ const Triangle = styled.div`
   ${(props) => {
     const border = `${props.width[0]} solid transparent;`;
     return props.invertX
-      ? `border-left: ${border}; right: 0;`
-      : `border-right: ${border};`;
+            ? `border-left: ${border}; right: 0;`
+            : `border-right: ${border};`;
   }}
 
   @media (min-width: 768px) and (min-width: 1199px) {
-    ${(props) => {
-      const color = props.theme.colors[props.color] || props.color;
-      const border = `${props.height[0]} solid ${color};`;
-      return props.invertY
-        ? `border-bottom: ${border}; bottom: 0;`
-        : `border-top: ${border};`;
-    }}
-  }
+  ${(props) => {
+    const color = props.theme.colors[props.color] || props.color;
+    const border = `${props.height[0]} solid ${color};`;
+    return props.invertY
+            ? `border-bottom: ${border}; bottom: 0;`
+            : `border-top: ${border};`;
+  }}
+}
 
   @media (min-width: 768px) and (max-width: 1199px) {
     ${(props) => {
-      let color = props.theme.colors[props.color] || props.color;
-      /*
+      let color;
       if (props.id == 'backgroundDarkOnTablet') {
         color = props.theme.colors['backgroundDark'] || 'backgroundDark';
       } else if (props.id == 'secondaryLightOnTablet') {
@@ -36,19 +35,16 @@ const Triangle = styled.div`
       } else {
         color = props.theme.colors[props.color] || props.color;
       }
-      
-       */
       const border = `${props.height[0]} solid ${color};`;
       return props.invertY
-        ? `border-bottom: ${border}; bottom: 0;`
-        : `border-top: ${border};`;
+              ? `border-bottom: ${border}; bottom: 0;`
+              : `border-top: ${border};`;
     }}
   }
 
   @media (max-width: 767px) {
     ${(props) => {
-      let color = props.theme.colors[props.color] || props.color;
-      /*
+      let color;
       if (props.id == 'secondaryLightOnTabletAndMobile') {
         color = props.theme.colors['secondaryLight'] || 'secondaryLight';
       } else if (props.id == 'backgroundDarkOnTablet') {
@@ -56,12 +52,10 @@ const Triangle = styled.div`
       } else {
         color = props.theme.colors[props.color] || props.color;
       }
-      
-       */
       const border = `${props.height[0]} solid ${color};`;
       return props.invertY
-        ? `border-bottom: ${border}; bottom: 0;`
-        : `border-top: ${border};`;
+              ? `border-bottom: ${border}; bottom: 0;`
+              : `border-top: ${border};`;
     }}
   }
 
@@ -69,16 +63,16 @@ const Triangle = styled.div`
     ${(props) => {
       const height = props.height[1];
       return props.invertY
-        ? `border-bottom-width: ${height};`
-        : `border-top-width: ${height};`;
+              ? `border-bottom-width: ${height};`
+              : `border-top-width: ${height};`;
     }}
 
-    ${(props) => {
-      const width = props.width[1];
-      return props.invertX
-        ? `border-left-width: ${width};`
-        : `border-right-width: ${width};`;
-    }};
+            ${(props) => {
+              const width = props.width[1];
+              return props.invertX
+                      ? `border-left-width: ${width};`
+                      : `border-right-width: ${width};`;
+            }};
   }
 `;
 

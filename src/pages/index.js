@@ -10,7 +10,7 @@ import { useDarkMode } from '../components/useDarkMode';
 
 
 const IndexPage = () => {
-  const [theme, themeToggler, mountedComponent] = useDarkMode();
+  const [theme, themeToggler] = useDarkMode();
 
   return (
     <Layout theme={theme}>

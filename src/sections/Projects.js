@@ -17,21 +17,21 @@ const Background = () => (
   <div>
     <Triangle
       id="backgroundDarkOnTablet"
-      color={({ theme }) => theme.secondaryLight}
+      color="secondaryLight"
       height={['80vh', '80vh']}
       width={['100vw', '100vw']}
       invertX
     />
 
     <Triangle
-      color={({ theme }) => theme.background}
+      color="background"
       height={['50vh', '20vh']}
       width={['50vw', '50vw']}
       invertX
     />
 
     <Triangle
-      color={({ theme }) => theme.primary}
+      color="primaryDark"
       height={['25vh', '40vh']}
       width={['75vw', '60vw']}
       invertX
@@ -40,13 +40,14 @@ const Background = () => (
 
     <Triangle
       id="secondaryLightOnTabletAndMobile"
-      color={({ theme }) => theme.backgroundDark}
+      color="backgroundDark"
       height={['25vh', '20vh']}
       width={['100vw', '100vw']}
       invertY
     />
   </div>
 );
+
 
 const CARD_HEIGHT = '200px';
 
@@ -150,12 +151,9 @@ const Project = ({
               />
             </Box>
           </Flex>
-          <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
+          <ImageSubtitle color="text" y="bottom" x="right" round>
             {type}
           </ImageSubtitle>
-          <Hide query={MEDIA_QUERY_SMALL}>
-            <ImageSubtitle bg="backgroundDark">{publishedDate}</ImageSubtitle>
-          </Hide>
         </ProjectTag>
       </ImageContainer>
     </Flex>

@@ -5,9 +5,17 @@ import LinkAnimated from './LinkAnimated';
 import Toggle from './Toggler';
 
 const RouteLink = ({ onClick, selected, name }) => (
-  <Box ml={[2, 3]} color="background" fontSize={[2, 3]}>
+  <Box ml={[2, 3]} color="#e2e6eb" fontSize={[2, 3]}>
     <LinkAnimated onClick={onClick} selected={selected} tabIndex={0}>
       {name}
+    </LinkAnimated>
+  </Box>
+);
+
+export const DarkToggler = ({ theme, toggle }) => (
+  <Box ml={[2, 3]} color="#e2e6eb" fontSize={[2, 3]}>
+    <LinkAnimated>
+      <Toggle theme={theme} toggleTheme={toggle} />
     </LinkAnimated>
   </Box>
 );

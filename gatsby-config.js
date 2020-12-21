@@ -1,4 +1,4 @@
-const colors = require('./colors');
+// const colors = require('./colors');
 const about = require('./about.json');
 
 require('dotenv').config();
@@ -13,8 +13,8 @@ const plugins = [
       name: 'Christian Hein',
       short_name: 'Christian Hein',
       start_url: '/',
-      background_color: colors.background,
-      theme_color: colors.primary,
+      // background_color: colors.background,
+      // theme_color: colors.primary,
       display: 'minimal-ui',
       icon: 'src/assets/images/ch.png',
     },

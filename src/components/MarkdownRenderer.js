@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const StyledLink = styled.a`
   display: inline-block;
   transition: color 250ms, text-shadow 250ms;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
   position: relative;
   text-decoration: none;
@@ -20,12 +20,12 @@ const StyledLink = styled.a`
     content: '';
     width: 100%;
     height: 3px;
-    background-color: ${({ theme }) => theme.primaryLight};
+    background-color: ${({ theme }) => theme.colors.primaryLight};
     transition: all 250ms;
   }
 
   &:hover {
-    color: white;
+    color: ${({ theme }) => theme.colors.background};
 
     &::after {
       height: 110%;

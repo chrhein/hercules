@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { ScrollingProvider } from 'react-scroll-section';
 import config from 'react-reveal/globals';
 import Helmet from './Helmet';
-import { GlobalStyles } from './Globalstyles';
-import { darkTheme, lightTheme } from './Theme';
+import { GlobalStyles } from '../styles/GlobalStyles';
+import { darkTheme, lightTheme } from '../styles/Theme';
 import { useDarkMode } from './useDarkMode';
 
 /*
@@ -50,7 +50,7 @@ const theme = {
 };
 */
 
-const Layout = ({ theme,  toggleTheme, children }) => {
+const Layout = ({ theme, children }) => {
   useEffect(() => {
     loadScript('https://use.fontawesome.com/fd58d214b9.js');
   }, []);

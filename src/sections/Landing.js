@@ -10,26 +10,26 @@ import Triangle from '../components/Triangle';
 const Background = () => (
   <div>
     <Triangle
-      color={({ theme }) => theme.backgroundDark}
+      color="backgroundDark"
       height={['35vh', '75vh']}
       width={['95vw', '60vw']}
     />
 
     <Triangle
-      color={({ theme }) => theme.secondary}
+      color="secondary"
       height={['38vh', '80vh']}
       width={['50vw', '35vw']}
     />
 
     <Triangle
-      color={({ theme }) => theme.primaryDark}
+      color="primaryDark"
       height={['25vh', '35vh']}
       width={['75vw', '60vw']}
       invertX
     />
 
     <Triangle
-      color={({ theme }) => theme.backgroundDark}
+      color="backgroundDark"
       height={['20vh', '20vh']}
       width={['100vw', '100vw']}
       invertX
@@ -38,11 +38,12 @@ const Background = () => (
   </div>
 );
 
+
 const Delay = styled.div`
-  @include fade-in('5000ms');
-  @mixin fade-in($waitTime) {
-    animation: wait #{$waitTime}, fade-in 1000ms #{$waitTime};
-  }
+@include fade-in('5000ms');
+@mixin fade-in($waitTime) {
+  animation: wait #{$waitTime}, fade-in 1000ms #{$waitTime};
+}
 
   @keyframes wait {
     0% {
@@ -90,7 +91,7 @@ const LandingPage = () => (
             <Heading
               textAlign="center"
               as="h1"
-              color={({ theme }) => theme.primary}
+              color='primary'
               fontSize={[5, 7]}
               mb={[3, 4, 5]}
             >
@@ -99,7 +100,7 @@ const LandingPage = () => (
 
             <Heading
               as="h2"
-              color={({ theme }) => theme.primaryLight}
+              color='primaryLight'
               fontSize={[3, 5]}
               mb={[3, 5]}
               textAlign="center"
@@ -109,10 +110,10 @@ const LandingPage = () => (
                 {roles
                   .sort(() => fixedOrder || Math.random() - 0.5)
                   .map((text) => (
-                  <Text width={[300, 500]} key={text}>
-                    {text}
-                  </Text>
-                ))}
+                    <Text width={[300, 500]} key={text}>
+                      {text}
+                    </Text>
+                  ))}
               </TextLoop>
             </Heading>
 
