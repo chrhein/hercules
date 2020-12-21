@@ -18,7 +18,7 @@ const IndexPage = () => {
       <Landing />
       <About />
       <Projects />
-      <CV />
+      <CV theme={theme} />
       <Footer />
     </Layout>
   );

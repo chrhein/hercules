@@ -8,11 +8,11 @@ import 'tippy.js/dist/tippy.css'; // eslint-disable-line
 
 const IconLink = styled(Link)`
   transition: color 0.5s;
-  color: ${({ theme }) => theme.colors.primaryLight};
+  color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.secondaryDark};
+    color: ${({ theme }) => theme.colors.projectIcon};
   }
 `;
 

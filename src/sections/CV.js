@@ -7,6 +7,7 @@ import Triangle from '../components/Triangle';
 import Education from '../cv/Education';
 import Experience from '../cv/Experience';
 import VolunteerEx from '../cv/VolunteerEx';
+import { darkTheme, lightTheme } from '../styles/Theme';
 
 import Aircraft from '../assets/svgs/aircraft';
 import Clouds from '../assets/svgs/clouds';
@@ -73,18 +74,25 @@ const Background = () => (
   </div>
 );
 
-function CV() {
+function CV( {theme} ) {
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
     <Section.Container id="CV" Background={Background}>
       <Section.Header name="CV" icon="👨🏻‍🎓" label="person" />
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
         <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
           <StyledParagraph>
+            <Fade>
             <Education />
+            </Fade>
             <br />
+            <Fade>
             <Experience />
+            </Fade>
             <br />
+            <Fade>
             <VolunteerEx />
+            </Fade>
             <br />
           </StyledParagraph>
         </Box>
@@ -94,11 +102,14 @@ function CV() {
         >
           <SvgWrapper>
             <CloudDiv>
-              <Clouds />
+              <Clouds cloudColor={themeMode.colors.clouds}/>
             </CloudDiv>
             <AircraftDiv>
               <Fade right>
-                <Aircraft />
+                <Aircraft
+                  airplaneColor={themeMode.colors.airplane}
+                  airplaneBottomColor={themeMode.colors.airplaneBottom}
+                />
               </Fade>
             </AircraftDiv>
           </SvgWrapper>

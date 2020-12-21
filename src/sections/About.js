@@ -58,7 +58,7 @@ const About = () => (
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
-              <Fade bottom>
+              <Fade>
                 <ReactMarkdown
                   source={aboutQuery.markdownRemark.rawMarkdownBody}
                   renderers={markdownRenderer}
@@ -70,7 +70,7 @@ const About = () => (
               width={[1, 1, 2 / 6]}
               style={{ maxWidth: '300px', margin: 'auto' }}
             >
-              <Fade right>
+              <Fade>
                 <ProfilePicture
                   src={require('../assets/images/pb.png')}
                   alt={'Christian Hein'}

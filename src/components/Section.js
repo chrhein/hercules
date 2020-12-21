@@ -5,6 +5,7 @@ import { Heading } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
 import Slide from 'react-reveal/Slide';
 import LinkAnimated from './LinkAnimated';
+import Fade from 'react-reveal/Fade';
 
 const SectionContainer = styled.div`
   min-height: 100vh;
@@ -39,8 +40,8 @@ Container.propTypes = {
 };
 
 const Header = ({ name, icon = '', label = '' }) => (
-  <Slide left>
-    <Heading color="secondaryDark" mb={4}>
+  <Fade>
+    <Heading color="heading" mb={4}>
       <LinkAnimated selected>
         {name}
         {icon && (
@@ -50,7 +51,7 @@ const Header = ({ name, icon = '', label = '' }) => (
         )}
       </LinkAnimated>
     </Heading>
-  </Slide>
+  </Fade>
 );
 
 Header.propTypes = {

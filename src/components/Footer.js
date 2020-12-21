@@ -42,9 +42,9 @@ const Footer = () => (
       return (
         <Box p={[2, 3]} backgroundColor='primaryDark' id="footer">
           <FooterContainer>
-            <Fade left></Fade>
+            <Fade></Fade>
             <Flex>
-              <Fade right>
+              <Fade>
                 {socialLinks.map(({ id, ...rest }) => (
                   <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
                     <SocialLink {...rest} color='red' />

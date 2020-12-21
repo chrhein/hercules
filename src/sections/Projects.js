@@ -112,7 +112,6 @@ const Project = ({
                    projectUrl,
                    repositoryUrl,
                    type,
-                   publishedDate,
                    logo,
                  }) => (
   <Card p={0}>
@@ -138,16 +137,18 @@ const Project = ({
           >
             <Box mx={1} fontSize={5}>
               <SocialLink
-                name="Check repository"
+                name="Github repository"
                 fontAwesomeIcon="github"
                 url={repositoryUrl}
+                color='white'
               />
             </Box>
             <Box mx={1} fontSize={5}>
               <SocialLink
-                name="See project"
+                name="Live demo"
                 fontAwesomeIcon="globe"
                 url={projectUrl}
+                color={'white'}
               />
             </Box>
           </Flex>
@@ -203,7 +204,7 @@ const Projects = () => (
       render={({ contentfulAbout }) => (
         <CardContainer minWidth="350px">
           {contentfulAbout.projects.map((p, i) => (
-            <Fade bottom delay={i * 200} key={p.id}>
+            <Fade delay={i * 200} key={p.id}>
               <Project {...p} />
             </Fade>
           ))}

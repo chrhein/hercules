@@ -15,7 +15,8 @@ const HeaderContainer = styled(Headroom)`
   }
   .headroom--pinned {
     background-color: ${({ theme }) => theme.colors.primaryDark};
-    color: red;
+    color: ${({ theme }) => theme.colors.text};
+    margin-top: -2px;
   }
   position: absolute;
   width: 100%;
@@ -82,8 +83,8 @@ const Header = ({ theme, themeToggler }) => (
             <Fragment>
               {homeLink}
               <Flex mr={[0, 3, 4]}>
-                {navLinks}
                 <DarkToggler theme={theme} toggle={themeToggler}/>
+                {navLinks}
               </Flex>
             </Fragment>
           );
