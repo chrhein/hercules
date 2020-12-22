@@ -10,6 +10,7 @@ import SocialLink from '../components/SocialLink';
 import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
 import { LayoutIcon } from '../assets/svgs/Icons';
+import { darkTheme, lightTheme } from '../styles/Theme';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
@@ -58,9 +59,6 @@ const Title = styled(Text)`
   display: table;
   border-bottom: ${({ theme }) => theme.secondary}
 }
-
-2
-px solid
 
 ;
 `;
@@ -124,59 +122,65 @@ const ProjectTag = styled.div`
 `;
 
 const Project = ({
+                   theme,
                    name,
                    description,
                    projectUrl,
                    repositoryUrl,
                    type,
                    logo,
-                 }) => (
-  <Card p={0}>
-    <Flex style={{ height: CARD_HEIGHT }}>
-      <TextContainer>
+                 }) => {
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  return (
+    <Card p={0}>
+      <Flex style={{ height: CARD_HEIGHT }}>
+        <TextContainer>
         <span>
           <Title my={2} pb={1} color="text">
             {name}
           </Title>
         </span>
-        <Text width={[1]} style={{ overflow: 'auto' }} color="text">
-          {description}
-        </Text>
-      </TextContainer>
+          <Text width={[1]} style={{ overflow: 'auto' }} color="primary">
+            {description}
+          </Text>
+        </TextContainer>
 
-      <ImageContainer>
-        <ProjectSVG>
-          <LayoutIcon />
-        </ProjectSVG>
-        <ProjectTag>
-          <Flex
-            style={{
-              float: 'right',
-            }}
-          >
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="Github repository"
-                fontAwesomeIcon="github"
-                url={repositoryUrl}
-              />
-            </Box>
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="Live demo"
-                fontAwesomeIcon="globe"
-                url={projectUrl}
-              />
-            </Box>
-          </Flex>
-          <ImageSubtitle color="button" y="bottom" x="right" round='true'>
-            {type}
-          </ImageSubtitle>
-        </ProjectTag>
-      </ImageContainer>
-    </Flex>
-  </Card>
-);
+        <ImageContainer>
+          <ProjectSVG>
+            <LayoutIcon
+              color={themeMode.colors.projectIcon}
+            />
+          </ProjectSVG>
+          <ProjectTag>
+            <Flex
+              style={{
+                float: 'right',
+              }}
+            >
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name="Github repository"
+                  fontAwesomeIcon="github"
+                  url={repositoryUrl}
+                />
+              </Box>
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name="Live demo"
+                  fontAwesomeIcon="globe"
+                  url={projectUrl}
+                />
+              </Box>
+            </Flex>
+            <ImageSubtitle color="button" y="bottom" x="right" round>
+              {type}
+            </ImageSubtitle>
+          </ProjectTag>
+        </ImageContainer>
+      </Flex>
+    </Card>
+  );
+};
 
 Project.propTypes = {
   name: PropTypes.string.isRequired,
@@ -193,7 +197,7 @@ Project.propTypes = {
   }).isRequired,
 };
 
-const Projects = () => (
+const Projects = ({ theme }) => (
   <Section.Container id="projects" Background={Background}>
     <Section.Header name="Projects" icon="💻" label="notebook" />
     <StaticQuery
@@ -222,7 +226,7 @@ const Projects = () => (
         <CardContainer minWidth="350px">
           {contentfulAbout.projects.map((p, i) => (
             <Fade delay={i * 200} key={p.id}>
-              <Project {...p} />
+              <Project theme={theme} {...p} />
             </Fade>
           ))}
         </CardContainer>

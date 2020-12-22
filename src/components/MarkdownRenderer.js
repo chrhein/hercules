@@ -37,7 +37,7 @@ const StyledLink = styled.a`
 const MarkdownParagraph = styled.p`
   line-height: 2em;
   &:first-child {
-    margin-top: 0em;
+    margin-top: 0;
   }
 `;
 
