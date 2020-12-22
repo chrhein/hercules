@@ -10,7 +10,7 @@ const Toggle = ({theme,  toggleTheme}) => {
             marginBottom: '-5px',
             marginTop: '-4px',
             marginLeft: '3px',
-            marginRight: '3px'
+            marginRight: '3px',
           }
         }
         checked={theme === "light"}

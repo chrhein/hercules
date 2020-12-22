@@ -1,6 +1,53 @@
 import React from 'react';
 
-const Clouds = (theme) => (
+const Airplane = (theme) => (
+  <svg
+    id="b8eef085-bbb0-4c81-9a53-f8aa424b48dc"
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    width="inherit"
+    height="inherit"
+    viewBox="0 0 1063.13 672.74"
+  >
+    <title>aircraft</title>
+    <path
+      d="M928.08,510.29c-9.77,3.6-26.93,6.56-46.79,8.94-54,6.48-128,8.78-128,8.78S372.88,559.56,87.77,442.22c0,0-41.47-21.74-3-51a125.29,125.29,0,0,1,18.82-11.48l.47-.47a99.89,99.89,0,0,1,14.13-10.89c14.77-9.55,39.71-20.87,70.07-15.74L937.08,473.75S964.43,496.86,928.08,510.29Z"
+      transform="translate(-68.44 -113.63)"
+      fill={theme.airplaneColor}
+    />
+    <path
+      d="M778.88,455.4,935.64,344.18l69.09,11.95L937.08,473.75S780.68,475,778.88,455.4Z"
+      transform="translate(-68.44 -113.63)"
+      fill={theme.airplaneColor}
+    />
+    <polygon
+      points="315.78 274.2 628.03 186.63 678.36 197.15 537.31 260.6 493.23 309.92 315.78 274.2"
+      fill={theme.airplaneColor}
+    />
+    <path
+      d="M881.29,519.23c-54,6.48-128,8.78-128,8.78S372.88,559.56,87.77,442.22c0,0-41.47-21.74-3-51l.13.54s61.52,41.58,355.46,76.29Z"
+      transform="translate(-68.44 -113.63)"
+      fill={theme.airplaneBottomColor}
+    />
+    <path
+      d="M831.1,516.83l139.6,57,35.07-3.89-83.5-62.76S821.27,485.63,831.1,516.83Z"
+      transform="translate(-68.44 -113.63)"
+      fill={theme.airplaneColor}
+    />
+    <path
+      d="M135.52,397.85c-6.66.11-21.92-11.06-31.41-18.58a99.89,99.89,0,0,1,14.13-10.89c7.65,5.87,21.26,15.37,28.83,15C158,382.93,145.55,397.67,135.52,397.85Z"
+      transform="translate(-68.44 -113.63)"
+      fill="#0d1418"
+    />
+    <path
+      d="M769.73,713.86l-89.63,4.69-252-169.92-46.78-31.55L358.6,501.75c42.63-36,216.56,13.65,216.56,13.65,3.33,2.81,4.39,7.48,4.24,12.64-.29,9.66-4.83,21-6.58,25.08-.42,1-.68,1.53-.68,1.53Z"
+      transform="translate(-68.44 -113.63)"
+      fill={theme.airplaneColor}
+    />
+  </svg>
+);
+
+export const Clouds = (theme) => (
   <svg
     id="b8eef085-bbb0-4c81-9a53-f8aa424b48dc"
     data-name="Layer 1"
@@ -89,4 +136,54 @@ const Clouds = (theme) => (
   </svg>
 );
 
-export default Clouds;
+export const CodeIcon = (theme) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="inherit"
+    height="inherit"
+    fill="none"
+    stroke={theme.airplaneColor}
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    className="feather feather-code">
+    <polyline points="16 18 22 12 16 6" />
+    <polyline points="8 6 2 12 8 18" />
+  </svg>
+);
+
+export const LayoutIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="auto"
+    height="auto"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#7c7d7d"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    className="feather feather-layout">
+    <rect
+      x="3"
+      y="3"
+      width="18"
+      height="18"
+      rx="2"
+      ry="2"
+    />
+    <line
+      x1="3"
+      y1="9"
+      x2="21"
+      y2="9"
+    />
+    <line
+      x1="9"
+      y1="21"
+      x2="9"
+      y2="9"
+    />
+  </svg>
+);
+
+export default Airplane;

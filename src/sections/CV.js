@@ -9,8 +9,7 @@ import Experience from '../cv/Experience';
 import VolunteerEx from '../cv/VolunteerEx';
 import { darkTheme, lightTheme } from '../styles/Theme';
 
-import Aircraft from '../assets/svgs/aircraft';
-import Clouds from '../assets/svgs/clouds';
+import Airplane, { Clouds } from '../assets/svgs/Icons';
 
 const StyledParagraph = styled.p`
   line-height: 2em;
@@ -106,7 +105,7 @@ function CV( {theme} ) {
             </CloudDiv>
             <AircraftDiv>
               <Fade right>
-                <Aircraft
+                <Airplane
                   airplaneColor={themeMode.colors.airplane}
                   airplaneBottomColor={themeMode.colors.airplaneBottom}
                 />

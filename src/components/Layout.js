@@ -8,26 +8,6 @@ import { GlobalStyles } from '../styles/GlobalStyles';
 import { darkTheme, lightTheme } from '../styles/Theme';
 import { useDarkMode } from './useDarkMode';
 
-/*
-const GlobalStyle = createGlobalStyle`
-  *,
-  *::after,
-  *::before { 
-    box-sizing: inherit;
-    }
-
-  body {
-    box-sizing: border-box; 
-    margin: 0;
-    font-family: Cabin, 'Open Sans', sans-serif;
-    overflow-x: hidden;
-    width: 100vw;
-    background: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.text};
-  }
-`;
-*/
-
 config({ ssrFadeout: true });
 
 const loadScript = (src) => {
@@ -37,25 +17,13 @@ const loadScript = (src) => {
 
   document.getElementsByTagName('body')[0].appendChild(tag);
 };
-
-/*
-const theme = {
-  ...preset,
-  colors,
-  fonts: {
-    body: 'Cabin, Open Sans, sans-serif',
-    heading: 'inherit',
-    monospace: 'monospace',
-  },
-};
-*/
-
-const Layout = ({ theme, children }) => {
+const Layout = ({ theme, mountedComponent, children }) => {
   useEffect(() => {
     loadScript('https://use.fontawesome.com/fd58d214b9.js');
   }, []);
 
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  if(!mountedComponent) return <div/>
   return (
     <main>
       <ThemeProvider theme={themeMode}>
@@ -72,5 +40,4 @@ const Layout = ({ theme, children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
 export default Layout;

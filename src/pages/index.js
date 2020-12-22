@@ -10,14 +10,15 @@ import { useDarkMode } from '../components/useDarkMode';
 
 
 const IndexPage = () => {
-  const [theme, themeToggler] = useDarkMode();
+  const [theme, themeToggler, mountedComponent] = useDarkMode();
+
 
   return (
-    <Layout theme={theme}>
+    <Layout theme={theme} mountedComponent={mountedComponent}>
       <Header theme={theme} themeToggler={themeToggler} />
       <Landing />
       <About />
-      <Projects />
+      <Projects theme={theme} />
       <CV theme={theme} />
       <Footer />
     </Layout>

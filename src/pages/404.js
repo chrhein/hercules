@@ -30,44 +30,19 @@ const Background = () => (
   </div>
 );
 
-const LoadingTrailingDots = styled.div`
-    .appendMovingDots:after {
-        content: ' .';
-        animation: dots 3s steps(1, end) infinite;
-    }
-    @keyframes dots {
-        0%, 20% {
-            opacity: 0;
-        }
-        40% {
-            opacity: 1;
-        }
-        60% {
-            text-shadow: .5em 0;
-        }
-        80% {
-            text-shadow: .5em 0, 1em 0;
-        }
-        100% {
-            text-shadow: .5em 0, 1em 0;
-        }
-`;
-
 const NotFoundPage = () => (
   <Layout>
     <Section.Container id="404" Background={Background}>
       <Box width={[320, 400, 600]} m="auto">
         <Heading
-          color="primaryDark"
+          color="heading"
           fontSize={['8rem', '12rem', '14rem']}
           as="h1"
         >
           404
         </Heading>
-        <Heading color="secondary" fontSize={['4rem', '5rem', '6rem']} as="h2">
-          <LoadingTrailingDots>
-            <span className="appendMovingDots">Something went wrong</span>
-          </LoadingTrailingDots>
+        <Heading color="text" fontSize={['4rem', '5rem', '6rem']} as="h2">
+          <span className="appendMovingDots">Something went wrong</span>
         </Heading>
       </Box>
     </Section.Container>

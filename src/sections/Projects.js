@@ -9,7 +9,7 @@ import { Card, CardContainer } from '../components/Card';
 import SocialLink from '../components/SocialLink';
 import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
-import Hide from '../components/Hide';
+import { LayoutIcon } from '../assets/svgs/Icons';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
@@ -56,7 +56,13 @@ const Title = styled(Text)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${({ theme }) => theme.secondary}} 2px solid;
+  border-bottom: ${({ theme }) => theme.secondary}
+}
+
+2
+px solid
+
+;
 `;
 
 const TextContainer = styled.div`
@@ -94,12 +100,23 @@ const ProjectImage = styled(Image)`
   }
 `;
 
+const ProjectSVG = styled.div`
+  width: ${CARD_HEIGHT};
+  height: ${CARD_HEIGHT};
+  padding: 40px;
+  margin-top: 0px;
+
+  ${MEDIA_QUERY_SMALL} {
+    height: calc(${CARD_HEIGHT} / 2);
+    width: calc(${CARD_HEIGHT} / 2);
+    margin-top: calc(${CARD_HEIGHT} / 4);
+    padding: 10px;
+`;
+
 const ProjectTag = styled.div`
   position: relative;
   height: ${CARD_HEIGHT};
-  top: calc(
-    -${CARD_HEIGHT} - 3.5px
-  ); /*don't know why I have to add 3.5px here ... */
+  top: calc(-${CARD_HEIGHT} - 3.5px);
 
   ${MEDIA_QUERY_SMALL} {
     top: calc(-${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
@@ -128,7 +145,9 @@ const Project = ({
       </TextContainer>
 
       <ImageContainer>
-        <ProjectImage src={logo.image.src} alt={logo.title} />
+        <ProjectSVG>
+          <LayoutIcon />
+        </ProjectSVG>
         <ProjectTag>
           <Flex
             style={{
@@ -140,7 +159,6 @@ const Project = ({
                 name="Github repository"
                 fontAwesomeIcon="github"
                 url={repositoryUrl}
-                color='white'
               />
             </Box>
             <Box mx={1} fontSize={5}>
@@ -148,11 +166,10 @@ const Project = ({
                 name="Live demo"
                 fontAwesomeIcon="globe"
                 url={projectUrl}
-                color={'white'}
               />
             </Box>
           </Flex>
-          <ImageSubtitle color="text" y="bottom" x="right" round>
+          <ImageSubtitle color="button" y="bottom" x="right" round='true'>
             {type}
           </ImageSubtitle>
         </ProjectTag>

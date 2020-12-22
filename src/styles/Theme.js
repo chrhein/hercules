@@ -20,6 +20,9 @@ export const lightTheme = {
     projectCard: '#f0f7f8',
     projectIcon: '#727679',
 
+    button: '#737a7e',
+    buttonHover: '#05828e',
+
     airplane: '#69b4bb',
     airplaneBottom: '#034e55',
     clouds: '#f2f2f2',
@@ -49,6 +52,9 @@ export const darkTheme = {
 
     projectCard: '#14181c',
     projectIcon: '#f9fafb',
+
+    button: '#c7c8c8',
+    buttonHover: '#7c7d7d',
 
     airplane: '#293138',
     airplaneBottom: '#10181e',
