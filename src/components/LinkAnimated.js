@@ -11,7 +11,7 @@ const LinkAnimated = styled.span`
           `border-bottom:  4px solid ${props.theme.colors.button}`};
   transition: 0.4s;
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
-  
+
 
   &:after {
     content: '';

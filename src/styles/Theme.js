@@ -26,13 +26,20 @@ export const lightTheme = {
     airplane: '#69b4bb',
     airplaneBottom: '#034e55',
     clouds: '#f2f2f2',
+
+    resumeTitle: '#737a7e',
+    resumeHeader: '#07090f',
+    resumeInfo: '#05828e',
+    resumeParagraph: '#737a7e',
+    resumeDivider: '#727679',
+    resumePhotoBorder: '#727679',
   },
   fonts: {
     body: 'Cabin, Open Sans, sans-serif',
     heading: 'inherit',
     monospace: 'monospace',
   },
-}
+};
 export const darkTheme = {
   ...preset,
   colors: {
@@ -59,6 +66,14 @@ export const darkTheme = {
     airplane: '#293138',
     airplaneBottom: '#10181e',
     clouds: '#ffffff',
+
+    resumeTitle: '#7c7d7d',
+    resumeHeader: '#f3f5f7',
+    resumeInfo: '#a4b6c3',
+    resumeParagraph: '#f9fafb',
+    resumeDivider: '#293138',
+    resumePhotoBorder: '#7c7d7d',
+
   },
 
   fonts: {
@@ -66,4 +81,4 @@ export const darkTheme = {
     heading: 'inherit',
     monospace: 'monospace',
   },
-}
+};

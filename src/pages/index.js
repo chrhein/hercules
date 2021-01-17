@@ -4,9 +4,9 @@ import Landing from '../sections/Landing';
 import About from '../sections/About';
 import Projects from '../sections/Projects';
 import Header from '../components/Header';
-import CV from '../sections/CV';
 import Footer from '../components/Footer';
 import { useDarkMode } from '../components/useDarkMode';
+import Resume from '../sections/Resume';
 
 
 const IndexPage = () => {
@@ -19,7 +19,7 @@ const IndexPage = () => {
       <Landing />
       <About />
       <Projects theme={theme} />
-      <CV theme={theme} />
+      <Resume theme={theme} />
       <Footer />
     </Layout>
   );
