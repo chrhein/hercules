@@ -16,28 +16,28 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
   }
-  
+
   .resumeTitle {
     color: ${({ theme }) => theme.colors.resumeTitle};
-    font-weight: 100;  
+    font-weight: 100;
     // text-transform: uppercase;
     font-size: x-large;
     // text-align: right;
   }
-  
+
   .resumeHeader {
     color: ${({ theme }) => theme.colors.resumeHeader};
     margin-top: 28px;
   }
-  
+
   .resumeParagraph {
     color: ${({ theme }) => theme.colors.resumeParagraph};
   }
-  
+
   .info {
     color: ${({ theme }) => theme.colors.resumeInfo};
   }
-  
+
   a {
     text-decoration: none;
     position: relative;

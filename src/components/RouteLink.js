@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex } from 'rebass/styled-components';
+import { Box } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
 import LinkAnimated from './LinkAnimated';
 import Toggle from './Toggler';

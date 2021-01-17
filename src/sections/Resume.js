@@ -1,15 +1,14 @@
 import React from 'react';
 import { Flex, Image } from 'rebass/styled-components';
+import PropTypes from 'prop-types';
+import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
 import Triangle from '../components/Triangle';
 import Section from '../components/Section';
 import Education from '../data/resume-pages/Education';
-import FormattedResume from '../components/ResumeFormatter';
 import Experience from '../data/resume-pages/Experience';
-import Fade from 'react-reveal/Fade';
-import styled from 'styled-components';
 import VolunteerExperience from '../data/resume-pages/VolunteerExperience';
 import { darkTheme, lightTheme } from '../styles/Theme';
-import PropTypes from 'prop-types';
 import Airplane, { Clouds } from '../assets/svgs/Icons';
 
 const Background = () => (
@@ -47,10 +46,11 @@ const ProfilePicture = styled(Image)`
   margin-right: auto;
   border-radius: 50%;
   transition: all 0.25s ease-out;
-  border: solid 2px ${({ theme }) => theme.colors.resumePhotoBorder};
+  border: solid 4px ${({ theme }) => theme.colors.resumePhotoBorder};
 
   &:hover {
-    border-radius: 20%;
+    // border-radius: 20%;
+    border: solid 10px ${({ theme }) => theme.colors.resumePhotoBorder};
   }
 `;
 
@@ -59,7 +59,7 @@ const AircraftDiv = styled.div`
   position: absolute;
   left: 10%;
   right: -10%;
-  z-index: 0;  
+  z-index: 0;
   height: 100%;
   @media (max-width: 1026px) {
     bottom: 13%;
@@ -93,9 +93,7 @@ function Resume({ theme }) {
   return (
     <Section.Container id="Resume" Background={Background}>
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-        <FormattedResume
-          resumeHeaderColor={themeMode.colors.airplane}
-        >
+        <div>
           <Fade>
             <ProfilePicture
               src={require('../assets/images/cv-pb-sq.png')}
@@ -120,7 +118,7 @@ function Resume({ theme }) {
             </AircraftDiv>
           </SvgWrapper>
 
-        </FormattedResume>
+        </div>
       </Flex>
     </Section.Container>
   );

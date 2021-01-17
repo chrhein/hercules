@@ -39,7 +39,7 @@ export const lightTheme = {
     heading: 'inherit',
     monospace: 'monospace',
   },
-}
+};
 export const darkTheme = {
   ...preset,
   colors: {
@@ -72,7 +72,7 @@ export const darkTheme = {
     resumeInfo: '#a4b6c3',
     resumeParagraph: '#f9fafb',
     resumeDivider: '#293138',
-    resumePhotoBorder: '#101316',
+    resumePhotoBorder: '#7c7d7d',
 
   },
 
@@ -81,4 +81,4 @@ export const darkTheme = {
     heading: 'inherit',
     monospace: 'monospace',
   },
-}
+};

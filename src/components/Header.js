@@ -1,11 +1,9 @@
 import React, { Fragment } from 'react';
 import Headroom from 'react-headroom';
-import { Box, Flex } from 'rebass/styled-components';
+import { Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { SectionLinks } from 'react-scroll-section';
 import RouteLink, { DarkToggler } from './RouteLink';
-import Toggle from './Toggler';
-import LinkAnimated from './LinkAnimated';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -13,11 +11,13 @@ const HeaderContainer = styled(Headroom)`
   * {
     transition: background-color 0.5s ease;
   }
+
   .headroom--pinned {
     background-color: ${({ theme }) => theme.colors.primaryDark};
     color: ${({ theme }) => theme.colors.text};
     margin-top: -2px;
   }
+
   position: absolute;
   width: 100%;
 `;
@@ -52,12 +52,12 @@ const Header = ({ theme, themeToggler }) => (
           const { home, links } = formatLinks(allLinks);
 
           const homeLink = home && (
-              <RouteLink
-                key={'home'}
-                onClick={home.onClick}
-                selected={home.isSelected}
-                name={'Home'}
-              />
+            <RouteLink
+              key={'home'}
+              onClick={home.onClick}
+              selected={home.isSelected}
+              name={'Home'}
+            />
           );
 
           const navLinks = links.map(({ name, value }) => (
@@ -83,7 +83,7 @@ const Header = ({ theme, themeToggler }) => (
             <Fragment>
               {homeLink}
               <Flex mr={[0, 3, 4]}>
-                <DarkToggler theme={theme} toggle={themeToggler}/>
+                <DarkToggler theme={theme} toggle={themeToggler} />
                 {navLinks}
               </Flex>
             </Fragment>

@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// Might be implemented later
 const Skills = () => (
   <div className="row skill">
     <div className="three columns header-col">

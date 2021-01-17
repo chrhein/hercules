@@ -19,7 +19,8 @@ const Education = () => (
           </p>
 
           <p className="resumeParagraph">
-            A Master&apos;s Degree that results in great knowledge and advanced skills in visualization, computer graphics, and interactive techniques, as well as good skills in related programming.
+            A Master&apos;s Degree that results in great knowledge and advanced skills in visualization, computer
+            graphics, and interactive techniques, as well as good skills in related programming.
           </p>
         </div>
       </div>
@@ -34,7 +35,8 @@ const Education = () => (
           </p>
 
           <p className="resumeParagraph">
-            The Bachelor&apos;s Degree included both the general Computer Science subjects offered by the University of Bergen, as well as a specialization in Computer Security.
+            The Bachelor&apos;s Degree included both the general Computer Science subjects offered by the University of
+            Bergen, as well as a specialization in Computer Security.
           </p>
         </div>
       </div>
@@ -48,7 +50,8 @@ const Education = () => (
           </p>
 
           <p className="resumeParagraph">
-            Worked as an operator in an alarm central at Ørland Air Station, in shifts of 12 hours a day, 14 days in a row.
+            Worked as an operator in an alarm central at Ørland Air Station, in shifts of 12 hours a day, 14 days in a
+            row.
           </p>
         </div>
       </div>
