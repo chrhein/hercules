@@ -1,11 +1,14 @@
 import React from 'react';
-import { Flex } from 'rebass/styled-components';
+import { Box, Flex, Image } from 'rebass/styled-components';
 import Triangle from '../components/Triangle';
 import Section from '../components/Section';
 import Education from '../data/resume-pages/Education';
 import FormattedResume from '../components/ResumeFormatter';
 import Experience from '../data/resume-pages/Experience';
-import Volunteer from '../data/resume-pages/Volunteer';
+import Skills from '../data/resume-pages/Skills';
+import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
+import VolunteerExperience from '../data/resume-pages/VolunteerExperience';
 
 const Background = () => (
   <div>
@@ -34,16 +37,40 @@ const Background = () => (
   </div>
 );
 
+const ProfilePicture = styled(Image)`
+  margin-top: 25px;
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  transition: all 0.25s ease-out;
+  border: solid 3px red;
+
+  &:hover {
+    border-radius: 20%;
+  }
+`;
+
 
 function Resume({ theme }) {
   // const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
     <Section.Container id="Resume" Background={Background}>
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+
+
+
         <FormattedResume>
+          <Fade>
+            <ProfilePicture
+              src={require('../assets/images/cv-pb-sq.png')}
+              alt={'Christian Hein'}
+            />
+          </Fade>
           <Education />
           <Experience />
-          <Volunteer />
+          <VolunteerExperience />
         </FormattedResume>
       </Flex>
     </Section.Container>

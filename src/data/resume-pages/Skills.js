@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Volunteer = () => (
+const Skills = () => (
   <div className="row skill">
     <div className="three columns header-col">
       <h1>
@@ -50,4 +50,4 @@ const Volunteer = () => (
   </div>
 );
 
-export default Volunteer;
+export default Skills;

@@ -591,12 +591,16 @@ const FormattedResume = styled.div`
     padding-bottom: 24px;
     border-bottom: 1px solid #e8e8e8;
   }
+  
+  .volunteer {
+    margin-bottom: 100px;
+  }
 
   /*----------------------------------------------*/
   /*\tSkill Bars
   /*----------------------------------------------*/
 
-  .bars {
+  .bars{
     width: 95%;
     float: left;
     padding: 0;
