@@ -19,7 +19,7 @@ const IndexPage = () => {
       <Landing />
       <About />
       <Projects theme={theme} />
-      <Resume />
+      <Resume theme={theme} />
       <Footer />
     </Layout>
   );
