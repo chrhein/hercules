@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { Box, Flex, Heading, Text } from 'rebass/styled-components';
 import TextLoop from 'react-text-loop';
-import styled from 'styled-components';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
 import Triangle from '../components/Triangle';
@@ -38,31 +37,6 @@ const Background = () => (
   </div>
 );
 
-
-const Delay = styled.div`
-@include fade-in('5000ms');
-@mixin fade-in($waitTime) {
-  animation: wait #{$waitTime}, fade-in 1000ms #{$waitTime};
-}
-
-  @keyframes wait {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
 
 const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 

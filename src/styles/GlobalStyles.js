@@ -1,11 +1,12 @@
-import { createGlobalStyle} from "styled-components"
+import { createGlobalStyle } from 'styled-components';
+
 export const GlobalStyles = createGlobalStyle`
   *,
   *::after,
   *::before {
     box-sizing: inherit;
   }
-  
+
   body {
     box-sizing: border-box;
     margin: 0;
@@ -15,4 +16,4 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
   }
-  `
+`;
