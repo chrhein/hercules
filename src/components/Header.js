@@ -9,17 +9,18 @@ const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
   * {
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
   }
 
-  .headroom--pinned {
+  .headroom--pinned, .headroom--unpinned, .headroom--scrolled{
     background-color: ${({ theme }) => theme.colors.primaryDark};
     color: ${({ theme }) => theme.colors.text};
-    margin-top: -2px;
   }
 
-  position: absolute;
+  
+  position: fixed;
   width: 100%;
+  z-index: 1;
 `;
 
 const formatLinks = (allLinks) =>
@@ -40,7 +41,7 @@ const formatLinks = (allLinks) =>
   );
 
 const Header = ({ theme, themeToggler }) => (
-  <HeaderContainer>
+  <HeaderContainer disableInlineStyles upTolerance={500}>
     <Flex
       flexWrap="wrap"
       justifyContent="space-between"

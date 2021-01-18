@@ -1,6 +1,6 @@
 // const colors = require('./colors');
-const about = require('./about.json');
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 
 const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC } = process.env;
@@ -67,7 +67,6 @@ if (ANALYTICS_ID) {
 module.exports = {
   plugins,
   siteMetadata: {
-    isMediumUserDefined: !!about.mediumUser,
     deterministicBehaviour: !!DETERMINISTIC,
     siteUrl: 'http://christianhein.no/',
   },
