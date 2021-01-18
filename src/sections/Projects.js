@@ -17,53 +17,54 @@ const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 const Background = () => (
   <div>
     <Triangle
+      color="backgroundDark"
+      height={['0vh', '10vh']}
+      width={['0vw', '100vw']}
+      invertX
+    />
+
+    <Triangle
+      color="backgroundDark"
+      height={['0vh', '12vh']}
+      width={['0vw', '200vw']}
+    />
+
+    <Triangle
       color="primaryDark"
+      height={['10vh', '20vh']}
+      width={['40vw', '40vw']}
+    />
+
+    <Triangle
+      color="secondaryLight"
+      height={['15vh', '23vh']}
+      width={['100vw', '100vw']}
+      invertX
+    />
+
+    <Triangle
+      color="backgroundDark"
+      height={['6vh', '6vh']}
+      width={['40vw', '40vw']}
+      invertX
+    />
+
+
+
+    <Triangle
+      color="primaryDark"
+      height={['25vh', '40vh']}
+      width={['75vw', '60vw']}
+      invertX
+      invertY
+    />
+
+    <Triangle
+      color="backgroundDark"
       height={['25vh', '20vh']}
-      width={['75vw', '40vw']}
-    />
-
-    <Triangle
-      id="backgroundDarkOnTablet"
-      color="secondaryLight"
-      height={['80vh', '30vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['50vh', '6vh']}
-      width={['50vw', '40vw']}
-      invertX
-    />
-
-
-
-    <Triangle
-      color="secondaryLight"
-      height={['25vh', '15vh']}
-      width={['75vw', '80vw']}
-      invertX
-      invertY
-    />
-
-    <Triangle
-      id="secondaryLightOnTabletAndMobile"
-      color="backgroundDark"
-      height={['25vh', '10vh']}
       width={['100vw', '100vw']}
       invertY
     />
-
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '2vh']}
-      width={['75vw', '5vw']}
-      invertY
-    />
-
-
-
   </div>
 );
 

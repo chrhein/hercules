@@ -12,18 +12,17 @@ const Background = () => (
   <div>
     <Triangle
       color="backgroundDark"
-      height={['25vh', '5vh']}
-      width={['100vw', '50vw']}
+      height={['5vh', '5vh']}
+      width={['50vw', '50vw']}
       invertX
       invertY
     />
 
 
     <Triangle
-      id="backgroundDarkOnTablet"
       color="secondaryLight"
-      height={['50vh', '10vh']}
-      width={['50vw', '60vw']}
+      height={['10vh', '10vh']}
+      width={['60vw', '60vw']}
       invertY
     />
 

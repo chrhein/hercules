@@ -37,6 +37,8 @@ export const GlobalStyles = createGlobalStyle`
   .info {
     color: ${({ theme }) => theme.colors.resumeInfo};
   }
+  
+  
 
   a {
     text-decoration: none;
@@ -541,14 +543,19 @@ export const GlobalStyles = createGlobalStyle`
 
   /* mobile narrow
   --------------------------------------------------------------- */
-  @media only screen and (max-width: 460px) {
+  @media only screen and (max-width: 400px) {
 
     .row {
       width: auto;
     }
     
     .bullet {
-      clear: both;
+      visibility: hidden;
+    }
+
+    .date {
+      display: block;
+      color: ${({ theme }) => theme.colors.primary};
     }
 
   }

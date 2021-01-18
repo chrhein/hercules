@@ -16,23 +16,17 @@ const Background = () => (
 
     <Triangle
       color="secondaryLight"
-      height={['10vh', '10vh']}
-      width={['100vw', '50vw']}
+      height={['20vh', '20vh']}
+      width={['70vw', '30vw']}
     />
 
     <Triangle
-      id="secondaryLightOnTabletAndMobile"
       color="backgroundDark"
       height={['15vh', '10vh']}
       width={['100vw', '100vw']}
       invertX
     />
 
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '2vh']}
-      width={['75vw', '5vw']}
-    />
 
 
     <Triangle
@@ -59,12 +53,17 @@ const ProfilePicture = styled(Image)`
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
+  /*
   transition: all 0.25s ease-out;
   border: solid 4px ${({ theme }) => theme.colors.resumePhotoBorder};
 
   &:hover {
     // border-radius: 20%;
     border: solid 10px ${({ theme }) => theme.colors.resumePhotoBorder};
+  }
+  */
+  @media (max-width: 400px) {
+    max-height: 200px;
   }
 `;
 

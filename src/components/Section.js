@@ -20,7 +20,7 @@ const SectionContainer = styled.div`
   
 
   @media (max-width: 400px) {
-    padding: 2em 1em;
+    padding: 4em 1em;
   }
 `;
 
