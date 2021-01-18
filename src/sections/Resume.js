@@ -13,6 +13,13 @@ import Airplane, { Clouds } from '../assets/svgs/Icons';
 
 const Background = () => (
   <div>
+
+    <Triangle
+      color="secondaryLight"
+      height={['10vh', '10vh']}
+      width={['100vw', '50vw']}
+    />
+
     <Triangle
       id="secondaryLightOnTabletAndMobile"
       color="backgroundDark"
@@ -20,6 +27,13 @@ const Background = () => (
       width={['100vw', '100vw']}
       invertX
     />
+
+    <Triangle
+      color="primaryDark"
+      height={['25vh', '2vh']}
+      width={['75vw', '5vw']}
+    />
+
 
     <Triangle
       color="secondaryLight"

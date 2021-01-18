@@ -546,6 +546,10 @@ export const GlobalStyles = createGlobalStyle`
     .row {
       width: auto;
     }
+    
+    .bullet {
+      clear: both;
+    }
 
   }
 

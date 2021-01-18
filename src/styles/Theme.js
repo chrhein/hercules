@@ -61,16 +61,16 @@ export const darkTheme = {
     projectIcon: '#f9fafb',
 
     button: '#c7c8c8',
-    buttonHover: '#7c7d7d',
+    buttonHover: '#6f8193',
 
-    airplane: '#293138',
-    airplaneBottom: '#10181e',
+    airplane: '#6f8193',
+    airplaneBottom: '#42505f',
     clouds: '#ffffff',
 
-    resumeTitle: '#7c7d7d',
+    resumeTitle: '#42505f',
     resumeHeader: '#f3f5f7',
-    resumeInfo: '#a4b6c3',
-    resumeParagraph: '#f9fafb',
+    resumeInfo: '#8899ac',
+    resumeParagraph: '#c4c9cf',
     resumeDivider: '#293138',
     resumePhotoBorder: '#7c7d7d',
 
