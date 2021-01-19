@@ -25,9 +25,10 @@ const Background = () => (
 
     <Triangle
       color="backgroundDark"
-      height={['0vh', '12vh']}
-      width={['0vw', '200vw']}
+      height={['0vh', '14vh']}
+      width={['0vw', '100vw']}
     />
+
 
     <Triangle
       color="primaryDark"
