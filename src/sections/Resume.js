@@ -53,15 +53,16 @@ const ProfilePicture = styled(Image)`
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  /*
+  
   transition: all 0.25s ease-out;
-  border: solid 4px ${({ theme }) => theme.colors.resumePhotoBorder};
-
+  border: solid 4px ${({ theme }) => theme.colors.backgroundDark};
+  /*
   &:hover {
     // border-radius: 20%;
     border: solid 10px ${({ theme }) => theme.colors.resumePhotoBorder};
   }
-  */
+   */
+  
   @media (max-width: 400px) {
     max-height: 200px;
   }

@@ -11,6 +11,7 @@ const LinkAnimated = styled.span`
           `border-bottom:  4px solid ${props.theme.colors.button}`};
   transition: 0.4s;
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
+  outline: none;
 
 
   &:after {
@@ -25,6 +26,7 @@ const LinkAnimated = styled.span`
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
+    outline: none;
   }
 
   &:focus:after,
