@@ -6,7 +6,7 @@ import Toggle from './Toggler';
 
 const RouteLink = ({ onClick, selected, name }) => (
   <Box ml={[2, 3]} color="#e2e6eb" fontSize={[2, 3]}>
-    <LinkAnimated onClick={onClick} selected={selected} tabIndex={0}>
+    <LinkAnimated onClick={onClick} selected={selected} tabIndex={0} name={name}>
       {name}
     </LinkAnimated>
   </Box>

@@ -19,6 +19,7 @@ export const lightTheme = {
 
     projectCard: '#f0f7f8',
     projectIcon: '#727679',
+    projectCardHoverShadow: '#69b4bb',
 
     button: '#737a7e',
     buttonHover: '#05828e',
@@ -59,6 +60,8 @@ export const darkTheme = {
 
     projectCard: '#14181c',
     projectIcon: '#f9fafb',
+    projectCardHoverShadow: '#034e55',
+
 
     button: '#c7c8c8',
     buttonHover: '#6f8193',

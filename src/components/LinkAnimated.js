@@ -8,12 +8,32 @@ const LinkAnimated = styled.span`
   color: inherit;
   ${(props) =>
           props.selected &&
-          `border-bottom:  4px solid ${props.theme.colors.button}`};
-  transition: 0.4s;
+          `
+          color: ${props.theme.colors.buttonHover};
+          `};
+  ${(props) =>
+          props.selected && props.name==='Home' &&
+          `
+          border-bottom: 0px solid ${props.theme.colors.button};
+          color: ${props.theme.colors.clouds};
+          `};
+  
+  transition: 0.4s ease-in-out;
+  transition-property: border-bottom-width;
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
   outline: none;
+  
+  &:hover {
+    // border-bottom: 4px solid ${({ theme }) => theme.colors.buttonHover};
+    color: ${({ theme }) => theme.colors.buttonHover};
+    ${(props) =>
+            props.selected && props.name==='Home' &&
+            `
+          color: ${props.theme.colors.projectCardHoverShadow};
+          `};
+  }
 
-
+  /*
   &:after {
     content: '';
     position: absolute;
@@ -27,6 +47,14 @@ const LinkAnimated = styled.span`
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
     outline: none;
+  }
+  
+   */
+
+  &:focus {
+    left: 0;
+    right: auto;
+    width: 100%;
   }
 
   &:focus:after,

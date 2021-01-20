@@ -17,6 +17,14 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
   }
 
+  .sectionTitle {
+    color: ${({ theme }) => theme.colors.text};
+    font-weight: normal;
+    // text-transform: uppercase;
+    font-size: xx-large;
+    // text-align: right;
+  }
+
   .resumeTitle {
     color: ${({ theme }) => theme.colors.resumeTitle};
     font-weight: 100;

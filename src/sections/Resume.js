@@ -105,7 +105,8 @@ const SvgWrapper = styled.div`
 function Resume({ theme }) {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
-    <Section.Container id="Resume" Background={Background}>
+    <Section.Container id="resume" Background={Background}>
+      <Section.Header name="Resume" label="resume" />
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
         <div>
           <Fade>

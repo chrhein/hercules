@@ -41,8 +41,8 @@ Container.propTypes = {
 
 const Header = ({ name, icon = '', label = '' }) => (
   <Fade>
-    <Heading color="heading" fontSize={[ 4 ]} mb={4}>
-      <LinkAnimated selected>
+    <Heading color="heading" fontSize={[ 4 ]} mb={4} className='sectionTitle'>
+      <LinkAnimated>
         {name}
         {icon && (
           <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
