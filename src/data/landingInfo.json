@@ -36,6 +36,12 @@
       },
       {
         "id": "4",
+        "url": "https://my.flightradar24.com/christianhein",
+        "name": "myFlightradar24",
+        "fontAwesomeIcon": "map-marker"
+      },
+      {
+        "id": "5",
         "url": "https://instagram.com/christianhein",
         "name": "Instagram",
         "fontAwesomeIcon": "instagram"

@@ -13,7 +13,7 @@ const RouteLink = ({ onClick, selected, name }) => (
 );
 
 export const DarkToggler = ({ theme, toggle }) => (
-  <Box ml={[2, 3]} color="#e2e6eb" fontSize={[2, 3]}>
+  <Box ml={[2, 3]} color="headerText" fontSize={[2, 3]}>
     <LinkAnimated>
       <Toggle theme={theme} toggleTheme={toggle} />
     </LinkAnimated>

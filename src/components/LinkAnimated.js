@@ -4,18 +4,12 @@ const LinkAnimated = styled.span`
   text-decoration: none;
   position: relative;
   margin-bottom: 0;
-  padding-bottom: 4px;
+  padding-bottom: 5px;
   color: inherit;
   ${(props) =>
           props.selected &&
           `
-          color: ${props.theme.colors.buttonHover};
-          `};
-  ${(props) =>
-          props.selected && props.name==='Home' &&
-          `
-          border-bottom: 0px solid ${props.theme.colors.button};
-          color: ${props.theme.colors.clouds};
+          border-bottom: 2px solid ${props.theme.colors.headerText};
           `};
   
   transition: 0.4s ease-in-out;
@@ -24,32 +18,8 @@ const LinkAnimated = styled.span`
   outline: none;
   
   &:hover {
-    // border-bottom: 4px solid ${({ theme }) => theme.colors.buttonHover};
-    color: ${({ theme }) => theme.colors.buttonHover};
-    ${(props) =>
-            props.selected && props.name==='Home' &&
-            `
-          color: ${props.theme.colors.projectCardHoverShadow};
-          `};
+    color: ${({ theme }) => theme.colors.clouds};
   }
-
-  /*
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 0;
-    bottom: -4px;
-    background: ${({ theme }) => theme.colors.buttonHover};
-    color: ${({ theme }) => theme.colors.text};
-    height: 4px;
-    transition-property: width;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-    outline: none;
-  }
-  
-   */
 
   &:focus {
     left: 0;

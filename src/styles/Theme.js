@@ -8,6 +8,7 @@ export const lightTheme = {
 
     text: '#080b11',
     heading: '#07090f',
+    headerText: '#e2e6eb',
 
     primary: '#162229',
     primaryLight: '#737a7e',
@@ -49,6 +50,7 @@ export const darkTheme = {
 
     text: '#f9fafb',
     heading: '#f3f5f7',
+    headerText: '#e2e6eb',
 
     primary: '#e2e6eb',
     primaryLight: '#c6cdd7',
