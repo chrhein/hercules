@@ -5,6 +5,7 @@ const Triangle = styled.div`
   width: 0;
   height: 0;
   z-index: -2;
+  content-visibility: auto;
 
   ${(props) => {
     const border = `${props.width[0]} solid transparent;`;

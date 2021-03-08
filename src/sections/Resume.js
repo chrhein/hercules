@@ -15,12 +15,6 @@ const Background = () => (
   <div>
 
     <Triangle
-      color="secondaryLight"
-      height={['20vh', '20vh']}
-      width={['70vw', '30vw']}
-    />
-
-    <Triangle
       color="backgroundDark"
       height={['15vh', '10vh']}
       width={['100vw', '100vw']}
@@ -53,9 +47,8 @@ const ProfilePicture = styled(Image)`
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
+  content-visibility: auto;
   
-  transition: all 0.25s ease-out;
-  border: solid 4px ${({ theme }) => theme.colors.backgroundDark};
   /*
   &:hover {
     // border-radius: 20%;

@@ -6,7 +6,6 @@ import config from 'react-reveal/globals';
 import Helmet from './Helmet';
 import { GlobalStyles } from '../styles/GlobalStyles';
 import { darkTheme, lightTheme } from '../styles/Theme';
-import { useDarkMode } from './useDarkMode';
 
 config({ ssrFadeout: true });
 
@@ -23,7 +22,7 @@ const Layout = ({ theme, mountedComponent, children }) => {
   }, []);
 
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-  if(!mountedComponent) return <div/>
+  if(!mountedComponent) return <div />
   return (
     <main>
       <ThemeProvider theme={themeMode}>

@@ -18,7 +18,6 @@ const Background = () => (
       invertY
     />
 
-
     <Triangle
       color="secondaryLight"
       height={['10vh', '10vh']}
@@ -45,6 +44,7 @@ const Background = () => (
 
 const ProfilePicture = styled(Image)`
   border-radius: 50%;
+  content-visibility: auto;
 `;
 
 const About = () => (

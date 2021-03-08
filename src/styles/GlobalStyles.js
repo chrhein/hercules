@@ -19,9 +19,9 @@ export const GlobalStyles = createGlobalStyle`
 
   .sectionTitle {
     color: ${({ theme }) => theme.colors.text};
-    font-weight: normal;
+    font-weight: bold;
     // text-transform: uppercase;
-    font-size: xx-large;
+    font-size: 4.5vh;
     // text-align: right;
   }
 
