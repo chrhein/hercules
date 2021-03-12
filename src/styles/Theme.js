@@ -46,7 +46,7 @@ export const darkTheme = {
   ...preset,
   colors: {
     background: '#000103',
-    backgroundDark: '#070a0d',
+    backgroundDark: '#101111',
 
     text: '#f9fafb',
     heading: '#f3f5f7',
@@ -64,7 +64,6 @@ export const darkTheme = {
     projectIcon: '#f9fafb',
     projectCardHoverShadow: '#034e55',
 
-
     button: '#c7c8c8',
     buttonHover: '#6f8193',
 
@@ -78,7 +77,6 @@ export const darkTheme = {
     resumeParagraph: '#c4c9cf',
     resumeDivider: '#293138',
     resumePhotoBorder: '#7c7d7d',
-
   },
 
   fonts: {

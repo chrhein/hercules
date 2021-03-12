@@ -28,7 +28,6 @@ const Footer = () => (
       query footerQuery {
         landingInfoJson {
           socialLinks {
-            
             url
             name
             fontAwesomeIcon
@@ -40,9 +39,9 @@ const Footer = () => (
       const { socialLinks } = footerQuery.landingInfoJson;
 
       return (
-        <Box p={[2, 3]} backgroundColor='primaryDark' id="footer">
+        <Box p={[2, 3]} backgroundColor="primaryDark" id="footer">
           <FooterContainer>
-            <Fade></Fade>
+            <Fade />
             <Flex>
               <Fade>
                 {socialLinks.map(({ ...rest }) => (
