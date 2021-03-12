@@ -3,45 +3,40 @@
     "name": "Christian",
     "roles": [
       "Visualization Student 👨🏻‍🎓",
+      "Hiking Enthusiast 🏔",
+      "Outgoing and Positive 😄",
       "Collaborative 👥",
+      "Energetic ⚡️",
+      "Willing to Learn 👨🏻‍🏫",
       "Passionate 🧑🏻‍💻",
       "Planespotter ✈️",
-      "Hiking Enthusiast 🏔",
       "Have an Eye for Details 🔍",
-      "Energetic ⚡️",
-      "Outgoing and Positive 😄",
-      "Willing to Learn 👨🏻‍🏫",
       "Hobby Photographer 📷",
       "Hard Working 👨🏻‍💼",
       "Helpful 🦸🏻‍♂️"
     ],
     "socialLinks": [
       {
-        "id": "1",
         "url": "mailto:scheiehein@gmail.com",
         "name": "Mail",
         "fontAwesomeIcon": "envelope-o"
       },
       {
-        "id": "2",
         "url": "https://github.com/chrhein",
         "name": "Github",
         "fontAwesomeIcon": "github"
       },
       {
-        "id": "3",
         "url": "https://www.linkedin.com/in/christianshein/",
         "name": "LinkedIn",
         "fontAwesomeIcon": "linkedin"
       },
       {
-        "id": "4",
         "url": "https://my.flightradar24.com/christianhein",
         "name": "myFlightradar24",
         "fontAwesomeIcon": "map-marker"
       },
       {
-        "id": "5",
         "url": "https://instagram.com/christianhein",
         "name": "Instagram",
         "fontAwesomeIcon": "instagram"

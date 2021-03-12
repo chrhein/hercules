@@ -104,8 +104,9 @@ function Resume({ theme }) {
         <div>
           <Fade>
             <ProfilePicture
+              // eslint-disable-next-line global-require
               src={require('../assets/images/cv-pb-sq.png')}
-              alt={'Christian Hein'}
+              alt="Christian Hein"
             />
           </Fade>
           <Education />

@@ -56,7 +56,7 @@ const LandingPage = () => (
             name
             roles
             socialLinks {
-              id
+              
               url
               name
               fontAwesomeIcon
@@ -66,7 +66,7 @@ const LandingPage = () => (
       `}
       render={({ landingInfoJson }) => {
         const { name, socialLinks, roles } = landingInfoJson;
-        const fixedOrder = false;
+        const fixedOrder = true;
         return (
           <Fragment>
             <Heading
@@ -99,8 +99,8 @@ const LandingPage = () => (
             </Heading>
 
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
-              {socialLinks.map(({ id, ...rest }) => (
-                <Box mx={3} fontSize={[4, 5, 5]} key={id}>
+              {socialLinks.map(({ ...rest }) => (
+                <Box mx={3} fontSize={[4, 5, 5]}>
                   <SocialLink {...rest} />
                 </Box>
               ))}

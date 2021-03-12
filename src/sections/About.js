@@ -5,9 +5,11 @@ import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
-import Triangle from '../components/Triangle';
+// import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
+import SectionBackground from '../components/SectionBackground';
 
+/*
 const Background = () => (
   <div>
     <Triangle
@@ -41,6 +43,13 @@ const Background = () => (
 
   </div>
 );
+*/
+
+const Background = () => (
+  <div>
+    <SectionBackground color="primaryLight" />
+  </div>
+);
 
 const ProfilePicture = styled(Image)`
   border-radius: 50%;
@@ -69,15 +78,19 @@ const About = () => (
                 />
               </Fade>
             </Box>
-            <Box width={[1, 1, 1 / 6]} style={{ maxWidth: '300px', margin: 'auto' }} />
+            <Box
+              width={[1, 1, 1 / 6]}
+              style={{ maxWidth: '300px', margin: 'auto' }}
+            />
             <Box
               width={[1, 1, 2 / 6]}
               style={{ maxWidth: '300px', margin: 'auto' }}
             >
               <Fade>
                 <ProfilePicture
+                  // eslint-disable-next-line global-require
                   src={require('../assets/images/pb.png')}
-                  alt={'Christian Hein'}
+                  alt="Christian Hein"
                   mt={[4, 4, 0]}
                   ml={[0, 0, 1]}
                 />

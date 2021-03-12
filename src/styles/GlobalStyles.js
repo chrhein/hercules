@@ -21,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     font-weight: bold;
     // text-transform: uppercase;
-    font-size: 4.5vh;
+    font-size: 42px;
     // text-align: right;
   }
 
@@ -826,3 +826,5 @@ export const GlobalStyles = createGlobalStyle`
 
   }
 `;
+
+export default GlobalStyles;
