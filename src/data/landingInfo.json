@@ -17,26 +17,31 @@
     ],
     "socialLinks": [
       {
+        "id": "1",
         "url": "mailto:scheiehein@gmail.com",
         "name": "Mail",
         "fontAwesomeIcon": "envelope-o"
       },
       {
+        "id": "2",
         "url": "https://github.com/chrhein",
         "name": "Github",
         "fontAwesomeIcon": "github"
       },
       {
+        "id": "3",
         "url": "https://www.linkedin.com/in/christianshein/",
         "name": "LinkedIn",
         "fontAwesomeIcon": "linkedin"
       },
       {
+        "id": "4",
         "url": "https://my.flightradar24.com/christianhein",
         "name": "myFlightradar24",
         "fontAwesomeIcon": "map-marker"
       },
       {
+        "id": "5",
         "url": "https://instagram.com/christianhein",
         "name": "Instagram",
         "fontAwesomeIcon": "instagram"

@@ -44,7 +44,6 @@ const Background = () => (
   </div>
 );
 
-
 const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 
 const LandingPage = () => (
@@ -56,7 +55,7 @@ const LandingPage = () => (
             name
             roles
             socialLinks {
-              
+              id
               url
               name
               fontAwesomeIcon
@@ -72,7 +71,7 @@ const LandingPage = () => (
             <Heading
               textAlign="center"
               as="h1"
-              color='primary'
+              color="primary"
               fontSize={[5, 7]}
               mb={[3, 4, 5]}
             >
@@ -81,7 +80,7 @@ const LandingPage = () => (
 
             <Heading
               as="h2"
-              color='primaryLight'
+              color="primaryLight"
               fontSize={[3, 5]}
               mb={[3, 5]}
               textAlign="center"
@@ -99,8 +98,8 @@ const LandingPage = () => (
             </Heading>
 
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
-              {socialLinks.map(({ ...rest }) => (
-                <Box mx={3} fontSize={[4, 5, 5]}>
+              {socialLinks.map(({ id, ...rest }) => (
+                <Box mx={3} fontSize={[4, 5, 5]} key={id}>
                   <SocialLink {...rest} />
                 </Box>
               ))}

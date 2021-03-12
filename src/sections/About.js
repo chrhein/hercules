@@ -14,6 +14,7 @@ const ProfilePicture = styled(Image)`
 
 const StyledSectionBackground = styled(SectionBackground)`
   margin: 5vw;
+  box-shadow: 0px 0px 10px 3px red, 0px 0px 10px 3px blue;
 `;
 
 const About = () => (

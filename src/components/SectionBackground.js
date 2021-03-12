@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SectionBackground = styled.div`
-  z-index: -2;
+  z-index: -1;
   border-radius: 18px;
   content-visibility: auto;
   padding-top: 24px;
