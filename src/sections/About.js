@@ -12,11 +12,6 @@ const ProfilePicture = styled(Image)`
   border-radius: 18px;
 `;
 
-const StyledSectionBackground = styled(SectionBackground)`
-  margin: 5vw;
-  box-shadow: 0px 0px 10px 3px red, 0px 0px 10px 3px blue;
-`;
-
 const About = () => (
   <Section.Container id="about">
     <StaticQuery
@@ -29,11 +24,10 @@ const About = () => (
       `}
       render={(aboutQuery) => {
         return (
-          <StyledSectionBackground color="backgroundDark">
+          <SectionBackground color="backgroundDark">
             <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
               <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
                 <Section.Header name="About me" label="person" />
-
                 <Fade>
                   <ReactMarkdown
                     source={aboutQuery.markdownRemark.rawMarkdownBody}
@@ -59,7 +53,7 @@ const About = () => (
                 </Fade>
               </Box>
             </Flex>
-          </StyledSectionBackground>
+          </SectionBackground>
         );
       }}
     />
