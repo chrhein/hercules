@@ -3,6 +3,8 @@ import preset from '@rebass/preset';
 export const lightTheme = {
   ...preset,
   colors: {
+    backgroundGradient:
+      'linear-gradient(160deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)',
     background: '#FFFFFF',
     backgroundDark: '#e7eaef',
 
@@ -45,6 +47,7 @@ export const lightTheme = {
 export const darkTheme = {
   ...preset,
   colors: {
+    backgroundGradient: 'linear-gradient(150deg, #243949 0%, #517fa4 100%)',
     background: '#000103',
     backgroundDark: '#101111',
 
