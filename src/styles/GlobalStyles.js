@@ -15,6 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100vw;
     background: ${({ theme }) => theme.colors.backgroundGradient};
     color: ${({ theme }) => theme.colors.text};
+    height: 100%;
   }
 
   .sectionTitle {

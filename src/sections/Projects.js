@@ -29,7 +29,6 @@ const Background = () => (
       width={['0vw', '100vw']}
     />
 
-
     <Triangle
       color="primaryDark"
       height={['10vh', '20vh']}
@@ -50,8 +49,6 @@ const Background = () => (
       invertX
     />
 
-
-
     <Triangle
       color="primaryDark"
       height={['25vh', '20vh']}
@@ -69,10 +66,10 @@ const Background = () => (
   </div>
 );
 
-
 const CARD_HEIGHT = '200px';
 
 const Title = styled(Text)`
+  padding-top: 10px;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -88,6 +85,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   padding: 10px;
   width: 100%;
+  height: 100%;
   width: calc(100% - ${CARD_HEIGHT});
 
   ${MEDIA_QUERY_SMALL} {
@@ -102,6 +100,12 @@ const ImageContainer = styled.div`
   ${MEDIA_QUERY_SMALL} {
     width: calc(${CARD_HEIGHT} / 2);
   }
+`;
+
+const ProjectLinks = styled.div`
+  position: absolute;
+  bottom: 2px;
+  left: 4px;
 `;
 
 const ProjectImage = styled(Image)`
@@ -119,10 +123,9 @@ const ProjectImage = styled(Image)`
 `;
 
 const ProjectSVG = styled.div`
-  width: ${CARD_HEIGHT};
+  width: calc(${CARD_HEIGHT} / 1.5);
   height: ${CARD_HEIGHT};
-  padding: 40px;
-  margin-top: 0px;
+  margin: auto;
 
   ${MEDIA_QUERY_SMALL} {
     height: calc(${CARD_HEIGHT} / 2);
@@ -135,6 +138,7 @@ const ProjectTag = styled.div`
   position: relative;
   height: ${CARD_HEIGHT};
   top: calc(-${CARD_HEIGHT} - 3.5px);
+  padding-bottom: -20px;
 
   ${MEDIA_QUERY_SMALL} {
     top: calc(-${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
@@ -142,39 +146,36 @@ const ProjectTag = styled.div`
 `;
 
 const Project = ({
-                   theme,
-                   name,
-                   description,
-                   projectUrl,
-                   repositoryUrl,
-                   type,
-                   logo,
-                 }) => {
+  theme,
+  name,
+  description,
+  projectUrl,
+  repositoryUrl,
+  type,
+  logo,
+}) => {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
     <Card p={0}>
+      <span className="trafficMenuBar">
+        <span className="trafficLight trafficRed" />
+        <span className="trafficLight trafficYellow" />
+        <span className="trafficLight trafficGreen" />
+      </span>
       <Flex style={{ height: CARD_HEIGHT }}>
         <TextContainer>
-        <span>
-          <Title my={2} pb={1} color="text">
-            {name}
-          </Title>
-        </span>
+          <span>
+            <Title my={2} pb={1} color="text">
+              {name}
+            </Title>
+          </span>
           <Text width={[1]} style={{ overflow: 'auto' }} color="primary">
             {description}
           </Text>
-        </TextContainer>
-
-        <ImageContainer>
-          <ProjectSVG>
-            <LayoutIcon
-              color={themeMode.colors.projectIcon}
-            />
-          </ProjectSVG>
-          <ProjectTag>
+          <ProjectLinks>
             <Flex
               style={{
-                float: 'right',
+                float: 'left',
               }}
             >
               <Box mx={1} fontSize={5}>
@@ -186,12 +187,21 @@ const Project = ({
               </Box>
               <Box mx={1} fontSize={5}>
                 <SocialLink
+                  className="projectCardLink"
                   name="Live demo"
                   fontAwesomeIcon="globe"
                   url={projectUrl}
                 />
               </Box>
             </Flex>
+          </ProjectLinks>
+        </TextContainer>
+
+        <ImageContainer>
+          <ProjectSVG>
+            <LayoutIcon color={themeMode.colors.projectIcon} />
+          </ProjectSVG>
+          <ProjectTag>
             <ImageSubtitle color="button" y="bottom" x="right" round>
               {type}
             </ImageSubtitle>
@@ -219,7 +229,7 @@ Project.propTypes = {
 };
 
 const Projects = ({ theme }) => (
-  <Section.Container id="projects" Background={Background}>
+  <Section.Container id="projects">
     <Section.Header name="Projects" label="notebook" />
     <StaticQuery
       query={graphql`
@@ -233,12 +243,6 @@ const Projects = ({ theme }) => (
               repositoryUrl
               publishedDate(formatString: "YYYY")
               type
-              logo {
-                title
-                image: resize(width: 200, quality: 100) {
-                  src
-                }
-              }
             }
           }
         }

@@ -4,7 +4,7 @@ export const lightTheme = {
   ...preset,
   colors: {
     backgroundGradient:
-      'linear-gradient(160deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)',
+      'linear-gradient(90deg, rgb(240, 118, 150), rgb(0, 74, 111))',
     background: '#FFFFFF',
     backgroundDark: '#e7eaef',
 
@@ -47,7 +47,8 @@ export const lightTheme = {
 export const darkTheme = {
   ...preset,
   colors: {
-    backgroundGradient: 'linear-gradient(150deg, #243949 0%, #517fa4 100%)',
+    backgroundGradient:
+      'linear-gradient(180deg, rgb(247, 182, 187), rgb(23, 123, 134))',
     background: '#000103',
     backgroundDark: '#101111',
 
