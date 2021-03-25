@@ -84,12 +84,19 @@ const SvgWrapper = styled.div`
   margin-bottom: 10%;
 `;
 
+const StyledCVBackground = styled(SectionBackground)`
+  padding: 40px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 120px;
+`;
+
 function Resume({ theme }) {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
     <Section.Container id="resume" Background={Background}>
-      <SectionBackground color="backgroundDark">
-        <Section.Header name="Resume" label="resume" />
+      <Section.Header name="Resume" label="resume" />
+      <StyledCVBackground color="backgroundDark">
         <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
           <div>
             <Fade>
@@ -118,7 +125,7 @@ function Resume({ theme }) {
             </SvgWrapper>
           </div>
         </Flex>
-      </SectionBackground>
+      </StyledCVBackground>
     </Section.Container>
   );
 }

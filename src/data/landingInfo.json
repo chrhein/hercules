@@ -46,6 +46,34 @@
         "name": "Instagram",
         "fontAwesomeIcon": "instagram"
       }
+    ],
+    "projects": [
+      {
+        "id": "1",
+        "name": "Globemaster",
+        "description": "A sleek, but very slow start page, with links to the websites I visit the most.",
+        "projectUrl": "globemaster/",
+        "repositoryUrl": "https://github.com/chrhein/globemaster",
+        "logo": {
+          "title": "Globemaster Preview",
+          "image": {
+            "src": "https://github.com/chrhein/hercules/blob/master/src/assets/images/ch.png?raw=true"
+          }
+        }
+      },
+      {
+        "id": "2",
+        "name": "Hercules",
+        "description": "Slow websites are not that fun. Therefore, on Hercules I've used Gatsby and React to create this fast and responsive website.",
+        "projectUrl": "/",
+        "repositoryUrl": "https://github.com/chrhein/hercules",
+        "logo": {
+          "title": "Hercules Preview",
+          "image": {
+            "src": "https://github.com/chrhein/hercules/blob/master/src/assets/images/ch.png?raw=true"
+          }
+        }
+      }
     ]
   }
 ]

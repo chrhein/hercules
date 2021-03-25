@@ -26,6 +26,11 @@ export const GlobalStyles = createGlobalStyle`
     // text-align: right;
   }
 
+  #resumeHeaderShifted {
+      margin-left: 15px;
+      background: red;
+    }
+
   .resumeTitle {
     color: ${({ theme }) => theme.colors.resumeTitle};
     font-weight: 100;

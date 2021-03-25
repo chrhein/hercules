@@ -8,8 +8,6 @@ import Section from '../components/Section';
 import { Card, CardContainer } from '../components/Card';
 import SocialLink from '../components/SocialLink';
 import ImageSubtitle from '../components/ImageSubtitle';
-import { LayoutIcon } from '../assets/svgs/Icons';
-import { darkTheme, lightTheme } from '../styles/Theme';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
@@ -52,6 +50,20 @@ const ProjectLinks = styled.div`
   left: 4px;
 `;
 
+const ProjectImage = styled(Image)`
+  width: ${CARD_HEIGHT};
+  height: ${CARD_HEIGHT};
+  padding: 40px;
+  margin-top: 0px;
+  ${MEDIA_QUERY_SMALL} {
+    height: calc(${CARD_HEIGHT} / 2);
+    width: calc(${CARD_HEIGHT} / 2);
+    margin-top: calc(${CARD_HEIGHT} / 4);
+    padding: 10px;
+  }
+`;
+
+// eslint-disable-next-line no-unused-vars
 const ProjectSVG = styled.div`
   width: calc(${CARD_HEIGHT} / 1.5);
   height: ${CARD_HEIGHT};
@@ -77,14 +89,13 @@ const ProjectTag = styled.div`
 `;
 
 const Project = ({
-  theme,
   name,
   description,
   projectUrl,
   repositoryUrl,
   type,
+  logo,
 }) => {
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
     <Card p={0}>
       <span className="trafficMenuBar">
@@ -128,9 +139,7 @@ const Project = ({
         </TextContainer>
 
         <ImageContainer>
-          <ProjectSVG>
-            <LayoutIcon color={themeMode.colors.projectIcon} />
-          </ProjectSVG>
+          <ProjectImage src={logo.image.src} alt={logo.title} />
           <ProjectTag>
             <ImageSubtitle color="button" y="bottom" x="right" round>
               {type}
@@ -143,13 +152,11 @@ const Project = ({
 };
 
 Project.propTypes = {
-  theme: PropTypes.string,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   projectUrl: PropTypes.string.isRequired,
   repositoryUrl: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  publishedDate: PropTypes.string.isRequired,
   logo: PropTypes.shape({
     image: PropTypes.shape({
       src: PropTypes.string,
@@ -158,30 +165,34 @@ Project.propTypes = {
   }).isRequired,
 };
 
-const Projects = ({ theme }) => (
+const Projects = () => (
   <Section.Container id="projects">
     <Section.Header name="Projects" label="notebook" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
-          contentfulAbout {
+          landingInfoJson {
             projects {
               id
               name
               description
               projectUrl
               repositoryUrl
-              publishedDate(formatString: "YYYY")
-              type
+              logo {
+                title
+                image {
+                  src
+                }
+              }
             }
           }
         }
       `}
-      render={({ contentfulAbout }) => (
-        <CardContainer minWidth="350px">
-          {contentfulAbout.projects.map((p, i) => (
-            <Fade delay={i * 200} key={p.id}>
-              <Project theme={theme} {...p} />
+      render={({ landingInfoJson }) => (
+        <CardContainer minWidth="350px" className="cardContainer">
+          {landingInfoJson.projects.map((p, i) => (
+            <Fade bottom delay={i * 200} key={p.id}>
+              <Project {...p} />
             </Fade>
           ))}
         </CardContainer>

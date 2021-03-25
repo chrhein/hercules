@@ -3,6 +3,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 
+const path = require(`path`);
+
 const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC } = process.env;
 
 const plugins = [

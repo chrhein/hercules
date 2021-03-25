@@ -5,6 +5,10 @@ export const CardContainer = styled.div`
   display: grid;
   grid-gap: 50px;
 
+  .cardContainer:hover {
+    opacity: 0.5;
+  }
+
   grid-template-columns: repeat(
     auto-fill,
     minmax(${(props) => props.minWidth}, 1fr)
@@ -57,11 +61,14 @@ export const Card = styled(CardRebass).attrs({
 .trafficGreen {
   background-color: #35c840;
 }
-
   
   &:hover {
-        box-shadow: ${({ theme }) => theme.colors.boxShadow};
+    opacity: 1;
+    z-index: 1;
+    box-shadow: ${({ theme }) => theme.colors.boxShadow};
   }
+
+  
   
 `;
 

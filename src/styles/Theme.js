@@ -39,7 +39,7 @@ export const lightTheme = {
     resumePhotoBorder: '#727679',
 
     boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.0)',
+      'inset 0 1px 0 rgba(255,255,255,.0), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.0)',
     menuBar: '#eeefee',
   },
   fonts: {
@@ -87,7 +87,7 @@ export const darkTheme = {
     resumePhotoBorder: '#7c7d7d',
 
     boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.4), 0 0 0 1px rgba(0, 0, 0, 0.0)',
+      'inset 0 1px 0 rgba(255,255,255,.0), 0 22px 70px 4px rgba(0,0,0,0.4), 0 0 0 1px rgba(0, 0, 0, 0.0)',
     menuBar: '#1a1a1a',
   },
 

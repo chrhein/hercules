@@ -28,6 +28,7 @@ const About = () => (
             <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
               <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
                 <Section.Header name="About me" label="person" />
+
                 <Fade>
                   <ReactMarkdown
                     source={aboutQuery.markdownRemark.rawMarkdownBody}
