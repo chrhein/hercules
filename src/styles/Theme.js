@@ -37,6 +37,10 @@ export const lightTheme = {
     resumeParagraph: '#737a7e',
     resumeDivider: '#727679',
     resumePhotoBorder: '#727679',
+
+    boxShadow:
+      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.0)',
+    menuBar: '#eeefee',
   },
   fonts: {
     body: 'Cabin, Open Sans, sans-serif',
@@ -49,7 +53,7 @@ export const darkTheme = {
   colors: {
     backgroundGradient:
       'linear-gradient(180deg, rgb(247, 182, 187), rgb(23, 123, 134))',
-    background: '#000103',
+    background: '#24252d',
     backgroundDark: '#101111',
 
     text: '#f9fafb',
@@ -81,6 +85,10 @@ export const darkTheme = {
     resumeParagraph: '#c4c9cf',
     resumeDivider: '#293138',
     resumePhotoBorder: '#7c7d7d',
+
+    boxShadow:
+      'inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.4), 0 0 0 1px rgba(0, 0, 0, 0.0)',
+    menuBar: '#1a1a1a',
   },
 
   fonts: {

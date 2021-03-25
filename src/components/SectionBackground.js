@@ -7,7 +7,7 @@ const SectionBackground = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
   margin: 5vw;
-  box-shadow: 0px 0px 10px 3px red, 0px 0px 10px 3px blue;
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
 
   ${(props) => {
     const backgroundcolor = props.theme.colors[props.color];
@@ -17,7 +17,7 @@ const SectionBackground = styled.div`
 
 export const SectionShadow = styled.div`
   border-radius: 18px;
-  box-shadow: 0px 0px 10px 3px red, 0px 0px 10px 3px blue;
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
   width: fit-content;
   padding: 12px;
   margin-right: auto;

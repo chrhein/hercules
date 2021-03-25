@@ -7,66 +7,13 @@ import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import { Card, CardContainer } from '../components/Card';
 import SocialLink from '../components/SocialLink';
-import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
 import { LayoutIcon } from '../assets/svgs/Icons';
 import { darkTheme, lightTheme } from '../styles/Theme';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
-const Background = () => (
-  <div>
-    <Triangle
-      color="backgroundDark"
-      height={['0vh', '10vh']}
-      width={['0vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['0vh', '14vh']}
-      width={['0vw', '100vw']}
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['10vh', '20vh']}
-      width={['40vw', '40vw']}
-    />
-
-    <Triangle
-      color="secondaryLight"
-      height={['15vh', '23vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['6vh', '6vh']}
-      width={['40vw', '40vw']}
-      invertX
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '20vh']}
-      width={['75vw', '60vw']}
-      invertX
-      invertY
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['25vh', '20vh']}
-      width={['100vw', '100vw']}
-      invertY
-    />
-  </div>
-);
-
-const CARD_HEIGHT = '200px';
+const CARD_HEIGHT = '220px';
 
 const Title = styled(Text)`
   padding-top: 10px;
@@ -74,10 +21,7 @@ const Title = styled(Text)`
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${({ theme }) => theme.secondary}
-}
-
-;
+  border-bottom: ${({ theme }) => theme.secondary};
 `;
 
 const TextContainer = styled.div`
@@ -108,20 +52,6 @@ const ProjectLinks = styled.div`
   left: 4px;
 `;
 
-const ProjectImage = styled(Image)`
-  width: ${CARD_HEIGHT};
-  height: ${CARD_HEIGHT};
-  padding: 40px;
-  margin-top: 0px;
-
-  ${MEDIA_QUERY_SMALL} {
-    height: calc(${CARD_HEIGHT} / 2);
-    width: calc(${CARD_HEIGHT} / 2);
-    margin-top: calc(${CARD_HEIGHT} / 4);
-    padding: 10px;
-  }
-`;
-
 const ProjectSVG = styled.div`
   width: calc(${CARD_HEIGHT} / 1.5);
   height: ${CARD_HEIGHT};
@@ -132,6 +62,7 @@ const ProjectSVG = styled.div`
     width: calc(${CARD_HEIGHT} / 2);
     margin-top: calc(${CARD_HEIGHT} / 4);
     padding: 10px;
+  }
 `;
 
 const ProjectTag = styled.div`
@@ -152,7 +83,6 @@ const Project = ({
   projectUrl,
   repositoryUrl,
   type,
-  logo,
 }) => {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (

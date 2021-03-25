@@ -10,19 +10,10 @@ import Experience from '../data/resume-pages/Experience';
 import VolunteerExperience from '../data/resume-pages/VolunteerExperience';
 import { darkTheme, lightTheme } from '../styles/Theme';
 import Airplane, { Clouds } from '../assets/svgs/Icons';
+import SectionBackground from '../components/SectionBackground';
 
 const Background = () => (
   <div>
-
-    <Triangle
-      color="backgroundDark"
-      height={['15vh', '10vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
-
-
-
     <Triangle
       color="secondaryLight"
       height={['8vh', '10vh']}
@@ -61,7 +52,6 @@ const ProfilePicture = styled(Image)`
   }
 `;
 
-
 const AircraftDiv = styled.div`
   position: absolute;
   left: 10%;
@@ -94,41 +84,41 @@ const SvgWrapper = styled.div`
   margin-bottom: 10%;
 `;
 
-
 function Resume({ theme }) {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
     <Section.Container id="resume" Background={Background}>
-      <Section.Header name="Resume" label="resume" />
-      <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-        <div>
-          <Fade>
-            <ProfilePicture
-              // eslint-disable-next-line global-require
-              src={require('../assets/images/cv-pb-sq.png')}
-              alt="Christian Hein"
-            />
-          </Fade>
-          <Education />
-          <Experience />
-          <VolunteerExperience />
+      <SectionBackground color="backgroundDark">
+        <Section.Header name="Resume" label="resume" />
+        <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+          <div>
+            <Fade>
+              <ProfilePicture
+                // eslint-disable-next-line global-require
+                src={require('../assets/images/cv-pb-sq.png')}
+                alt="Christian Hein"
+              />
+            </Fade>
+            <Education />
+            <Experience />
+            <VolunteerExperience />
 
-          <SvgWrapper>
-            <CloudDiv>
-              <Clouds cloudColor={themeMode.colors.clouds} />
-            </CloudDiv>
-            <AircraftDiv>
-              <Fade right>
-                <Airplane
-                  airplaneColor={themeMode.colors.airplane}
-                  airplaneBottomColor={themeMode.colors.airplaneBottom}
-                />
-              </Fade>
-            </AircraftDiv>
-          </SvgWrapper>
-
-        </div>
-      </Flex>
+            <SvgWrapper>
+              <CloudDiv>
+                <Clouds cloudColor={themeMode.colors.clouds} />
+              </CloudDiv>
+              <AircraftDiv>
+                <Fade right>
+                  <Airplane
+                    airplaneColor={themeMode.colors.airplane}
+                    airplaneBottomColor={themeMode.colors.airplaneBottom}
+                  />
+                </Fade>
+              </AircraftDiv>
+            </SvgWrapper>
+          </div>
+        </Flex>
+      </SectionBackground>
     </Section.Container>
   );
 }

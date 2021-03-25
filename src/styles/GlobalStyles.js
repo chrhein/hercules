@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Cabin, 'Open Sans', sans-serif;
     overflow-x: hidden;
     width: 100vw;
-    background: ${({ theme }) => theme.colors.backgroundGradient};
+    background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     height: 100%;
   }
