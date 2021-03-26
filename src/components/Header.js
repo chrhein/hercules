@@ -13,23 +13,21 @@ const HeaderContainer = styled(Headroom)`
     transition: background-color 0.3s ease;
   }
 
-  .headroom--pinned,
-  .headroom--unpinned,
-  .headroom--scrolled {
-    color: ${({ theme }) => theme.colors.header};
-    background-color: ${({ theme }) => theme.colors.menuBar};
-    box-shadow: ${({ theme }) => theme.colors.boxShadow};
-  }
   position: fixed;
   width: 100%;
   z-index: 1;
-  border-radius: 0 0 18px 18px;
 `;
 
 const HeaderShadow = styled(SectionShadow)`
   width: 100%;
   padding: 0;
   border-radius: 0 0 18px 18px;
+  backdrop-filter: blur(20px);
+`;
+
+const HeaderShade = styled.div`
+  background-color: ${({ theme }) => theme.colors.menuBar};
+  opacity: 0.5;
 `;
 
 const formatLinks = (allLinks) =>
@@ -51,9 +49,7 @@ const formatLinks = (allLinks) =>
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ theme, themeToggler }) => {
-  const sections = useScrollSections();
-  const { links } = formatLinks(sections);
-  console.log(sections);
+  const { links } = formatLinks(useScrollSections());
 
   const homeLink = links
     .filter(({ value }) => value.id === 'home')
@@ -62,7 +58,7 @@ const Header = ({ theme, themeToggler }) => {
         key={value.id}
         onClick={value.onClick}
         selected={value.isSelected}
-        name={value.id}
+        name={capitalize(value.id)}
       />
     ));
 
@@ -73,26 +69,30 @@ const Header = ({ theme, themeToggler }) => {
         key={value.id}
         onClick={value.onClick}
         selected={value.isSelected}
-        name={value.id}
+        name={capitalize(value.id)}
       />
     ));
 
   return (
     <HeaderContainer disableInlineStyles upTolerance={500}>
-      <Flex
-        flexWrap="wrap"
-        justifyContent="space-between"
-        alignItems="center"
-        p={3}
-      >
-        <Fragment>
-          {homeLink}
-          <Flex mr={[0, 3, 4]}>
-            <DarkToggler theme={theme} toggle={themeToggler} />
-            {navLinks}
+      <HeaderShadow>
+        <HeaderShade>
+          <Flex
+            flexWrap="wrap"
+            justifyContent="space-between"
+            alignItems="center"
+            p={3}
+          >
+            <Fragment>
+              {homeLink}
+              <Flex mr={[0, 3, 4]}>
+                <DarkToggler theme={theme} toggle={themeToggler} />
+                {navLinks}
+              </Flex>
+            </Fragment>
           </Flex>
-        </Fragment>
-      </Flex>
+        </HeaderShade>
+      </HeaderShadow>
     </HeaderContainer>
   );
 };
