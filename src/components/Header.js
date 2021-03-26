@@ -4,7 +4,6 @@ import { Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { useScrollSections } from 'react-scroll-section';
 import RouteLink, { DarkToggler } from './RouteLink';
-import { HeaderShadow, HeaderShade } from './Shadows';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -21,6 +20,29 @@ const HeaderContainer = styled(Headroom)`
   position: fixed;
   width: 100%;
   z-index: 1;
+`;
+
+const HeaderShadow = styled(Headroom)`
+  background-color: transparent;
+  .headroom--pinned {
+    box-shadow: 0;
+    width: 100%;
+    padding: 0;
+    border-radius: 0 0 18px 18px;
+    backdrop-filter: blur(20px);
+  }
+`;
+
+const HeaderShade = styled(Headroom)`
+  * {
+    transition: background-color 0.3s ease;
+  }
+  .headroom--pinned {
+    border-radius: 0 0 18px 18px;
+    opacity: 0.75;
+    background-color: ${({ theme }) => theme.colors.menuBar};
+  }
+  background-color: transparent;
 `;
 
 const formatLinks = (allLinks) =>

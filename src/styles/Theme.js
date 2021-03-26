@@ -10,7 +10,7 @@ export const lightTheme = {
 
     text: '#080b11',
     heading: '#07090f',
-    headerText: '#e2e6eb',
+    headerText: '#07090f',
 
     primary: '#162229',
     primaryLight: '#737a7e',
