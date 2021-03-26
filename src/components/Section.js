@@ -17,7 +17,7 @@ const SectionContainer = styled.div`
   padding: 5em 2em;
   scroll-behavior: smooth;
   content-visibility: auto;
-  
+
   @media (max-width: 400px) {
     padding: 4em 1em;
   }
@@ -40,7 +40,13 @@ Container.propTypes = {
 
 const Header = ({ name, icon = '', label = '' }) => (
   <Fade>
-    <Heading color="heading" fontSize={[6]} fontWeight="bold" mb={4} className='sectionTitle'>
+    <Heading
+      color="heading"
+      fontSize={[6]}
+      fontWeight="bold"
+      mb={4}
+      className="sectionTitle"
+    >
       {name}
       {icon && (
         <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>

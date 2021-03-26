@@ -2,8 +2,9 @@ import React, { Fragment } from 'react';
 import Headroom from 'react-headroom';
 import { Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
-import { SectionLinks } from 'react-scroll-section';
+import { useScrollSections } from 'react-scroll-section';
 import RouteLink, { DarkToggler } from './RouteLink';
+import { SectionShadow } from './SectionBackground';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -12,15 +13,23 @@ const HeaderContainer = styled(Headroom)`
     transition: background-color 0.3s ease;
   }
 
-  .headroom--pinned, .headroom--unpinned, .headroom--scrolled{
-    background-color: ${({ theme }) => theme.colors.primaryDark};
-    color: ${({ theme }) => theme.colors.text};
+  .headroom--pinned,
+  .headroom--unpinned,
+  .headroom--scrolled {
+    color: ${({ theme }) => theme.colors.header};
+    background-color: ${({ theme }) => theme.colors.menuBar};
+    box-shadow: ${({ theme }) => theme.colors.boxShadow};
   }
-
-  
   position: fixed;
   width: 100%;
   z-index: 1;
+  border-radius: 0 0 18px 18px;
+`;
+
+const HeaderShadow = styled(SectionShadow)`
+  width: 100%;
+  padding: 0;
+  border-radius: 0 0 18px 18px;
 `;
 
 const formatLinks = (allLinks) =>
@@ -29,70 +38,63 @@ const formatLinks = (allLinks) =>
       const isHome = key === 'home';
       return isHome
         ? {
-          ...acc,
-          home: value,
-        }
+            ...acc,
+            home: value,
+          }
         : {
-          ...acc,
-          links: [...acc.links, { name: capitalize(key), value }],
-        };
+            ...acc,
+            links: [...acc.links, { name: capitalize(key), value }],
+          };
     },
     { links: [], home: null },
   );
 
-const Header = ({ theme, themeToggler }) => (
-  <HeaderContainer disableInlineStyles upTolerance={500}>
-    <Flex
-      flexWrap="wrap"
-      justifyContent="space-between"
-      alignItems="center"
-      p={3}
-    >
-      <SectionLinks>
-        {({ allLinks }) => {
-          const { home, links } = formatLinks(allLinks);
+// eslint-disable-next-line react/prop-types
+const Header = ({ theme, themeToggler }) => {
+  const sections = useScrollSections();
+  const { links } = formatLinks(sections);
+  console.log(sections);
 
-          const homeLink = home && (
-            <RouteLink
-              key={'home'}
-              onClick={home.onClick}
-              selected={home.isSelected}
-              name={'Home'}
-            />
-          );
+  const homeLink = links
+    .filter(({ value }) => value.id === 'home')
+    .map(({ value }) => (
+      <RouteLink
+        key={value.id}
+        onClick={value.onClick}
+        selected={value.isSelected}
+        name={value.id}
+      />
+    ));
 
-          const navLinks = links.map(({ name, value }) => (
-            <RouteLink
-              key={name}
-              onClick={value.onClick}
-              selected={value.isSelected}
-              name={name}
-            />
-          ));
+  const navLinks = links
+    .filter(({ value }) => value.id !== 'home')
+    .map(({ value }) => (
+      <RouteLink
+        key={value.id}
+        onClick={value.onClick}
+        selected={value.isSelected}
+        name={value.id}
+      />
+    ));
 
-          /*
-          const toggle = (
-            <Box ml={[2, 3]} color='#e2e6eb' fontSize={[2, 3]}>
-              <LinkAnimated onClick={onClick} selected={selected} tabIndex={0}>
-                <Toggle theme={theme} toggleTheme={themeToggler} />
-              </LinkAnimated>
-            </Box>
-          );
-           */
-
-          return (
-            <Fragment>
-              {homeLink}
-              <Flex mr={[0, 3, 4]}>
-                <DarkToggler theme={theme} toggle={themeToggler} />
-                {navLinks}
-              </Flex>
-            </Fragment>
-          );
-        }}
-      </SectionLinks>
-    </Flex>
-  </HeaderContainer>
-);
+  return (
+    <HeaderContainer disableInlineStyles upTolerance={500}>
+      <Flex
+        flexWrap="wrap"
+        justifyContent="space-between"
+        alignItems="center"
+        p={3}
+      >
+        <Fragment>
+          {homeLink}
+          <Flex mr={[0, 3, 4]}>
+            <DarkToggler theme={theme} toggle={themeToggler} />
+            {navLinks}
+          </Flex>
+        </Fragment>
+      </Flex>
+    </HeaderContainer>
+  );
+};
 
 export default Header;

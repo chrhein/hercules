@@ -54,6 +54,7 @@
         "description": "A sleek, but very slow start page, with links to the websites I visit the most.",
         "projectUrl": "globemaster/",
         "repositoryUrl": "https://github.com/chrhein/globemaster",
+        "type": "Javascript",
         "logo": {
           "title": "Globemaster Preview",
           "image": {
@@ -67,6 +68,7 @@
         "description": "Slow websites are not that fun. Therefore, on Hercules I've used Gatsby and React to create this fast and responsive website.",
         "projectUrl": "/",
         "repositoryUrl": "https://github.com/chrhein/hercules",
+        "type": "React, Gatsby",
         "logo": {
           "title": "Hercules Preview",
           "image": {

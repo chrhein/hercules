@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { SectionLink } from 'react-scroll-section';
+import { useScrollSection } from 'react-scroll-section';
+import { Text } from 'rebass';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const StyledLink = styled.a`
   display: inline-block;
@@ -34,6 +35,17 @@ const StyledLink = styled.a`
   }
 `;
 
+const Root = styled.div`
+  font-size: large;
+  padding-bottom: 1em;
+  line-height: 2em;
+
+  @media (max-width: 600px) {
+    line-height: 1.5em;
+    font-size: medium;
+  }
+`;
+
 const MarkdownParagraph = styled.p`
   line-height: 2em;
   &:first-child {
@@ -52,23 +64,26 @@ const MarkdownListItem = styled.li`
 
 const MarkdownLink = ({ href, children }) => {
   const isInnerLink = href.startsWith('#');
-  return isInnerLink ? (
-    <SectionLink section={href.substring(1, href.length)}>
-      {({ onClick }) => <StyledLink onClick={onClick}>{children}</StyledLink>}
-    </SectionLink>
-  ) : (
+  if (isInnerLink)
+    return (
+      <InnerLink href={href.substring(1, href.length)}>{children}</InnerLink>
+    );
+
+  return (
     <StyledLink href={href} target="_blank" rel="noreferrer">
       {children}
     </StyledLink>
   );
 };
 
-MarkdownLink.propTypes = {
-  href: PropTypes.string.isRequired,
-  children: PropTypes.node,
+const InnerLink = ({ href, children }) => {
+  const { onClick } = useScrollSection(href);
+
+  return <StyledLink onClick={onClick}>{children}</StyledLink>;
 };
 
 export default {
+  root: Root,
   paragraph: MarkdownParagraph,
   list: MarkdownList,
   listItem: MarkdownListItem,
