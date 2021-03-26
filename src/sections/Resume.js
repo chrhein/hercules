@@ -10,7 +10,7 @@ import Experience from '../data/resume-pages/Experience';
 import VolunteerExperience from '../data/resume-pages/VolunteerExperience';
 import { darkTheme, lightTheme } from '../styles/Theme';
 import Airplane, { Clouds } from '../assets/svgs/Icons';
-import SectionBackground from '../components/SectionBackground';
+import SectionBackground from '../components/Shadows';
 
 const Background = () => (
   <div>

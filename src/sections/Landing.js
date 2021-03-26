@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import { Box, Flex, Heading } from 'rebass/styled-components';
 import Section from '../components/Section';
 import SocialLink from '../components/SocialLink';
-import { SectionShadow } from '../components/SectionBackground';
+import { SectionShadow } from '../components/Shadows';
 
 const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 

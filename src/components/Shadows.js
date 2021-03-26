@@ -29,4 +29,18 @@ export const SectionShadow = styled.div`
   }}
 `;
 
+export const HeaderShadow = styled(SectionShadow)`
+  box-shadow: 0;
+  width: 100%;
+  padding: 0;
+  border-radius: 0 0 18px 18px;
+  backdrop-filter: blur(20px);
+`;
+
+export const HeaderShade = styled.div`
+  background-color: ${({ theme }) => theme.colors.menuBar};
+  border-radius: 0 0 18px 18px;
+  opacity: 0.75;
+`;
+
 export default SectionBackground;

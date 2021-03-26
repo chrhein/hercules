@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { useScrollSection } from 'react-scroll-section';
-import { Text } from 'rebass';
 import styled from 'styled-components';
 
 const StyledLink = styled.a`

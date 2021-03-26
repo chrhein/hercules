@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import markdownRenderer from '../components/MarkdownRenderer';
-import SectionBackground from '../components/SectionBackground';
+import SectionBackground from '../components/Shadows';
 
 const ProfilePicture = styled(Image)`
   border-radius: 18px;
