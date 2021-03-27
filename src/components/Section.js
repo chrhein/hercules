@@ -40,13 +40,7 @@ Container.propTypes = {
 
 const Header = ({ name, icon = '', label = '' }) => (
   <Fade>
-    <Heading
-      color="heading"
-      fontSize={[6]}
-      fontWeight="bold"
-      mb={4}
-      className="sectionTitle"
-    >
+    <Heading mb={4} className="sectionTitle">
       {name}
       {icon && (
         <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>

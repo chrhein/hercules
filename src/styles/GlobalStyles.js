@@ -19,17 +19,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .sectionTitle {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.headerText};
     font-weight: bold;
     // text-transform: uppercase;
     font-size: 42px;
-    // text-align: right;
   }
-
-  #resumeHeaderShifted {
-      margin-left: 15px;
-      background: red;
-    }
 
   .resumeTitle {
     color: ${({ theme }) => theme.colors.resumeTitle};

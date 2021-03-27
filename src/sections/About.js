@@ -14,6 +14,8 @@ const ProfilePicture = styled(Image)`
 
 const About = () => (
   <Section.Container id="about">
+    <Section.Header name="About me" label="person" />
+
     <StaticQuery
       query={graphql`
         query aboutQuery {
@@ -24,11 +26,9 @@ const About = () => (
       `}
       render={(aboutQuery) => {
         return (
-          <SectionBackground color="backgroundDark">
+          <SectionBackground>
             <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
               <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
-                <Section.Header name="About me" label="person" />
-
                 <Fade>
                   <ReactMarkdown
                     source={aboutQuery.markdownRemark.rawMarkdownBody}

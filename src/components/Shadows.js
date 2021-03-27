@@ -8,11 +8,7 @@ const SectionBackground = styled.div`
   padding-bottom: 24px;
   margin: 5vw;
   box-shadow: ${({ theme }) => theme.colors.boxShadow};
-
-  ${(props) => {
-    const backgroundcolor = props.theme.colors[props.color];
-    return `background-color: ${backgroundcolor};`;
-  }}
+  background-color: ${({ theme }) => theme.colors.projectCard};
 `;
 
 export const SectionShadow = styled.div`
@@ -22,11 +18,7 @@ export const SectionShadow = styled.div`
   padding: 12px;
   margin-right: auto;
   margin-left: auto;
-
-  ${(props) => {
-    const backgroundcolor = props.theme.colors[props.color];
-    return `background-color: ${backgroundcolor};`;
-  }}
+  background-color: ${({ theme }) => theme.colors.projectCard};
 `;
 
 export default SectionBackground;

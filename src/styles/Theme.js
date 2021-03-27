@@ -4,13 +4,13 @@ export const lightTheme = {
   ...preset,
   colors: {
     backgroundGradient:
-      'linear-gradient(90deg, rgb(240, 118, 150), rgb(0, 74, 111))',
-    background: '#FFFFFF',
+      'linear-gradient(180deg, rgb(247, 182, 187), rgb(23, 123, 134))',
+    background: '#d49a89',
     backgroundDark: '#e7eaef',
 
     text: '#080b11',
-    heading: '#07090f',
-    headerText: '#07090f',
+    heading: '#f4f4f4',
+    headerText: '#f4f4f4',
 
     primary: '#162229',
     primaryLight: '#737a7e',
@@ -20,7 +20,7 @@ export const lightTheme = {
     secondaryLight: '#69b4bb',
     secondaryDark: '#034e55',
 
-    projectCard: '#f0f7f8',
+    projectCard: '#f7d1ba',
     projectIcon: '#727679',
     projectCardHoverShadow: '#69b4bb',
 
@@ -38,8 +38,7 @@ export const lightTheme = {
     resumeDivider: '#727679',
     resumePhotoBorder: '#727679',
 
-    boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.0), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.0)',
+    boxShadow: '0 10px 20px 0 rgba(0,0,0,0.30)',
     menuBar: '#eeefee',
   },
   fonts: {
@@ -53,7 +52,7 @@ export const darkTheme = {
   colors: {
     backgroundGradient:
       'linear-gradient(180deg, rgb(247, 182, 187), rgb(23, 123, 134))',
-    background: '#24252d',
+    background: '#000000',
     backgroundDark: '#101111',
 
     text: '#f9fafb',
@@ -68,7 +67,7 @@ export const darkTheme = {
     secondaryLight: '#101316',
     secondaryDark: '#a4b6c3',
 
-    projectCard: '#14181c',
+    projectCard: '#24252d',
     projectIcon: '#f9fafb',
     projectCardHoverShadow: '#034e55',
 
@@ -86,8 +85,8 @@ export const darkTheme = {
     resumeDivider: '#293138',
     resumePhotoBorder: '#7c7d7d',
 
-    boxShadow:
-      'inset 0 1px 0 rgba(255,255,255,.0), 0 22px 70px 4px rgba(0,0,0,0.4), 0 0 0 1px rgba(0, 0, 0, 0.0)',
+    boxShadow: '0 10px 20px 0 rgba(0,0,0,0.40)',
+
     menuBar: '#1a1a1a',
   },
 

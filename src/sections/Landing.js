@@ -31,14 +31,14 @@ const LandingPage = () => (
             <Heading
               textAlign="center"
               as="h1"
-              color="primary"
+              color="headerText"
               fontSize={[5, 7]}
               mb={[3, 4, 5]}
             >
               {`Hi, I'm ${name}.`}
             </Heading>
 
-            <SectionShadow color="backgroundDark">
+            <SectionShadow>
               <Flex
                 alignItems="center"
                 justifyContent="center"
@@ -54,7 +54,7 @@ const LandingPage = () => (
                     paddingLeft="12px"
                     paddingRight="12px"
                   >
-                    <SocialLink {...rest} />
+                    <SocialLink color="text" {...rest} />
                   </Box>
                 ))}
               </Flex>

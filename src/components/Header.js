@@ -14,7 +14,7 @@ const HeaderContainer = styled(Headroom)`
   }
 
   .headroom--pinned {
-    box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0 0 18px 18px;
   }
   position: fixed;
@@ -30,6 +30,10 @@ const HeaderShadow = styled(Headroom)`
     padding: 0;
     border-radius: 0 0 18px 18px;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -ms-backdrop-filter: blur(20px);
+    -o-backdrop-filter: blur(20px);
   }
 `;
 

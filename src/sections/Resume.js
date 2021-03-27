@@ -96,7 +96,7 @@ function Resume({ theme }) {
   return (
     <Section.Container id="resume" Background={Background}>
       <Section.Header name="Resume" label="resume" />
-      <StyledCVBackground color="backgroundDark">
+      <StyledCVBackground>
         <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
           <div>
             <Fade>
