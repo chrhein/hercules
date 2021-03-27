@@ -37,28 +37,29 @@ const LandingPage = () => (
             >
               {`Hi, I'm ${name}.`}
             </Heading>
-
-            <SectionShadow>
-              <Flex
-                alignItems="center"
-                justifyContent="center"
-                style={centerHorizontally}
-              >
-                {socialLinks.map(({ id, ...rest }) => (
-                  <Box
-                    mx={3}
-                    fontSize={[4, 5, 5]}
-                    key={id}
-                    style={centerHorizontally}
-                    maxWidth="fit-content"
-                    paddingLeft="12px"
-                    paddingRight="12px"
-                  >
-                    <SocialLink color="text" {...rest} />
-                  </Box>
-                ))}
-              </Flex>
-            </SectionShadow>
+            <Fragment>
+              <SectionShadow>
+                <Flex
+                  alignItems="center"
+                  justifyContent="center"
+                  style={centerHorizontally}
+                >
+                  {socialLinks.map(({ id, ...rest }) => (
+                    <Box
+                      mx={3}
+                      fontSize={[4, 5, 5]}
+                      key={id}
+                      style={centerHorizontally}
+                      maxWidth="fit-content"
+                      paddingLeft="12px"
+                      paddingRight="12px"
+                    >
+                      <SocialLink color="text" {...rest} />
+                    </Box>
+                  ))}
+                </Flex>
+              </SectionShadow>
+            </Fragment>
           </Fragment>
         );
       }}

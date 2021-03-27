@@ -12,11 +12,16 @@ const SectionBackground = styled.div`
 export const SectionShadow = styled.div`
   border-radius: 18px;
   box-shadow: ${({ theme }) => theme.colors.boxShadow};
+  width: -moz-fit-content;
   width: fit-content;
+  min-width: 250px;
   padding: 12px;
   margin-right: auto;
   margin-left: auto;
   background-color: ${({ theme }) => theme.colors.projectCard};
+  @media only screen and (max-width: 600px) {
+    min-width: 200px;
+  }
 `;
 
 export const BackgroundPadding = styled(SectionBackground)`

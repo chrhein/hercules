@@ -106,7 +106,7 @@ const Project = ({
       <Flex style={{ height: CARD_HEIGHT }}>
         <TextContainer>
           <span>
-            <Title my={2} pb={1} color="text">
+            <Title my={2} pb={1} color="text" fontWeight="bold">
               {name}
             </Title>
           </span>
@@ -124,6 +124,7 @@ const Project = ({
                   name="Github repository"
                   fontAwesomeIcon="github"
                   url={repositoryUrl}
+                  color="primary"
                 />
               </Box>
               <Box mx={1} fontSize={5}>
@@ -132,6 +133,7 @@ const Project = ({
                   name="Live demo"
                   fontAwesomeIcon="globe"
                   url={projectUrl}
+                  color="primary"
                 />
               </Box>
             </Flex>

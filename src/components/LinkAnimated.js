@@ -6,32 +6,14 @@ const LinkAnimated = styled.span`
   margin-bottom: 0;
   padding-bottom: 5px;
   color: inherit;
-  ${(props) =>
-          props.selected &&
-          `
-          border-bottom: 2px solid ${props.theme.colors.headerText};
-          `};
-  
-  transition: 0.4s ease-in-out;
-  transition-property: border-bottom-width;
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
   outline: none;
-  
+
   &:hover {
-    color: ${({ theme }) => theme.colors.clouds};
-  }
-
-  &:focus {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-
-  &:focus:after,
-  &:hover:after {
-    left: 0;
-    right: auto;
-    width: 100%;
+    color: ${({ theme }) => theme.colors.buttonHover};
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
   }
 `;
 

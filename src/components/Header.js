@@ -22,7 +22,7 @@ const HeaderContainer = styled(Headroom)`
   z-index: 1;
 `;
 
-const HeaderShadow = styled(Headroom)`
+export const HeaderShadow = styled(Headroom)`
   background-color: transparent;
   .headroom--pinned {
     box-shadow: 0;
@@ -37,7 +37,7 @@ const HeaderShadow = styled(Headroom)`
   }
 `;
 
-const HeaderShade = styled(Headroom)`
+export const HeaderShade = styled(Headroom)`
   * {
     transition: background-color 0.3s ease;
   }

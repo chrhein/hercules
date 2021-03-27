@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .resumeTitle {
-    color: ${({ theme }) => theme.colors.resumeTitle};
+    color: ${({ theme }) => theme.colors.primaryLight};
     font-weight: 100;
     // text-transform: uppercase;
     font-size: x-large;
@@ -37,16 +37,18 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .resumeHeader {
-    color: ${({ theme }) => theme.colors.resumeHeader};
+    color: ${({ theme }) => theme.colors.text};
     margin-top: 28px;
   }
 
   .resumeParagraph {
-    color: ${({ theme }) => theme.colors.resumeParagraph};
+    color: ${({ theme }) => theme.colors.text};
+    font-size: large;
+  line-height: 2em;
   }
 
   .info {
-    color: ${({ theme }) => theme.colors.resumeInfo};
+    color: ${({ theme }) => theme.colors.primaryLight};
   }
   
   
@@ -55,10 +57,9 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     position: relative;
     margin-bottom: 0;
-    padding-bottom: 4px;
+    padding-bottom: 0px;
     color: ${({ theme }) => theme.colors.buttonHover};
     transition: 0.4s;
-
 
     &:after {
       content: '';
@@ -68,11 +69,12 @@ export const GlobalStyles = createGlobalStyle`
       bottom: -2px;
       background: ${({ theme }) => theme.colors.buttonHover};
       color: ${({ theme }) => theme.colors.text};
-      height: 2px;
+      height: 0px;
       transition-property: width;
       transition-duration: 0.3s;
       transition-timing-function: ease-out;
     }
+
 
     &:focus:after,
     &:hover:after {
