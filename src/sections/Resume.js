@@ -3,33 +3,13 @@ import { Flex, Image } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
-import Triangle from '../components/Triangle';
 import Section from '../components/Section';
 import Education from '../data/resume-pages/Education';
 import Experience from '../data/resume-pages/Experience';
 import VolunteerExperience from '../data/resume-pages/VolunteerExperience';
 import { darkTheme, lightTheme } from '../styles/Theme';
 import Airplane, { Clouds } from '../assets/svgs/Icons';
-import SectionBackground from '../components/Shadows';
-
-const Background = () => (
-  <div>
-    <Triangle
-      color="secondaryLight"
-      height={['8vh', '10vh']}
-      width={['70vw', '40vw']}
-      invertY
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['10vh', '15vh']}
-      width={['100vw', '100vw']}
-      invertX
-      invertY
-    />
-  </div>
-);
+import { BackgroundPadding } from '../components/Shadows';
 
 const ProfilePicture = styled(Image)`
   margin-top: 25px;
@@ -39,14 +19,7 @@ const ProfilePicture = styled(Image)`
   margin-right: auto;
   border-radius: 50%;
   content-visibility: auto;
-  
-  /*
-  &:hover {
-    // border-radius: 20%;
-    border: solid 10px ${({ theme }) => theme.colors.resumePhotoBorder};
-  }
-   */
-  
+
   @media (max-width: 400px) {
     max-height: 200px;
   }
@@ -84,18 +57,12 @@ const SvgWrapper = styled.div`
   margin-bottom: 10%;
 `;
 
-const StyledCVBackground = styled(SectionBackground)`
-  padding: 40px;
-  margin: auto;
-  margin-bottom: 120px;
-`;
-
 function Resume({ theme }) {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
-    <Section.Container id="resume" Background={Background}>
+    <Section.Container id="resume">
       <Section.Header name="Resume" label="resume" />
-      <StyledCVBackground>
+      <BackgroundPadding>
         <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
           <div>
             <Fade>
@@ -124,7 +91,7 @@ function Resume({ theme }) {
             </SvgWrapper>
           </div>
         </Flex>
-      </StyledCVBackground>
+      </BackgroundPadding>
     </Section.Container>
   );
 }

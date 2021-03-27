@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import markdownRenderer from '../components/MarkdownRenderer';
-import SectionBackground from '../components/Shadows';
+import { BackgroundPadding } from '../components/Shadows';
 
 const ProfilePicture = styled(Image)`
   border-radius: 18px;
@@ -26,7 +26,7 @@ const About = () => (
       `}
       render={(aboutQuery) => {
         return (
-          <SectionBackground>
+          <BackgroundPadding>
             <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
               <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
                 <Fade>
@@ -54,7 +54,7 @@ const About = () => (
                 </Fade>
               </Box>
             </Flex>
-          </SectionBackground>
+          </BackgroundPadding>
         );
       }}
     />

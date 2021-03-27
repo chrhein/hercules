@@ -19,4 +19,24 @@ export const SectionShadow = styled.div`
   background-color: ${({ theme }) => theme.colors.projectCard};
 `;
 
+export const BackgroundPadding = styled(SectionBackground)`
+  padding: 40px;
+  margin: auto;
+  margin-bottom: 120px;
+
+  @media only screen and (max-width: 900px) {
+    padding: 10px;
+    margin-bottom: 200px;
+    padding-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0px;
+
+    ul {
+      margin-left: 1em;
+      padding-left: 0;
+    }
+  }
+`;
+
 export default SectionBackground;

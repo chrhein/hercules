@@ -59,6 +59,9 @@ const MarkdownList = styled.ul`
 const MarkdownListItem = styled.li`
   margin: 1em 0;
   line-height: 2em;
+  @media (max-width: 400px) {
+    margin: 0;
+  }
 `;
 
 const MarkdownLink = ({ href, children }) => {
