@@ -4,9 +4,7 @@ const SectionBackground = styled.div`
   z-index: -1;
   border-radius: 18px;
   content-visibility: auto;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin: 5vw;
+
   box-shadow: ${({ theme }) => theme.colors.boxShadow};
   background-color: ${({ theme }) => theme.colors.projectCard};
 `;

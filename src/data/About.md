@@ -1,15 +1,14 @@
 ---
-title: "About me"
+title: 'About me'
 mdName: aboutmd
 ---
 
-Hello 👋
+### Hello 👋
 
 My name is Christian Hein. I'm a visualization student who's passionate about programming, working on hobby projects, and learning new technologies.
 
-
-
 #### Some facts
+
 - Born in Stavanger in 1997
 - Currently living in Bergen
 - Have a Bachelor's Degree in Computer Security

@@ -87,7 +87,6 @@ const SvgWrapper = styled.div`
 const StyledCVBackground = styled(SectionBackground)`
   padding: 40px;
   margin: auto;
-  margin-top: 50px;
   margin-bottom: 120px;
 `;
 

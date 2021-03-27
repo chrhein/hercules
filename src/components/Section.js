@@ -51,6 +51,12 @@ const Header = ({ name, icon = '', label = '' }) => (
   </Fade>
 );
 
+const Centered = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+`;
+
 Header.propTypes = {
   name: PropTypes.string.isRequired,
   icon: PropTypes.string,
@@ -58,6 +64,7 @@ Header.propTypes = {
 };
 
 export default {
+  Centered,
   Container,
   Header,
 };

@@ -3,19 +3,14 @@ import { Card as CardRebass } from 'rebass/styled-components';
 
 export const CardContainer = styled.div`
   display: grid;
-  grid-gap: 50px;
-
-  .cardContainer:hover {
-    opacity: 0.5;
-  }
+  grid-gap: 60px;
 
   grid-template-columns: repeat(
     auto-fill,
-    minmax(${(props) => props.minWidth}, 1fr)
+    minmax(${(props) => props.minWidth}, ${(props) => props.maxWidth})
   );
-  justify-items: center;
-
-  @media only screen and (max-width: 400px) {
+  justify-content: space-around;
+  justify-content: center @media only screen and (max-width: 400px) {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 `;
@@ -60,16 +55,7 @@ export const Card = styled(CardRebass).attrs({
 
 .trafficGreen {
   background-color: #35c840;
-}
-  
-  &:hover {
-    opacity: 1;
-    z-index: 1;
-    box-shadow: ${({ theme }) => theme.colors.boxShadow};
-  }
-
-  
-  
+} 
 `;
 
 export default Card;

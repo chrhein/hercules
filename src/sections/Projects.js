@@ -167,7 +167,7 @@ Project.propTypes = {
 
 const Projects = () => (
   <Section.Container id="projects">
-    <Section.Header name="Projects" label="notebook" />
+    <Section.Header name="Projects" label="projects" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
@@ -189,7 +189,11 @@ const Projects = () => (
         }
       `}
       render={({ landingInfoJson }) => (
-        <CardContainer minWidth="350px" className="cardContainer">
+        <CardContainer
+          minWidth="350px"
+          maxWidth="500px"
+          className="cardContainer"
+        >
           {landingInfoJson.projects.map((p, i) => (
             <Fade bottom delay={i * 200} key={p.id}>
               <Project {...p} />

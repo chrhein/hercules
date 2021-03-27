@@ -22,7 +22,10 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.headerText};
     font-weight: bold;
     // text-transform: uppercase;
-    font-size: 42px;
+    font-size: 45px;
+    text-align: center;
+    padding-bottom: 24px;
+
   }
 
   .resumeTitle {
