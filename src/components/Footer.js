@@ -24,7 +24,7 @@ const FooterContainer = styled.div`
 
 const FooterBackground = styled.div`
   border-radius: 18px 18px 0 0;
-  background-color: ${({ theme }) => theme.colors.projectCard};
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 const Footer = () => (

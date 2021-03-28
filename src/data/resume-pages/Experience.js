@@ -3,7 +3,6 @@ import Fade from 'react-reveal/Fade';
 
 const Experience = () => (
   <Fade>
-
     <div className="row work">
       <div className="three columns header-col">
         <h1 className="resumeTitle">
@@ -22,9 +21,10 @@ const Experience = () => (
             </p>
 
             <p className="resumeParagraph">
-              Student Mentor for the first-year Computer Security students. Helped the students become academically and
-              socially integrated with their studies and in the study environment, and made the transition from upper
-              secondary school to the university easier.
+              Student Mentor for the first-year Computer Security students.
+              Helped the students become academically and socially integrated
+              with their studies and in the study environment, and made the
+              transition from upper secondary school to the university easier.
             </p>
           </div>
         </div>
@@ -39,9 +39,9 @@ const Experience = () => (
             </p>
 
             <p className="resumeParagraph">
-              Guided students in the subject &quot;INF102 - Algorithms, Data Structures and, Programming&quot; by
-              helping
-              them program in Java and correct their mandatory assignments.
+              Guided students in the subject &quot;INF102 - Algorithms, Data
+              Structures and, Programming&quot; by helping them program in Java
+              and correct their mandatory assignments.
             </p>
           </div>
         </div>
@@ -56,8 +56,8 @@ const Experience = () => (
             </p>
 
             <p className="resumeParagraph">
-              Class Leader for the first-year Computer Security students. Gave the students a good and relevant start to
-              their studies.
+              Class Leader for the first-year Computer Security students. Gave
+              the students a good and relevant start to their studies.
             </p>
           </div>
         </div>
@@ -72,9 +72,9 @@ const Experience = () => (
             </p>
 
             <p className="resumeParagraph">
-              I taught students from secondary schools visiting the university to program robots using simple code
-              blocks
-              and tablets during the &quot;Åpen dag 2018&quot; events.
+              I taught students from secondary schools visiting the university
+              to program robots using simple code blocks and tablets during the
+              &quot;Åpen dag 2018&quot; events.
             </p>
           </div>
         </div>
@@ -89,14 +89,14 @@ const Experience = () => (
             </p>
 
             <p className="resumeParagraph">
-              Helped arrange everything from weddings to confirmations and teambuildings.
+              Helped arrange everything from weddings to confirmations and
+              teambuildings.
             </p>
           </div>
         </div>
       </div>
     </div>
   </Fade>
-
 );
 
 export default Experience;

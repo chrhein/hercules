@@ -8,7 +8,7 @@ import 'tippy.js/dist/tippy.css'; // eslint-disable-line
 
 const IconLink = styled(Link)`
   transition: color 0.5s;
-  color: ${(props) => props.color || props.theme.colors.button};
+  color: ${(props) => props.color || props.theme.colors.primaryText};
   text-decoration: none;
 
   .projectCardLink {
@@ -17,7 +17,7 @@ const IconLink = styled(Link)`
   }
 
   &:hover {
-    color: ${(props) => props.theme.colors.buttonHover};
+    color: ${(props) => props.theme.colors.secondary};
   }
 `;
 

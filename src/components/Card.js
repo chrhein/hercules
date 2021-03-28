@@ -16,7 +16,7 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled(CardRebass).attrs({
-  bg: 'projectCard',
+  bg: 'primary',
 })`
   position: relative;
   transition: all 0.25s;
@@ -32,7 +32,7 @@ export const Card = styled(CardRebass).attrs({
     padding-top: 3px;
     height: 23px;
     width: 100%;
-    background-color: ${({ theme }) => theme.colors.menuBar};
+    background-color: ${({ theme }) => theme.colors.menu};
     border-radius 15px 15px 0 0;
   }
   

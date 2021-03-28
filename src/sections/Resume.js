@@ -78,13 +78,13 @@ function Resume({ theme }) {
 
             <SvgWrapper>
               <CloudDiv>
-                <Clouds cloudColor={themeMode.colors.clouds} />
+                <Clouds cloudColor={themeMode.colors.cloud} />
               </CloudDiv>
               <AircraftDiv>
                 <Fade right>
                   <Airplane
-                    airplaneColor={themeMode.colors.airplane}
-                    airplaneBottomColor={themeMode.colors.airplaneBottom}
+                    airplaneColor={themeMode.colors.secondaryLight}
+                    airplaneBottomColor={themeMode.colors.secondary}
                   />
                 </Fade>
               </AircraftDiv>

@@ -44,7 +44,7 @@ export const HeaderShade = styled(Headroom)`
   .headroom--pinned {
     border-radius: 0 0 18px 18px;
     opacity: 0.65;
-    background-color: ${({ theme }) => theme.colors.menuBar};
+    background-color: ${({ theme }) => theme.colors.menu};
     @-moz-document url-prefix() {
       opacity: 1;
     }

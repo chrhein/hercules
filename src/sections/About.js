@@ -26,24 +26,22 @@ const About = () => (
       `}
       render={(aboutQuery) => {
         return (
-          <BackgroundPadding>
-            <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-              <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
-                <Fade>
+          <Fade right>
+            <BackgroundPadding>
+              <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+                <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
                   <ReactMarkdown
                     source={aboutQuery.markdownRemark.rawMarkdownBody}
                     renderers={markdownRenderer}
                   />
-                </Fade>
-              </Box>
-              <Box
-                width={[1, 1, 2 / 6]}
-                style={{
-                  maxWidth: '300px',
-                  margin: 'auto',
-                }}
-              >
-                <Fade>
+                </Box>
+                <Box
+                  width={[1, 1, 2 / 6]}
+                  style={{
+                    maxWidth: '300px',
+                    margin: 'auto',
+                  }}
+                >
                   <ProfilePicture
                     // eslint-disable-next-line global-require
                     src={require('../assets/images/pb.png')}
@@ -51,10 +49,10 @@ const About = () => (
                     mt={[4, 4, 0]}
                     ml={[0, 0, 1]}
                   />
-                </Fade>
-              </Box>
-            </Flex>
-          </BackgroundPadding>
+                </Box>
+              </Flex>
+            </BackgroundPadding>
+          </Fade>
         );
       }}
     />

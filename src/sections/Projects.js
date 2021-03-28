@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Flex, Image, Text } from 'rebass/styled-components';
@@ -7,7 +8,6 @@ import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import { Card, CardContainer } from '../components/Card';
 import SocialLink from '../components/SocialLink';
-import ImageSubtitle from '../components/ImageSubtitle';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
@@ -73,7 +73,6 @@ const ProjectImage = styled(Image)`
   }
 `;
 
-// eslint-disable-next-line no-unused-vars
 const ProjectSVG = styled.div`
   width: calc(${CARD_HEIGHT} / 1.5);
   height: ${CARD_HEIGHT};
@@ -116,11 +115,11 @@ const Project = ({
       <Flex style={{ height: CARD_HEIGHT }}>
         <TextContainer>
           <span>
-            <Title my={2} pb={1} color="resumeHeader" fontWeight="bold">
+            <Title my={2} pb={1} color="primaryText" fontWeight="bold">
               {name}
             </Title>
           </span>
-          <Text width={[1]} style={{ overflow: 'auto' }} color="resumeHeader">
+          <Text width={[1]} style={{ overflow: 'auto' }} color="primaryText">
             {description}
           </Text>
           <ProjectLinks>
@@ -134,7 +133,7 @@ const Project = ({
                   name="Github repository"
                   fontAwesomeIcon="github"
                   url={repositoryUrl}
-                  color="resumeHeader"
+                  color="primaryText"
                 />
               </Box>
               <Box mx={1} fontSize={5}>
@@ -143,7 +142,7 @@ const Project = ({
                   name="Live demo"
                   fontAwesomeIcon="globe"
                   url={projectUrl}
-                  color="resumeHeader"
+                  color="primaryText"
                 />
               </Box>
             </Flex>

@@ -10,7 +10,7 @@ const LinkAnimated = styled.span`
   outline: none;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.buttonHover};
+    color: ${({ theme }) => theme.colors.secondaryLight};
     transition-property: color;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;

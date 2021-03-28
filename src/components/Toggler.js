@@ -13,8 +13,8 @@ const Toggle = ({ theme, toggleTheme }) => {
       }}
       checked={theme === 'light'}
       onChange={toggleTheme}
-      sunColor="#e2e6eb"
-      moonColor="#07090f"
+      sunColor="#f9fafb"
+      moonColor="#080b11"
     />
   );
 };
