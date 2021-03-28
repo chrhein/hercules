@@ -72,9 +72,13 @@ function Resume({ theme }) {
             />
             <Education />
           </BackgroundPadding>
+        </Fade>
+        <Fade left>
           <BackgroundPadding>
             <Experience />
           </BackgroundPadding>
+        </Fade>
+        <Fade right>
           <BackgroundPadding>
             <VolunteerExperience />
             <div>

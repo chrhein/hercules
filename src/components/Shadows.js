@@ -24,11 +24,11 @@ export const BackgroundPadding = styled(SectionBackground)`
   margin-bottom: 60px;
   z-index: -1;
   @media only screen and (max-width: 500px) {
-    padding: 10px;
+    padding: 5px;
     padding-bottom: 40px;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
 
     ul {
       margin-left: 1em;

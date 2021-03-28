@@ -28,10 +28,7 @@ const Layout = ({ theme, mountedComponent, children }) => {
     <main>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
-        <ScrollingProvider>
-          <Helmet />
-          {children}
-        </ScrollingProvider>
+        <ScrollingProvider>{children}</ScrollingProvider>
       </ThemeProvider>
     </main>
   );

@@ -19,7 +19,6 @@ const Education = () => (
             <span className="bullet">&bull;</span>
             <em className="date">August 2020 - Present</em>
           </p>
-
           <p className="resumeParagraph">
             A Master&apos;s Degree that results in great knowledge and advanced
             skills in visualization, computer graphics, and interactive
@@ -38,7 +37,6 @@ const Education = () => (
             <span className="bullet">&bull;</span>
             <em className="date">August 2017 - June 2020</em>
           </p>
-
           <p className="resumeParagraph">
             The Bachelor&apos;s Degree included both the general Computer
             Science subjects offered by the University of Bergen, as well as a
@@ -54,7 +52,6 @@ const Education = () => (
             <span className="bullet">&bull;</span>
             <em className="date">July 2016 - July 2017</em>
           </p>
-
           <p className="resumeParagraph">
             Worked as an operator in an alarm central at Ørland Air Station, in
             shifts of 12 hours a day, 14 days in a row.

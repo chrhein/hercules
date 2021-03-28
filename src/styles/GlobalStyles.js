@@ -559,6 +559,22 @@ export const GlobalStyles = createGlobalStyle`
   --------------------------------------------------------------- */
   @media only screen and (max-width: 400px) {
 
+    .resumeTitle {
+    font-size: 32px;
+  }
+  .resumeParagraph {
+    line-height: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  
+  p {
+    margin: 0;
+  }
+
+  .resumeHeader {
+    margin-top: 40px;
+  }
+
     .row {
       width: auto;
     }

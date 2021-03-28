@@ -71,7 +71,7 @@ const VolunteerExperience = () => (
           <p className="resumeParagraph">
             Posting photos to show present and future students what it is like
             to be a student. Our Instagram account can be found
-            <a href="https://www.instagram.com/informatikk_uib/">here.</a>
+            <a href="https://www.instagram.com/informatikk_uib/"> here.</a>
           </p>
         </div>
       </div>
