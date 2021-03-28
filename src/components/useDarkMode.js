@@ -8,12 +8,25 @@ export const useDarkMode = () => {
     setTheme(mode);
   };
   const themeToggler = () => {
-    theme === 'light' ? setMode('dark') : setMode('light');
+    if (theme === 'light') {
+      setMode('dark');
+    } else {
+      setMode('light');
+    }
   };
   useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme');
-    localTheme ? setTheme(localTheme) : setMode('dark');
+    const chosenTheme = window.localStorage.getItem('theme');
+    const localTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (chosenTheme) {
+      setTheme(chosenTheme);
+    } else if (localTheme.matches) {
+      setMode('dark');
+    } else {
+      setMode('light');
+    }
     setMountedComponent(true);
   }, []);
   return [theme, themeToggler, mountedComponent];
 };
+
+export default useDarkMode;
