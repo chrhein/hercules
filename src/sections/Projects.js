@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Flex, Image, Text } from 'rebass/styled-components';
@@ -7,80 +8,18 @@ import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import { Card, CardContainer } from '../components/Card';
 import SocialLink from '../components/SocialLink';
-import Triangle from '../components/Triangle';
-import ImageSubtitle from '../components/ImageSubtitle';
-import { LayoutIcon } from '../assets/svgs/Icons';
-import { darkTheme, lightTheme } from '../styles/Theme';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
-const Background = () => (
-  <div>
-    <Triangle
-      color="backgroundDark"
-      height={['0vh', '10vh']}
-      width={['0vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['0vh', '14vh']}
-      width={['0vw', '100vw']}
-    />
-
-
-    <Triangle
-      color="primaryDark"
-      height={['10vh', '20vh']}
-      width={['40vw', '40vw']}
-    />
-
-    <Triangle
-      color="secondaryLight"
-      height={['15vh', '23vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['6vh', '6vh']}
-      width={['40vw', '40vw']}
-      invertX
-    />
-
-
-
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '20vh']}
-      width={['75vw', '60vw']}
-      invertX
-      invertY
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['25vh', '20vh']}
-      width={['100vw', '100vw']}
-      invertY
-    />
-  </div>
-);
-
-
-const CARD_HEIGHT = '200px';
+const CARD_HEIGHT = '220px';
 
 const Title = styled(Text)`
+  padding-top: 10px;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   display: table;
-  border-bottom: ${({ theme }) => theme.secondary}
-}
-
-;
+  border-bottom: ${({ theme }) => theme.secondary};
 `;
 
 const TextContainer = styled.div`
@@ -88,6 +27,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   padding: 10px;
   width: 100%;
+  height: 100%;
   width: calc(100% - ${CARD_HEIGHT});
 
   ${MEDIA_QUERY_SMALL} {
@@ -98,17 +38,45 @@ const TextContainer = styled.div`
 const ImageContainer = styled.div`
   margin: auto;
   width: ${CARD_HEIGHT};
-
   ${MEDIA_QUERY_SMALL} {
     width: calc(${CARD_HEIGHT} / 2);
+  }
+`;
+
+const ProjectLinks = styled.div`
+  position: absolute;
+  bottom: 2px;
+  left: 4px;
+`;
+
+const ProjectImageContainer = styled.div`
+  transform: scale(0.8);
+  margin-top: 9px;
+  ${MEDIA_QUERY_SMALL} {
+    transform: scale(1);
+    margin-top: 0;
+    margin-right: 8px;
+    margin-left: -8px;
   }
 `;
 
 const ProjectImage = styled(Image)`
+  object-fit: cover;
+  border-radius: 15px;
+
   width: ${CARD_HEIGHT};
   height: ${CARD_HEIGHT};
-  padding: 40px;
-  margin-top: 0px;
+  ${MEDIA_QUERY_SMALL} {
+    height: calc(${CARD_HEIGHT} / 2);
+    width: calc(${CARD_HEIGHT} / 2);
+    margin-top: calc(${CARD_HEIGHT} / 4);
+  }
+`;
+
+const ProjectSVG = styled.div`
+  width: calc(${CARD_HEIGHT} / 1.5);
+  height: ${CARD_HEIGHT};
+  margin: auto;
 
   ${MEDIA_QUERY_SMALL} {
     height: calc(${CARD_HEIGHT} / 2);
@@ -116,25 +84,13 @@ const ProjectImage = styled(Image)`
     margin-top: calc(${CARD_HEIGHT} / 4);
     padding: 10px;
   }
-`;
-
-const ProjectSVG = styled.div`
-  width: ${CARD_HEIGHT};
-  height: ${CARD_HEIGHT};
-  padding: 40px;
-  margin-top: 0px;
-
-  ${MEDIA_QUERY_SMALL} {
-    height: calc(${CARD_HEIGHT} / 2);
-    width: calc(${CARD_HEIGHT} / 2);
-    margin-top: calc(${CARD_HEIGHT} / 4);
-    padding: 10px;
 `;
 
 const ProjectTag = styled.div`
   position: relative;
   height: ${CARD_HEIGHT};
   top: calc(-${CARD_HEIGHT} - 3.5px);
+  padding-bottom: -20px;
 
   ${MEDIA_QUERY_SMALL} {
     top: calc(-${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
@@ -142,39 +98,34 @@ const ProjectTag = styled.div`
 `;
 
 const Project = ({
-                   theme,
-                   name,
-                   description,
-                   projectUrl,
-                   repositoryUrl,
-                   type,
-                   logo,
-                 }) => {
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  name,
+  description,
+  projectUrl,
+  repositoryUrl,
+  type,
+  logo,
+}) => {
   return (
     <Card p={0}>
+      <span className="trafficMenuBar">
+        <span className="trafficLight trafficRed" />
+        <span className="trafficLight trafficYellow" />
+        <span className="trafficLight trafficGreen" />
+      </span>
       <Flex style={{ height: CARD_HEIGHT }}>
         <TextContainer>
-        <span>
-          <Title my={2} pb={1} color="text">
-            {name}
-          </Title>
-        </span>
-          <Text width={[1]} style={{ overflow: 'auto' }} color="primary">
+          <span>
+            <Title my={2} pb={1} color="primaryText" fontWeight="bold">
+              {name}
+            </Title>
+          </span>
+          <Text width={[1]} style={{ overflow: 'auto' }} color="primaryText">
             {description}
           </Text>
-        </TextContainer>
-
-        <ImageContainer>
-          <ProjectSVG>
-            <LayoutIcon
-              color={themeMode.colors.projectIcon}
-            />
-          </ProjectSVG>
-          <ProjectTag>
+          <ProjectLinks>
             <Flex
               style={{
-                float: 'right',
+                float: 'left',
               }}
             >
               <Box mx={1} fontSize={5}>
@@ -182,20 +133,26 @@ const Project = ({
                   name="Github repository"
                   fontAwesomeIcon="github"
                   url={repositoryUrl}
+                  color="primaryText"
                 />
               </Box>
               <Box mx={1} fontSize={5}>
                 <SocialLink
+                  className="projectCardLink"
                   name="Live demo"
                   fontAwesomeIcon="globe"
                   url={projectUrl}
+                  color="primaryText"
                 />
               </Box>
             </Flex>
-            <ImageSubtitle color="button" y="bottom" x="right" round>
-              {type}
-            </ImageSubtitle>
-          </ProjectTag>
+          </ProjectLinks>
+        </TextContainer>
+
+        <ImageContainer>
+          <ProjectImageContainer>
+            <ProjectImage src={logo.image.src} alt={logo.title} />
+          </ProjectImageContainer>
         </ImageContainer>
       </Flex>
     </Card>
@@ -203,13 +160,11 @@ const Project = ({
 };
 
 Project.propTypes = {
-  theme: PropTypes.string,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   projectUrl: PropTypes.string.isRequired,
   repositoryUrl: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  publishedDate: PropTypes.string.isRequired,
+  type: PropTypes.string,
   logo: PropTypes.shape({
     image: PropTypes.shape({
       src: PropTypes.string,
@@ -218,24 +173,22 @@ Project.propTypes = {
   }).isRequired,
 };
 
-const Projects = ({ theme }) => (
-  <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="💻" label="notebook" />
+const Projects = () => (
+  <Section.Container id="projects">
+    <Section.Header name="Projects" label="projects" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
-          contentfulAbout {
+          landingInfoJson {
             projects {
               id
               name
               description
               projectUrl
               repositoryUrl
-              publishedDate(formatString: "YYYY")
-              type
               logo {
                 title
-                image: resize(width: 200, quality: 100) {
+                image {
                   src
                 }
               }
@@ -243,11 +196,15 @@ const Projects = ({ theme }) => (
           }
         }
       `}
-      render={({ contentfulAbout }) => (
-        <CardContainer minWidth="350px">
-          {contentfulAbout.projects.map((p, i) => (
-            <Fade delay={i * 200} key={p.id}>
-              <Project theme={theme} {...p} />
+      render={({ landingInfoJson }) => (
+        <CardContainer
+          minWidth="350px"
+          maxWidth="500px"
+          className="cardContainer"
+        >
+          {landingInfoJson.projects.map((p, i) => (
+            <Fade bottom delay={i * 200} key={p.id}>
+              <Project {...p} />
             </Fade>
           ))}
         </CardContainer>

@@ -3,36 +3,19 @@ import preset from '@rebass/preset';
 export const lightTheme = {
   ...preset,
   colors: {
-    background: '#FFFFFF',
-    backgroundDark: '#e7eaef',
+    background: '#d49a89',
+    primary: '#f7d1ba',
+    secondary: '#547571',
+    secondaryLight: '#76908d',
+    menu: '#eeefee',
 
-    text: '#080b11',
-    heading: '#07090f',
+    cloud: '#f4f4f4',
 
-    primary: '#162229',
-    primaryLight: '#737a7e',
-    primaryDark: '#0d1418',
+    primaryText: '#080b11',
+    secondaryText: '#737a7e',
+    header: '#f4f4f4',
 
-    secondary: '#05828e',
-    secondaryLight: '#69b4bb',
-    secondaryDark: '#034e55',
-
-    projectCard: '#f0f7f8',
-    projectIcon: '#727679',
-
-    button: '#737a7e',
-    buttonHover: '#05828e',
-
-    airplane: '#69b4bb',
-    airplaneBottom: '#034e55',
-    clouds: '#f2f2f2',
-
-    resumeTitle: '#737a7e',
-    resumeHeader: '#07090f',
-    resumeInfo: '#05828e',
-    resumeParagraph: '#737a7e',
-    resumeDivider: '#727679',
-    resumePhotoBorder: '#727679',
+    boxShadow: '0 10px 20px 0 rgba(0,0,0,0.30)',
   },
   fonts: {
     body: 'Cabin, Open Sans, sans-serif',
@@ -43,37 +26,19 @@ export const lightTheme = {
 export const darkTheme = {
   ...preset,
   colors: {
-    background: '#000103',
-    backgroundDark: '#070a0d',
+    background: '#222831',
+    primary: '#393e46',
+    secondary: '#42505f',
+    secondaryLight: '#6f8193',
+    menu: '#1a1a1a',
 
-    text: '#f9fafb',
-    heading: '#f3f5f7',
+    cloud: '#f4f4f4',
 
-    primary: '#e2e6eb',
-    primaryLight: '#c6cdd7',
-    primaryDark: '#0b1014',
+    primaryText: '#f9fafb',
+    secondaryText: '#8899ac',
+    header: '#e2e6eb',
 
-    secondary: '#121b22',
-    secondaryLight: '#101316',
-    secondaryDark: '#a4b6c3',
-
-    projectCard: '#14181c',
-    projectIcon: '#f9fafb',
-
-    button: '#c7c8c8',
-    buttonHover: '#6f8193',
-
-    airplane: '#6f8193',
-    airplaneBottom: '#42505f',
-    clouds: '#ffffff',
-
-    resumeTitle: '#42505f',
-    resumeHeader: '#f3f5f7',
-    resumeInfo: '#8899ac',
-    resumeParagraph: '#c4c9cf',
-    resumeDivider: '#293138',
-    resumePhotoBorder: '#7c7d7d',
-
+    boxShadow: '0 10px 20px 0 rgba(0,0,0,0.40)',
   },
 
   fonts: {

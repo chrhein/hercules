@@ -6,7 +6,6 @@ import config from 'react-reveal/globals';
 import Helmet from './Helmet';
 import { GlobalStyles } from '../styles/GlobalStyles';
 import { darkTheme, lightTheme } from '../styles/Theme';
-import { useDarkMode } from './useDarkMode';
 
 config({ ssrFadeout: true });
 
@@ -17,13 +16,14 @@ const loadScript = (src) => {
 
   document.getElementsByTagName('body')[0].appendChild(tag);
 };
+// eslint-disable-next-line react/prop-types
 const Layout = ({ theme, mountedComponent, children }) => {
   useEffect(() => {
     loadScript('https://use.fontawesome.com/fd58d214b9.js');
   }, []);
 
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-  if(!mountedComponent) return <div/>
+  if (!mountedComponent) return <div />;
   return (
     <main>
       <ThemeProvider theme={themeMode}>

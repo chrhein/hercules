@@ -1,4 +1,4 @@
-const ghpages = require('gh-pages')
+const ghpages = require('gh-pages');
 
 // replace with your repo url
 ghpages.publish(
@@ -8,6 +8,6 @@ ghpages.publish(
     repo: 'git@github.com:chrhein/chrhein.github.io.git',
   },
   () => {
-    console.log('Deploy Complete!')
-  }
-)
+    console.log('Deploy Complete!');
+  },
+);

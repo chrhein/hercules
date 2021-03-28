@@ -3,14 +3,14 @@
     "name": "Christian",
     "roles": [
       "Visualization Student 👨🏻‍🎓",
+      "Hiking Enthusiast 🏔",
+      "Outgoing and Positive 😄",
       "Collaborative 👥",
+      "Energetic ⚡️",
+      "Willing to Learn 👨🏻‍🏫",
       "Passionate 🧑🏻‍💻",
       "Planespotter ✈️",
-      "Hiking Enthusiast 🏔",
       "Have an Eye for Details 🔍",
-      "Energetic ⚡️",
-      "Outgoing and Positive 😄",
-      "Willing to Learn 👨🏻‍🏫",
       "Hobby Photographer 📷",
       "Hard Working 👨🏻‍💼",
       "Helpful 🦸🏻‍♂️"
@@ -36,9 +36,45 @@
       },
       {
         "id": "4",
+        "url": "https://my.flightradar24.com/christianhein",
+        "name": "myFlightradar24",
+        "fontAwesomeIcon": "map-marker"
+      },
+      {
+        "id": "5",
         "url": "https://instagram.com/christianhein",
         "name": "Instagram",
         "fontAwesomeIcon": "instagram"
+      }
+    ],
+    "projects": [
+      {
+        "id": "1",
+        "name": "Globemaster",
+        "description": "A sleek, but very slow start page, with links to the websites I visit the most.",
+        "projectUrl": "globemaster/",
+        "repositoryUrl": "https://github.com/chrhein/globemaster",
+        "type": "Javascript",
+        "logo": {
+          "title": "Globemaster Preview",
+          "image": {
+            "src": "https://raw.githubusercontent.com/chrhein/hercules/dev/src/assets/images/globemaster.png"
+          }
+        }
+      },
+      {
+        "id": "2",
+        "name": "Hercules",
+        "description": "Slow websites are not that fun. Therefore, on Hercules I've used Gatsby and React to create this fast and responsive website.",
+        "projectUrl": "/",
+        "repositoryUrl": "https://github.com/chrhein/hercules",
+        "type": "React, Gatsby",
+        "logo": {
+          "title": "Hercules Preview",
+          "image": {
+            "src": "https://raw.githubusercontent.com/chrhein/hercules/dev/src/assets/images/hercules.png"
+          }
+        }
       }
     ]
   }

@@ -13,12 +13,23 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Cabin, 'Open Sans', sans-serif;
     overflow-x: hidden;
     width: 100vw;
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.primaryText};
+    height: 100%;
+  }
+
+  .sectionTitle {
+    color: ${({ theme }) => theme.colors.header};
+    font-weight: bold;
+    // text-transform: uppercase;
+    font-size: 45px;
+    text-align: center;
+    padding-bottom: 24px;
+
   }
 
   .resumeTitle {
-    color: ${({ theme }) => theme.colors.resumeTitle};
+    color: ${({ theme }) => theme.colors.secondaryText};
     font-weight: 100;
     // text-transform: uppercase;
     font-size: x-large;
@@ -26,16 +37,18 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .resumeHeader {
-    color: ${({ theme }) => theme.colors.resumeHeader};
+    color: ${({ theme }) => theme.colors.primaryText};
     margin-top: 28px;
   }
 
   .resumeParagraph {
-    color: ${({ theme }) => theme.colors.resumeParagraph};
+    color: ${({ theme }) => theme.colors.primaryText};
+    font-size: large;
+  line-height: 2em;
   }
 
   .info {
-    color: ${({ theme }) => theme.colors.resumeInfo};
+    color: ${({ theme }) => theme.colors.secondaryText};
   }
   
   
@@ -44,10 +57,9 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     position: relative;
     margin-bottom: 0;
-    padding-bottom: 4px;
-    color: ${({ theme }) => theme.colors.buttonHover};
+    padding-bottom: 0px;
+    color: ${({ theme }) => theme.colors.secondary};
     transition: 0.4s;
-
 
     &:after {
       content: '';
@@ -55,13 +67,14 @@ export const GlobalStyles = createGlobalStyle`
       right: 0;
       width: 0;
       bottom: -2px;
-      background: ${({ theme }) => theme.colors.buttonHover};
-      color: ${({ theme }) => theme.colors.text};
-      height: 2px;
+      background: ${({ theme }) => theme.colors.secondaryLight};
+      color: ${({ theme }) => theme.colors.secondaryLight};
+      height: 0px;
       transition-property: width;
       transition-duration: 0.3s;
       transition-timing-function: ease-out;
     }
+
 
     &:focus:after,
     &:hover:after {
@@ -587,7 +600,7 @@ export const GlobalStyles = createGlobalStyle`
   .work {
     margin-bottom: 48px;
     padding-bottom: 24px;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.resumeDivider};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.secondaryText};
   }
 
   .volunteer {
@@ -818,3 +831,5 @@ export const GlobalStyles = createGlobalStyle`
 
   }
 `;
+
+export default GlobalStyles;

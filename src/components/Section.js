@@ -4,7 +4,6 @@ import { Section } from 'react-scroll-section';
 import { Heading } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
-import LinkAnimated from './LinkAnimated';
 
 const SectionContainer = styled.div`
   min-height: 100vh;
@@ -17,7 +16,7 @@ const SectionContainer = styled.div`
   justify-content: center;
   padding: 5em 2em;
   scroll-behavior: smooth;
-  
+  content-visibility: auto;
 
   @media (max-width: 400px) {
     padding: 4em 1em;
@@ -41,18 +40,22 @@ Container.propTypes = {
 
 const Header = ({ name, icon = '', label = '' }) => (
   <Fade>
-    <Heading color="heading" fontSize={[ 4 ]} mb={4}>
-      <LinkAnimated selected>
-        {name}
-        {icon && (
-          <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
-            {icon}
-          </span>
-        )}
-      </LinkAnimated>
+    <Heading mb={4} className="sectionTitle">
+      {name}
+      {icon && (
+        <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
+          {icon}
+        </span>
+      )}
     </Heading>
   </Fade>
 );
+
+const Centered = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+`;
 
 Header.propTypes = {
   name: PropTypes.string.isRequired,
@@ -61,6 +64,7 @@ Header.propTypes = {
 };
 
 export default {
+  Centered,
   Container,
   Header,
 };

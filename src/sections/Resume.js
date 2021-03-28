@@ -3,48 +3,13 @@ import { Flex, Image } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
-import Triangle from '../components/Triangle';
 import Section from '../components/Section';
 import Education from '../data/resume-pages/Education';
 import Experience from '../data/resume-pages/Experience';
 import VolunteerExperience from '../data/resume-pages/VolunteerExperience';
 import { darkTheme, lightTheme } from '../styles/Theme';
 import Airplane, { Clouds } from '../assets/svgs/Icons';
-
-const Background = () => (
-  <div>
-
-    <Triangle
-      color="secondaryLight"
-      height={['20vh', '20vh']}
-      width={['70vw', '30vw']}
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['15vh', '10vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
-
-
-
-    <Triangle
-      color="secondaryLight"
-      height={['8vh', '10vh']}
-      width={['70vw', '40vw']}
-      invertY
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['10vh', '15vh']}
-      width={['100vw', '100vw']}
-      invertX
-      invertY
-    />
-  </div>
-);
+import { BackgroundPadding } from '../components/Shadows';
 
 const ProfilePicture = styled(Image)`
   margin-top: 25px;
@@ -53,21 +18,12 @@ const ProfilePicture = styled(Image)`
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  
-  transition: all 0.25s ease-out;
-  border: solid 4px ${({ theme }) => theme.colors.backgroundDark};
-  /*
-  &:hover {
-    // border-radius: 20%;
-    border: solid 10px ${({ theme }) => theme.colors.resumePhotoBorder};
-  }
-   */
-  
+  content-visibility: auto;
+
   @media (max-width: 400px) {
     max-height: 200px;
   }
 `;
-
 
 const AircraftDiv = styled.div`
   position: absolute;
@@ -101,39 +57,41 @@ const SvgWrapper = styled.div`
   margin-bottom: 10%;
 `;
 
-
 function Resume({ theme }) {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (
-    <Section.Container id="Resume" Background={Background}>
-      <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-        <div>
-          <Fade>
-            <ProfilePicture
-              src={require('../assets/images/cv-pb-sq.png')}
-              alt={'Christian Hein'}
-            />
-          </Fade>
-          <Education />
-          <Experience />
-          <VolunteerExperience />
+    <Section.Container id="resume">
+      <Section.Header name="Resume" label="resume" />
+      <BackgroundPadding>
+        <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+          <div>
+            <Fade>
+              <ProfilePicture
+                // eslint-disable-next-line global-require
+                src={require('../assets/images/cv-pb-sq.png')}
+                alt="Christian Hein"
+              />
+            </Fade>
+            <Education />
+            <Experience />
+            <VolunteerExperience />
 
-          <SvgWrapper>
-            <CloudDiv>
-              <Clouds cloudColor={themeMode.colors.clouds} />
-            </CloudDiv>
-            <AircraftDiv>
-              <Fade right>
-                <Airplane
-                  airplaneColor={themeMode.colors.airplane}
-                  airplaneBottomColor={themeMode.colors.airplaneBottom}
-                />
-              </Fade>
-            </AircraftDiv>
-          </SvgWrapper>
-
-        </div>
-      </Flex>
+            <SvgWrapper>
+              <CloudDiv>
+                <Clouds cloudColor={themeMode.colors.cloud} />
+              </CloudDiv>
+              <AircraftDiv>
+                <Fade right>
+                  <Airplane
+                    airplaneColor={themeMode.colors.secondaryLight}
+                    airplaneBottomColor={themeMode.colors.secondary}
+                  />
+                </Fade>
+              </AircraftDiv>
+            </SvgWrapper>
+          </div>
+        </Flex>
+      </BackgroundPadding>
     </Section.Container>
   );
 }

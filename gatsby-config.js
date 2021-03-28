@@ -3,6 +3,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 
+const path = require(`path`);
+
 const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC } = process.env;
 
 const plugins = [
@@ -32,8 +34,8 @@ const plugins = [
   {
     resolve: `gatsby-source-filesystem`,
     options: {
-      name: `markdown-pages`,
-      path: `${__dirname}/src/markdown-pages`,
+      name: `data`,
+      path: `${__dirname}/src/data`,
     },
   },
   'gatsby-transformer-json',

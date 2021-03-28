@@ -4,36 +4,16 @@ const LinkAnimated = styled.span`
   text-decoration: none;
   position: relative;
   margin-bottom: 0;
-  padding-bottom: 4px;
+  padding-bottom: 5px;
   color: inherit;
-  ${(props) =>
-          props.selected &&
-          `border-bottom:  4px solid ${props.theme.colors.button}`};
-  transition: 0.4s;
   cursor: ${(props) => (props.onClick ? 'pointer' : 'default')};
   outline: none;
 
-
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 0;
-    bottom: -4px;
-    background: ${({ theme }) => theme.colors.buttonHover};
-    color: ${({ theme }) => theme.colors.text};
-    height: 4px;
-    transition-property: width;
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondaryLight};
+    transition-property: color;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
-    outline: none;
-  }
-
-  &:focus:after,
-  &:hover:after {
-    left: 0;
-    right: auto;
-    width: 100%;
   }
 `;
 
