@@ -28,7 +28,6 @@ export const BackgroundPadding = styled(SectionBackground)`
   padding: 40px;
   margin: auto;
   margin-bottom: 120px;
-
   @media only screen and (max-width: 900px) {
     padding: 10px;
     margin-bottom: 200px;

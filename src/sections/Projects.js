@@ -38,7 +38,6 @@ const TextContainer = styled.div`
 const ImageContainer = styled.div`
   margin: auto;
   width: ${CARD_HEIGHT};
-
   ${MEDIA_QUERY_SMALL} {
     width: calc(${CARD_HEIGHT} / 2);
   }
@@ -50,16 +49,27 @@ const ProjectLinks = styled.div`
   left: 4px;
 `;
 
+const ProjectImageContainer = styled.div`
+  transform: scale(0.8);
+  margin-top: 9px;
+  ${MEDIA_QUERY_SMALL} {
+    transform: scale(1);
+    margin-top: 0;
+    margin-right: 8px;
+    margin-left: -8px;
+  }
+`;
+
 const ProjectImage = styled(Image)`
+  object-fit: cover;
+  border-radius: 15px;
+
   width: ${CARD_HEIGHT};
   height: ${CARD_HEIGHT};
-  padding: 40px;
-  margin-top: 0px;
   ${MEDIA_QUERY_SMALL} {
     height: calc(${CARD_HEIGHT} / 2);
     width: calc(${CARD_HEIGHT} / 2);
     margin-top: calc(${CARD_HEIGHT} / 4);
-    padding: 10px;
   }
 `;
 
@@ -106,11 +116,11 @@ const Project = ({
       <Flex style={{ height: CARD_HEIGHT }}>
         <TextContainer>
           <span>
-            <Title my={2} pb={1} color="text" fontWeight="bold">
+            <Title my={2} pb={1} color="resumeHeader" fontWeight="bold">
               {name}
             </Title>
           </span>
-          <Text width={[1]} style={{ overflow: 'auto' }} color="primary">
+          <Text width={[1]} style={{ overflow: 'auto' }} color="resumeHeader">
             {description}
           </Text>
           <ProjectLinks>
@@ -124,7 +134,7 @@ const Project = ({
                   name="Github repository"
                   fontAwesomeIcon="github"
                   url={repositoryUrl}
-                  color="primary"
+                  color="resumeHeader"
                 />
               </Box>
               <Box mx={1} fontSize={5}>
@@ -133,7 +143,7 @@ const Project = ({
                   name="Live demo"
                   fontAwesomeIcon="globe"
                   url={projectUrl}
-                  color="primary"
+                  color="resumeHeader"
                 />
               </Box>
             </Flex>
@@ -141,12 +151,9 @@ const Project = ({
         </TextContainer>
 
         <ImageContainer>
-          <ProjectImage src={logo.image.src} alt={logo.title} />
-          <ProjectTag>
-            <ImageSubtitle color="button" y="bottom" x="right" round>
-              {type}
-            </ImageSubtitle>
-          </ProjectTag>
+          <ProjectImageContainer>
+            <ProjectImage src={logo.image.src} alt={logo.title} />
+          </ProjectImageContainer>
         </ImageContainer>
       </Flex>
     </Card>

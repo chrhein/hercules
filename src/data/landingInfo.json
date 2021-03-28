@@ -58,7 +58,7 @@
         "logo": {
           "title": "Globemaster Preview",
           "image": {
-            "src": "https://github.com/chrhein/hercules/blob/master/src/assets/images/ch.png?raw=true"
+            "src": "https://raw.githubusercontent.com/chrhein/hercules/dev/src/assets/images/globemaster.png"
           }
         }
       },

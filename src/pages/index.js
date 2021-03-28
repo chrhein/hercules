@@ -8,10 +8,8 @@ import Footer from '../components/Footer';
 import { useDarkMode } from '../components/useDarkMode';
 import Resume from '../sections/Resume';
 
-
 const IndexPage = () => {
   const [theme, themeToggler, mountedComponent] = useDarkMode();
-
 
   return (
     <Layout theme={theme} mountedComponent={mountedComponent}>

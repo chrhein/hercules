@@ -54,7 +54,7 @@ const LandingPage = () => (
                       paddingLeft="12px"
                       paddingRight="12px"
                     >
-                      <SocialLink color="text" {...rest} />
+                      <SocialLink color="button" {...rest} />
                     </Box>
                   ))}
                 </Flex>

@@ -24,7 +24,7 @@ export const lightTheme = {
     projectIcon: '#727679',
     projectCardHoverShadow: '#69b4bb',
 
-    button: '#737a7e',
+    button: '#080b11',
     buttonHover: '#05828e',
 
     airplane: '#69b4bb',
@@ -52,14 +52,14 @@ export const darkTheme = {
   colors: {
     backgroundGradient:
       'linear-gradient(180deg, rgb(247, 182, 187), rgb(23, 123, 134))',
-    background: '#000000',
+    background: '#222831',
     backgroundDark: '#101111',
 
     text: '#f9fafb',
     heading: '#f3f5f7',
     headerText: '#e2e6eb',
 
-    primary: '#e2e6eb',
+    primary: '#162229',
     primaryLight: '#c6cdd7',
     primaryDark: '#0b1014',
 
@@ -67,12 +67,12 @@ export const darkTheme = {
     secondaryLight: '#101316',
     secondaryDark: '#a4b6c3',
 
-    projectCard: '#24252d',
+    projectCard: '#393e46',
     projectIcon: '#f9fafb',
     projectCardHoverShadow: '#034e55',
 
     button: '#c7c8c8',
-    buttonHover: '#6f8193',
+    buttonHover: '#547571',
 
     airplane: '#6f8193',
     airplaneBottom: '#42505f',

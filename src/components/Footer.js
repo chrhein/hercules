@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import { Box, Flex } from 'rebass/styled-components';
 import Fade from 'react-reveal/Fade';
 import SocialLink from './SocialLink';
-import { HeaderShade, HeaderShadow } from './Header';
 
 const FooterContainer = styled.div`
   max-width: 1366px;
@@ -25,7 +24,7 @@ const FooterContainer = styled.div`
 
 const FooterBackground = styled.div`
   border-radius: 18px 18px 0 0;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.projectCard};
 `;
 
 const Footer = () => (
