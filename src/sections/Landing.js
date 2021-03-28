@@ -47,15 +47,7 @@ const LandingPage = () => (
                     style={centerHorizontally}
                   >
                     {socialLinks.map(({ id, ...rest }) => (
-                      <Box
-                        mx={3}
-                        fontSize={[4, 5, 5]}
-                        key={id}
-                        style={centerHorizontally}
-                        maxWidth="fit-content"
-                        paddingLeft="12px"
-                        paddingRight="12px"
-                      >
+                      <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
                         <SocialLink color="primaryText" {...rest} />
                       </Box>
                     ))}

@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.primaryText};
     height: 100%;
+    z-index: -5;
   }
 
   .sectionTitle {
@@ -30,10 +31,10 @@ export const GlobalStyles = createGlobalStyle`
 
   .resumeTitle {
     color: ${({ theme }) => theme.colors.secondaryText};
-    font-weight: 100;
+    font-weight: 200;
     // text-transform: uppercase;
-    font-size: x-large;
-    // text-align: right;
+    font-size: 34px;
+    text-align: left;
   }
 
   .resumeHeader {
@@ -44,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
   .resumeParagraph {
     color: ${({ theme }) => theme.colors.primaryText};
     font-size: large;
-  line-height: 2em;
+    line-height: 2em;
   }
 
   .info {
@@ -600,7 +601,6 @@ export const GlobalStyles = createGlobalStyle`
   .work {
     margin-bottom: 48px;
     padding-bottom: 24px;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.secondaryText};
   }
 
   .volunteer {

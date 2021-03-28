@@ -17,7 +17,7 @@ const HeaderContainer = styled(Headroom)`
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0 0 18px 18px;
   }
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 1;
 `;
@@ -43,10 +43,9 @@ export const HeaderShade = styled(Headroom)`
   }
   .headroom--pinned {
     border-radius: 0 0 18px 18px;
-    opacity: 0.65;
-    background-color: ${({ theme }) => theme.colors.menu};
+    background-color: ${({ theme }) => theme.colors.menu}75;
     @-moz-document url-prefix() {
-      opacity: 1;
+      background-color: ${({ theme }) => theme.colors.menu};
     }
   }
   background-color: transparent;

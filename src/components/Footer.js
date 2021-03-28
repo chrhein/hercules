@@ -24,7 +24,18 @@ const FooterContainer = styled.div`
 
 const FooterBackground = styled.div`
   border-radius: 18px 18px 0 0;
-  background-color: ${({ theme }) => theme.colors.primary};
+  width: fit-content;
+  padding: 0;
+  box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  -moz-backdrop-filter: blur(20px);
+  -ms-backdrop-filter: blur(20px);
+  -o-backdrop-filter: blur(20px);
+  background-color: ${({ theme }) => theme.colors.footer};
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Footer = () => (
@@ -46,14 +57,14 @@ const Footer = () => (
 
       return (
         <FooterBackground>
-          <Box p={[2, 3]} id="footer">
+          <Box p={[2, 2]} id="footer">
             <FooterContainer>
               <Fade />
               <Flex>
                 <Fade>
                   {socialLinks.map(({ id, ...rest }) => (
                     <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
-                      <SocialLink {...rest} />
+                      <SocialLink color="header" {...rest} />
                     </Box>
                   ))}
                 </Fade>

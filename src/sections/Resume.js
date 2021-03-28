@@ -38,7 +38,7 @@ const AircraftDiv = styled.div`
 
 const CloudDiv = styled.div`
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   left: -5%;
   right: 5%;
   height: 100%;
@@ -62,36 +62,39 @@ function Resume({ theme }) {
   return (
     <Section.Container id="resume">
       <Section.Header name="Resume" label="resume" />
-      <BackgroundPadding>
-        <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-          <div>
-            <Fade>
-              <ProfilePicture
-                // eslint-disable-next-line global-require
-                src={require('../assets/images/cv-pb-sq.png')}
-                alt="Christian Hein"
-              />
-            </Fade>
+      <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+        <Fade right>
+          <BackgroundPadding>
+            <ProfilePicture
+              // eslint-disable-next-line global-require
+              src={require('../assets/images/cv-pb-sq.png')}
+              alt="Christian Hein"
+            />
             <Education />
+          </BackgroundPadding>
+          <BackgroundPadding>
             <Experience />
+          </BackgroundPadding>
+          <BackgroundPadding>
             <VolunteerExperience />
-
-            <SvgWrapper>
-              <CloudDiv>
-                <Clouds cloudColor={themeMode.colors.cloud} />
-              </CloudDiv>
-              <AircraftDiv>
-                <Fade right>
-                  <Airplane
-                    airplaneColor={themeMode.colors.secondaryLight}
-                    airplaneBottomColor={themeMode.colors.secondary}
-                  />
-                </Fade>
-              </AircraftDiv>
-            </SvgWrapper>
-          </div>
-        </Flex>
-      </BackgroundPadding>
+            <div>
+              <SvgWrapper>
+                <CloudDiv>
+                  <Clouds cloudColor={themeMode.colors.cloud} />
+                </CloudDiv>
+                <AircraftDiv>
+                  <Fade right>
+                    <Airplane
+                      airplaneColor={themeMode.colors.secondaryLight}
+                      airplaneBottomColor={themeMode.colors.secondary}
+                    />
+                  </Fade>
+                </AircraftDiv>
+              </SvgWrapper>
+            </div>
+          </BackgroundPadding>
+        </Fade>
+      </Flex>
     </Section.Container>
   );
 }
