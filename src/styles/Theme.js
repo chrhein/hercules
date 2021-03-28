@@ -14,6 +14,7 @@ export const lightTheme = {
     primaryText: '#080b11',
     secondaryText: '#737a7e',
     header: '#f4f4f4',
+    footer: '#393e46',
 
     boxShadow: '0 10px 20px 0 rgba(0,0,0,0.30)',
   },
@@ -37,6 +38,7 @@ export const darkTheme = {
     primaryText: '#f9fafb',
     secondaryText: '#8899ac',
     header: '#e2e6eb',
+    footer: '#1c1c1e',
 
     boxShadow: '0 10px 20px 0 rgba(0,0,0,0.40)',
   },
