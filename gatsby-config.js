@@ -3,8 +3,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 
-const path = require(`path`);
-
 const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC } = process.env;
 
 const plugins = [
@@ -18,7 +16,7 @@ const plugins = [
       background_color: 'black',
       theme_color: 'black',
       display: 'minimal-ui',
-      icon: 'src/assets/images/ch.png',
+      icon: 'src/assets/images/favicon_hercules.png',
     },
   },
   `gatsby-transformer-remark`,

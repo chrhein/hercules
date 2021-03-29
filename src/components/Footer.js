@@ -15,10 +15,6 @@ const FooterContainer = styled.div`
 
   @media (max-width: 400px) {
     flex-direction: column-reverse;
-
-    & > * {
-      margin-bottom: 10px;
-    }
   }
 `;
 
