@@ -3,7 +3,7 @@ import { Box, Flex, Image } from 'rebass/styled-components';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 import Section from '../components/Section';
 import markdownRenderer from '../components/MarkdownRenderer';
 import { BackgroundPadding } from '../components/Shadows';
@@ -26,7 +26,7 @@ const About = () => (
       `}
       render={(aboutQuery) => {
         return (
-          <Fade right>
+          <Slide bottom>
             <BackgroundPadding>
               <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
                 <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
@@ -52,7 +52,7 @@ const About = () => (
                 </Box>
               </Flex>
             </BackgroundPadding>
-          </Fade>
+          </Slide>
         );
       }}
     />

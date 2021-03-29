@@ -29,11 +29,11 @@ export const HeaderShadow = styled(Headroom)`
     width: 100%;
     padding: 0;
     border-radius: 0 0 18px 18px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    -moz-backdrop-filter: blur(20px);
-    -ms-backdrop-filter: blur(20px);
-    -o-backdrop-filter: blur(20px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    -moz-backdrop-filter: blur(16px);
+    -ms-backdrop-filter: blur(16px);
+    -o-backdrop-filter: blur(16px);
   }
 `;
 
@@ -43,7 +43,7 @@ export const HeaderShade = styled(Headroom)`
   }
   .headroom--pinned {
     border-radius: 0 0 18px 18px;
-    background-color: ${({ theme }) => theme.colors.menu}75;
+    background-color: ${({ theme }) => theme.colors.menu}85;
     @-moz-document url-prefix() {
       background-color: ${({ theme }) => theme.colors.menu};
     }
@@ -78,7 +78,7 @@ const Header = ({ theme, themeToggler }) => {
       <RouteLink
         key={value.id}
         onClick={value.onClick}
-        selected={value.isSelected}
+        selected={value.selected}
         name={capitalize(value.id)}
       />
     ));
@@ -89,7 +89,7 @@ const Header = ({ theme, themeToggler }) => {
       <RouteLink
         key={value.id}
         onClick={value.onClick}
-        selected={value.isSelected}
+        selected={value.selected}
         name={capitalize(value.id)}
       />
     ));

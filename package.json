@@ -51,6 +51,7 @@
     "react-markdown": "^4.3.1",
     "react-reveal": "^1.2.2",
     "react-scroll-section": "^3.0.2",
+    "react-spring": "^9.0.0",
     "react-text-loop": "^2.0.1",
     "react-toggle-dark-mode": "^1.0.3",
     "rebass": "^4.0.7",

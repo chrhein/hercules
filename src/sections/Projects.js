@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Box, Flex, Image, Text } from 'rebass/styled-components';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 import Section from '../components/Section';
 import { Card, CardContainer } from '../components/Card';
 import SocialLink from '../components/SocialLink';
@@ -126,6 +126,8 @@ const Project = ({
             <Flex
               style={{
                 float: 'left',
+                paddingBottom: '5px',
+                paddingLeft: '1px',
               }}
             >
               <Box mx={1} fontSize={5}>
@@ -133,7 +135,7 @@ const Project = ({
                   name="Github repository"
                   fontAwesomeIcon="github"
                   url={repositoryUrl}
-                  color="primaryText"
+                  color="secondaryText"
                 />
               </Box>
               <Box mx={1} fontSize={5}>
@@ -142,7 +144,7 @@ const Project = ({
                   name="Live demo"
                   fontAwesomeIcon="globe"
                   url={projectUrl}
-                  color="primaryText"
+                  color="secondaryText"
                 />
               </Box>
             </Flex>
@@ -203,9 +205,9 @@ const Projects = () => (
           className="cardContainer"
         >
           {landingInfoJson.projects.map((p, i) => (
-            <Fade bottom delay={i * 200} key={p.id}>
+            <Slide bottom delay={i * 200} key={p.id}>
               <Project {...p} />
-            </Fade>
+            </Slide>
           ))}
         </CardContainer>
       )}

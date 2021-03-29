@@ -1,4 +1,5 @@
 import React from 'react';
+import { TextLink } from '../../components/LinkAnimated';
 
 const VolunteerExperience = () => (
   <div className="row volunteer">
@@ -71,7 +72,13 @@ const VolunteerExperience = () => (
           <p className="resumeParagraph">
             Posting photos to show present and future students what it is like
             to be a student. Our Instagram account can be found
-            <a href="https://www.instagram.com/informatikk_uib/"> here.</a>
+            <TextLink
+              color="secondaryText"
+              href="https://www.instagram.com/informatikk_uib/"
+            >
+              {' '}
+              here.
+            </TextLink>
           </p>
         </div>
       </div>

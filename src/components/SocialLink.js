@@ -7,17 +7,39 @@ import FontAwesomeIcon from 'react-fontawesome';
 import 'tippy.js/dist/tippy.css'; // eslint-disable-line
 
 const IconLink = styled(Link)`
-  transition: color 0.5s;
-  color: ${(props) => props.color || props.theme.colors.primaryText};
   text-decoration: none;
+  padding-bottom: 2px;
+  transition: 0.2s;
+  outline: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: -2px;
+    background: ${(props) => props.theme.colors.secondaryLight};
+    height: 3px;
+    border-radius: 5px;
+    transition-property: width;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
+  &:focus:after,
+  &:hover:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 
   .projectCardLink {
     margin-top: 5px;
     padding-top: 10px;
+    padding-bottom: 1px;
   }
 
   &:hover {
-    color: ${(props) => props.theme.colors.secondary};
   }
 `;
 

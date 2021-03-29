@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Image } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 import styled from 'styled-components';
 import Section from '../components/Section';
 import Education from '../data/resume-pages/Education';
@@ -63,7 +63,7 @@ function Resume({ theme }) {
     <Section.Container id="resume">
       <Section.Header name="Resume" label="resume" />
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-        <Fade right>
+        <Slide bottom>
           <BackgroundPadding>
             <ProfilePicture
               // eslint-disable-next-line global-require
@@ -72,13 +72,13 @@ function Resume({ theme }) {
             />
             <Education />
           </BackgroundPadding>
-        </Fade>
-        <Fade left>
+        </Slide>
+        <Slide bottom>
           <BackgroundPadding>
             <Experience />
           </BackgroundPadding>
-        </Fade>
-        <Fade right>
+        </Slide>
+        <Slide bottom>
           <BackgroundPadding>
             <VolunteerExperience />
             <div>
@@ -87,17 +87,17 @@ function Resume({ theme }) {
                   <Clouds cloudColor={themeMode.colors.cloud} />
                 </CloudDiv>
                 <AircraftDiv>
-                  <Fade right>
+                  <Slide right>
                     <Airplane
                       airplaneColor={themeMode.colors.secondaryLight}
                       airplaneBottomColor={themeMode.colors.secondary}
                     />
-                  </Fade>
+                  </Slide>
                 </AircraftDiv>
               </SvgWrapper>
             </div>
           </BackgroundPadding>
-        </Fade>
+        </Slide>
       </Flex>
     </Section.Container>
   );

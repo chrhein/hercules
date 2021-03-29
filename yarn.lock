@@ -13299,7 +13299,7 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
   integrity sha512-IgmcegOSi5SNX+2Snh1vqmF0Vg/CbkycU9XZbOHJlZ6kMzTmi3yc254oB1WCkgA7OQtIAoLmcSFuHTc/tlcqXg==
 
-react-spring@^9.0.0-rc.3:
+react-spring@^9.0.0, react-spring@^9.0.0-rc.3:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-9.0.0.tgz#ff9d3611b8f637f8500d7f1cbd990a5861384d50"
   integrity sha512-90s8beqIAKJA3VdmkGBEv8wZNAuhxE7ngKA5TGCd6Ya3wjyoZPzMR76vEYUSGv3Psu6q5R2dYXHh89LdlQTY1A==
@@ -13321,9 +13321,9 @@ react-text-loop@^2.0.1:
     react-motion "^0.5.2"
 
 react-toggle-dark-mode@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-toggle-dark-mode/-/react-toggle-dark-mode-1.0.3.tgz#44832f03ab166cd425905f332f36110531b5ec26"
-  integrity sha512-4XHhcaAeWQ7b/CeLJEjrZa0wlELGNoHTHhbG8J4iRV8ybIKV2/SpV4e+t4PuVy4Hvcg6I7osXNtp/eZLsckzWA==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-toggle-dark-mode/-/react-toggle-dark-mode-1.0.4.tgz#196defb8ed5fa7623241048d46104fa24d98e214"
+  integrity sha512-MREeRur1XGzwyDZZAvPFg01wL9ljR1Dugubc3s/i2bMlLIKaWPfQgx5JbomZfLAxa6OXYDbozJa0e+v39GawmA==
   dependencies:
     react-spring "^9.0.0-rc.3"
 
