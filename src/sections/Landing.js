@@ -15,10 +15,12 @@ const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 const LandingSVG = styled.div`
   margin-top: auto;
   margin-bottom: auto;
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-left: 80px;
 
   @media (max-width: 1200px) {
     transform: scale(0.8);
+    margin-left: 0px;
   }
   @media (max-width: 831px) {
     transform: scale(0.6);
@@ -64,13 +66,13 @@ function LandingPage({ theme }) {
           render={({ landingInfoJson }) => {
             const { name, socialLinks } = landingInfoJson;
             return (
-              <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
+              <Box width={[1, 1, 3 / 6]} minWidth="400px" px={[1, 2, 4]}>
                 <Heading
                   textAlign="center"
                   as="h1"
                   color="header"
                   fontSize={[5, 7]}
-                  mb={[3, 4, 5]}
+                  mb={[3, 4]}
                 >
                   {`Hi, I'm ${name}.`}
                 </Heading>
