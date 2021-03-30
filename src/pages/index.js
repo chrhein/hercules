@@ -14,7 +14,7 @@ const IndexPage = () => {
   return (
     <Layout theme={theme} mountedComponent={mountedComponent}>
       <Header theme={theme} themeToggler={themeToggler} />
-      <Landing />
+      <Landing theme={theme} />
       <About />
       <Projects theme={theme} />
       <Resume theme={theme} />
