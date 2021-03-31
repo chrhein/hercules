@@ -29,7 +29,12 @@ const About = () => (
           <Slide bottom>
             <BackgroundPadding>
               <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-                <Box width={[1, 1, 3 / 6]} px={[1, 2, 4]}>
+                <Box
+                  width={[1, 1, 3 / 6]}
+                  px={[1, 2, 4]}
+                  paddingLeft="12px"
+                  paddingRight="12px"
+                >
                   <ReactMarkdown
                     source={aboutQuery.markdownRemark.rawMarkdownBody}
                     renderers={markdownRenderer}

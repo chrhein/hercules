@@ -492,7 +492,7 @@ export const GlobalStyles = createGlobalStyle`
       float: none;
       margin-left: 0;
       margin-right: 0;
-      padding: 0 30px;
+      padding: 0 20px;
     }
 
     .row .row {
@@ -561,6 +561,7 @@ export const GlobalStyles = createGlobalStyle`
 
     .resumeTitle {
     font-size: 32px;
+    margin-left: -12px;
   }
   .resumeParagraph {
     line-height: 1.5em;

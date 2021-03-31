@@ -28,75 +28,81 @@ const LandingSVG = styled.div`
   }
 `;
 
+const LandingWrapper = styled.div`
+  overflow-x: hidden;
+`;
+
 function LandingPage({ theme }) {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   return (
-    <Section.Container id="home">
-      <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-        <LandingSVG>
-          <LandingPageSVG
-            primary={themeMode.colors.primary}
-            desk={themeMode.colors.secondary}
-            hair="#655554"
-            skin="#ecbcb4"
-            shoes={themeMode.colors.secondaryLight}
-            pants={themeMode.colors.footer}
-            sweater={themeMode.colors.secondaryLight}
-            logo="#ffffff"
-            flower="#e6e6e6"
-            apple="#ff6584"
-          />
-        </LandingSVG>
-        <StaticQuery
-          query={graphql`
-            query landingInfoQuery {
-              landingInfoJson {
-                name
-                roles
-                socialLinks {
-                  id
-                  url
+    <LandingWrapper>
+      <Section.Container id="home">
+        <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+          <LandingSVG>
+            <LandingPageSVG
+              primary={themeMode.colors.primary}
+              desk={themeMode.colors.secondary}
+              hair="#655554"
+              skin="#ecbcb4"
+              shoes={themeMode.colors.secondaryLight}
+              pants={themeMode.colors.footer}
+              sweater={themeMode.colors.secondaryLight}
+              logo="#ffffff"
+              flower="#e6e6e6"
+              apple="#ff6584"
+            />
+          </LandingSVG>
+          <StaticQuery
+            query={graphql`
+              query landingInfoQuery {
+                landingInfoJson {
                   name
-                  fontAwesomeIcon
+                  roles
+                  socialLinks {
+                    id
+                    url
+                    name
+                    fontAwesomeIcon
+                  }
                 }
               }
-            }
-          `}
-          render={({ landingInfoJson }) => {
-            const { name, socialLinks } = landingInfoJson;
-            return (
-              <Box width={[1, 1, 3 / 6]} minWidth="400px" px={[1, 2, 4]}>
-                <Heading
-                  textAlign="center"
-                  as="h1"
-                  color="header"
-                  fontSize={[5, 7]}
-                  mb={[3, 4]}
-                >
-                  {`Hi, I'm ${name}.`}
-                </Heading>
-                <Fade bottom>
-                  <SectionShadow>
-                    <Flex
-                      alignItems="center"
-                      justifyContent="center"
-                      style={centerHorizontally}
-                    >
-                      {socialLinks.map(({ id, ...rest }) => (
-                        <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
-                          <SocialLink color="primaryText" {...rest} />
-                        </Box>
-                      ))}
-                    </Flex>
-                  </SectionShadow>
-                </Fade>
-              </Box>
-            );
-          }}
-        />
-      </Flex>
-    </Section.Container>
+            `}
+            render={({ landingInfoJson }) => {
+              const { name, socialLinks } = landingInfoJson;
+              return (
+                <Box width={[1, 1, 3 / 6]} minWidth="400px" px={[1, 2, 4]}>
+                  <Heading
+                    textAlign="center"
+                    as="h1"
+                    color="header"
+                    fontSize={[5, 7]}
+                    mb={[3, 4]}
+                  >
+                    {`Hi, I'm ${name}.`}
+                  </Heading>
+                  <Fade bottom>
+                    <SectionShadow>
+                      <Flex
+                        alignItems="center"
+                        justifyContent="center"
+                        style={centerHorizontally}
+                      >
+                        {socialLinks.map(({ id, ...rest }) => (
+                          <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
+                            <SocialLink color="primaryText" {...rest} />
+                          </Box>
+                        ))}
+                      </Flex>
+                    </SectionShadow>
+                  </Fade>
+                </Box>
+              );
+            }}
+          />
+        </Flex>
+      </Section.Container>
+    </LandingWrapper>
   );
 }
 
