@@ -568,9 +568,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   @media only screen and (max-width: 1000px) {
-
     .resumeTitle {
-    margin-left: -12px;
+      margin-left: -12px;
+    }
   }
 
   /* mobile narrow
