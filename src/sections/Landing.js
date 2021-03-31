@@ -32,7 +32,7 @@ const LandingWrapper = styled.div`
   overflow-x: hidden;
 `;
 
-function LandingPage({ theme }) {
+function LandingPage({ theme, themeToggler }) {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   return (
@@ -51,6 +51,7 @@ function LandingPage({ theme }) {
               logo="#ffffff"
               flower="#e6e6e6"
               apple="#ff6584"
+              toggler={themeToggler}
             />
           </LandingSVG>
           <StaticQuery
@@ -108,6 +109,7 @@ function LandingPage({ theme }) {
 
 LandingPage.propTypes = {
   theme: PropTypes.string,
+  themeToggler: PropTypes.func,
 };
 
 export default LandingPage;

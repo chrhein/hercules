@@ -3,7 +3,7 @@ import Headroom from 'react-headroom';
 import { Flex } from 'rebass/styled-components';
 import styled from 'styled-components';
 import { useScrollSections } from 'react-scroll-section';
-import RouteLink, { DarkToggler } from './RouteLink';
+import RouteLink from './RouteLink';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -69,7 +69,7 @@ const formatLinks = (allLinks) =>
   );
 
 // eslint-disable-next-line react/prop-types
-const Header = ({ theme, themeToggler }) => {
+const Header = () => {
   const { links } = formatLinks(useScrollSections());
 
   const homeLink = links
@@ -106,10 +106,7 @@ const Header = ({ theme, themeToggler }) => {
           >
             <Fragment>
               {homeLink}
-              <Flex mr={[0, 3, 4]}>
-                <DarkToggler theme={theme} toggle={themeToggler} />
-                {navLinks}
-              </Flex>
+              <Flex mr={[0, 3, 4]}>{navLinks}</Flex>
             </Fragment>
           </Flex>
         </HeaderShade>

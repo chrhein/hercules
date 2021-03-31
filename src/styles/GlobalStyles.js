@@ -19,6 +19,20 @@ export const GlobalStyles = createGlobalStyle`
     z-index: -5;
   }
 
+  .macbook {
+    transition-property: fill;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
+  .macbook:hover {
+    fill: ${({ theme }) => theme.colors.inverted};
+    stroke: ${({ theme }) => theme.colors.primary};
+    transition-property: fill;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
   .sectionTitle {
     color: ${({ theme }) => theme.colors.header};
     font-weight: bold;

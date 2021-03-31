@@ -135,7 +135,7 @@ const Project = ({
                   name="Github repository"
                   fontAwesomeIcon="github"
                   url={repositoryUrl}
-                  color="secondaryText"
+                  color="primaryText"
                 />
               </Box>
               <Box mx={1} fontSize={5}>
@@ -144,7 +144,7 @@ const Project = ({
                   name="Live demo"
                   fontAwesomeIcon="globe"
                   url={projectUrl}
-                  color="secondaryText"
+                  color="primaryText"
                 />
               </Box>
             </Flex>

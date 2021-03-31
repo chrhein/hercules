@@ -13,8 +13,8 @@ const IndexPage = () => {
 
   return (
     <Layout theme={theme} mountedComponent={mountedComponent}>
-      <Header theme={theme} themeToggler={themeToggler} />
-      <Landing theme={theme} />
+      <Header />
+      <Landing theme={theme} themeToggler={themeToggler} />
       <About />
       <Projects theme={theme} />
       <Resume theme={theme} />
