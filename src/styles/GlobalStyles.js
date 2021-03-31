@@ -10,7 +10,8 @@ export const GlobalStyles = createGlobalStyle`
   body {
     box-sizing: border-box;
     margin: 0;
-    font-family: Cabin, 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-display: swap;
     overflow-x: hidden;
     width: 100vw;
     background: ${({ theme }) => theme.colors.background};
@@ -564,6 +565,12 @@ export const GlobalStyles = createGlobalStyle`
     .row .offset-11 {
       margin-left: 0%;
     }
+  }
+
+  @media only screen and (max-width: 1000px) {
+
+    .resumeTitle {
+    margin-left: -12px;
   }
 
   /* mobile narrow
