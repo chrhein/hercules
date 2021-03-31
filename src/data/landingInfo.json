@@ -58,7 +58,7 @@
         "logo": {
           "title": "Globemaster Preview",
           "image": {
-            "src": "https://raw.githubusercontent.com/chrhein/hercules/master/src/assets/images/globemaster.png"
+            "src": "https://raw.githubusercontent.com/chrhein/hercules/master/src/assets/images/globemaster_small.png"
           }
         }
       },
@@ -72,7 +72,7 @@
         "logo": {
           "title": "Hercules Preview",
           "image": {
-            "src": "https://raw.githubusercontent.com/chrhein/hercules/master/src/assets/images/hercules.png"
+            "src": "https://raw.githubusercontent.com/chrhein/hercules/master/src/assets/images/hercules_small.png"
           }
         }
       }
