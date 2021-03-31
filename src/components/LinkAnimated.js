@@ -31,9 +31,6 @@ const LinkAnimated = styled.span`
     width: 100%;
     outline: none;
   }
-
-  &:hover {
-  }
 `;
 
 export const TextLink = styled(LinkAnimated)`

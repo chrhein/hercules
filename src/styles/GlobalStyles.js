@@ -28,9 +28,6 @@ export const GlobalStyles = createGlobalStyle`
   .macbook:hover {
     fill: ${({ theme }) => theme.colors.inverted};
     stroke: ${({ theme }) => theme.colors.primary};
-    transition-property: fill;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out;
   }
 
   .sectionTitle {

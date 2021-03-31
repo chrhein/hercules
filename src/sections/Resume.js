@@ -64,7 +64,7 @@ function Resume({ theme }) {
     <Section.Container id="resume">
       <Section.Header name="Resume" label="resume" />
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-        <Slide bottom>
+        <Slide right>
           <BackgroundPadding>
             <ProfilePicture
               // eslint-disable-next-line global-require
@@ -74,12 +74,12 @@ function Resume({ theme }) {
             <Education />
           </BackgroundPadding>
         </Slide>
-        <Slide bottom>
+        <Slide right>
           <BackgroundPadding>
             <Experience />
           </BackgroundPadding>
         </Slide>
-        <Slide bottom>
+        <Slide right>
           <BackgroundPadding>
             <VolunteerExperience />
             <div>

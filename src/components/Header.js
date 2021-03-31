@@ -8,11 +8,6 @@ import RouteLink from './RouteLink';
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
 const HeaderContainer = styled(Headroom)`
-  * {
-    transition: background-color 0.3s ease;
-    box-shadow: none;
-  }
-
   .headroom--pinned {
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0 0 18px 18px;
@@ -38,17 +33,24 @@ export const HeaderShadow = styled(Headroom)`
 `;
 
 export const HeaderShade = styled(Headroom)`
-  * {
-    transition: background-color 0.3s ease;
+  transition: color 0.5s ease-in;
+  -webkit-transition: color 0.5s ease-in;
+
+  .headroom {
+    color: ${({ theme }) => theme.colors.header};
+  }
+  .headroom--scrolled,
+  .headroom--unpinned {
+    color: ${({ theme }) => theme.colors.primaryText};
   }
   .headroom--pinned {
+    color: ${({ theme }) => theme.colors.primaryText};
     border-radius: 0 0 18px 18px;
     background-color: ${({ theme }) => theme.colors.menu}85;
     @-moz-document url-prefix() {
       background-color: ${({ theme }) => theme.colors.menu};
     }
   }
-  background-color: transparent;
 `;
 
 const formatLinks = (allLinks) =>
