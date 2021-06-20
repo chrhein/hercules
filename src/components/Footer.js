@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import { Box, Flex } from 'rebass/styled-components';
-import Fade from 'react-reveal/Fade';
 import SocialLink from './SocialLink';
 
 const FooterContainer = styled.div`
@@ -55,15 +54,12 @@ const Footer = () => (
         <FooterBackground>
           <Box p={[2, 2]} id="footer">
             <FooterContainer>
-              <Fade />
               <Flex>
-                <Fade>
-                  {socialLinks.map(({ id, ...rest }) => (
-                    <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
-                      <SocialLink color="header" {...rest} />
-                    </Box>
-                  ))}
-                </Fade>
+                {socialLinks.map(({ id, ...rest }) => (
+                  <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
+                    <SocialLink color="header" {...rest} />
+                  </Box>
+                ))}
               </Flex>
             </FooterContainer>
           </Box>

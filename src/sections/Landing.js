@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { Box, Flex, Heading } from 'rebass/styled-components';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Section from '../components/Section';
@@ -82,7 +82,7 @@ function LandingPage({ theme, themeToggler }) {
                   >
                     {`Hi, I'm ${name}.`}
                   </Heading>
-                  <Fade bottom>
+                  <Fade triggerOnce direction="up">
                     <SectionShadow>
                       <Flex
                         alignItems="center"

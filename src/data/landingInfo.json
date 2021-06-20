@@ -75,6 +75,20 @@
             "src": "https://raw.githubusercontent.com/chrhein/hercules/master/src/assets/images/hercules_small.png"
           }
         }
+      },
+      {
+        "id": "3",
+        "name": "Strangevis Movie Maker",
+        "description": "A visualization tool for exploring and analyzing volumetric data. Semester project for the course INF252 at the University of Bergen, Spring 2021.",
+        "projectUrl": "https://github.com/rikkeaas/strangevis-moviemaker/releases/tag/1.0.1",
+        "repositoryUrl": "https://github.com/rikkeaas/strangevis-moviemaker",
+        "type": "C++, Qt",
+        "logo": {
+          "title": "Strangevis Movie Maker Preview",
+          "image": {
+            "src": "https://raw.githubusercontent.com/chrhein/hercules/master/src/assets/images/svmm_small.png"
+          }
+        }
       }
     ]
   }

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Section } from 'react-scroll-section';
 import { Heading } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
 
 const SectionContainer = styled.div`
   min-height: 100vh;
@@ -39,16 +38,14 @@ Container.propTypes = {
 };
 
 const Header = ({ name, icon = '', label = '' }) => (
-  <Fade>
-    <Heading mb={4} className="sectionTitle">
-      {name}
-      {icon && (
-        <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
-          {icon}
-        </span>
-      )}
-    </Heading>
-  </Fade>
+  <Heading mb={4} className="sectionTitle">
+    {name}
+    {icon && (
+      <span role="img" aria-label={label} style={{ marginLeft: '10px' }}>
+        {icon}
+      </span>
+    )}
+  </Heading>
 );
 
 const Centered = styled.div`

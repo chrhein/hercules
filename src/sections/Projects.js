@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import { Box, Flex, Image, Text } from 'rebass/styled-components';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import Slide from 'react-reveal/Slide';
+import { Fade } from 'react-awesome-reveal';
 import Section from '../components/Section';
 import { Card, CardContainer } from '../components/Card';
 import SocialLink from '../components/SocialLink';
+import ImageSubtitle from '../components/ImageSubtitle';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
@@ -106,58 +107,70 @@ const Project = ({
   logo,
 }) => {
   return (
-    <Card p={0}>
-      <span className="trafficMenuBar">
-        <span className="trafficLight trafficRed" />
-        <span className="trafficLight trafficYellow" />
-        <span className="trafficLight trafficGreen" />
-      </span>
-      <Flex style={{ height: CARD_HEIGHT }}>
-        <TextContainer>
-          <span>
-            <Title my={2} pb={1} color="primaryText" fontWeight="bold">
-              {name}
-            </Title>
-          </span>
-          <Text width={[1]} style={{ overflow: 'auto' }} color="primaryText">
-            {description}
-          </Text>
-          <ProjectLinks>
-            <Flex
-              style={{
-                float: 'left',
-                paddingBottom: '5px',
-                paddingLeft: '1px',
-              }}
-            >
-              <Box mx={1} fontSize={5}>
-                <SocialLink
-                  name="Github repository"
-                  fontAwesomeIcon="github"
-                  url={repositoryUrl}
-                  color="primaryText"
-                />
-              </Box>
-              <Box mx={1} fontSize={5}>
-                <SocialLink
-                  className="projectCardLink"
-                  name="Live demo"
-                  fontAwesomeIcon="globe"
-                  url={projectUrl}
-                  color="primaryText"
-                />
-              </Box>
-            </Flex>
-          </ProjectLinks>
-        </TextContainer>
+    <Fade triggerOnce direction="up">
+      <Card p={0}>
+        <span className="trafficMenuBar">
+          <span className="trafficLight trafficRed" />
+          <span className="trafficLight trafficYellow" />
+          <span className="trafficLight trafficGreen" />
+        </span>
+        <Flex style={{ height: CARD_HEIGHT }}>
+          <TextContainer>
+            <span>
+              <Title my={2} pb={1} color="primaryText" fontWeight="bold">
+                {name}
+              </Title>
+            </span>
+            <Text width={[1]} style={{ overflow: 'auto' }} color="primaryText">
+              {description}
+            </Text>
 
-        <ImageContainer>
-          <ProjectImageContainer>
-            <ProjectImage src={logo.image.src} alt={logo.title} />
-          </ProjectImageContainer>
-        </ImageContainer>
-      </Flex>
-    </Card>
+            <ProjectLinks>
+              <Flex
+                style={{
+                  float: 'left',
+                  paddingBottom: '5px',
+                  paddingLeft: '1px',
+                }}
+              >
+                <Box mx={1} fontSize={5}>
+                  <SocialLink
+                    name="Github repository"
+                    fontAwesomeIcon="github"
+                    url={repositoryUrl}
+                    color="primaryText"
+                  />
+                </Box>
+                <Box mx={1} fontSize={5}>
+                  <SocialLink
+                    className="projectCardLink"
+                    name="Live demo"
+                    fontAwesomeIcon="globe"
+                    url={projectUrl}
+                    color="primaryText"
+                  />
+                </Box>
+                <ImageSubtitle
+                  bg="none"
+                  color="black"
+                  y="bottom"
+                  x="right"
+                  round
+                >
+                  {type}
+                </ImageSubtitle>
+              </Flex>
+            </ProjectLinks>
+          </TextContainer>
+
+          <ImageContainer>
+            <ProjectImageContainer>
+              <ProjectImage src={logo.image.src} alt={logo.title} />
+            </ProjectImageContainer>
+          </ImageContainer>
+        </Flex>
+      </Card>
+    </Fade>
   );
 };
 
@@ -188,6 +201,7 @@ const Projects = () => (
               description
               projectUrl
               repositoryUrl
+              type
               logo {
                 title
                 image {
@@ -204,10 +218,8 @@ const Projects = () => (
           maxWidth="500px"
           className="cardContainer"
         >
-          {landingInfoJson.projects.map((p, i) => (
-            <Slide bottom delay={i * 200} key={p.id}>
-              <Project {...p} />
-            </Slide>
+          {landingInfoJson.projects.reverse().map((p) => (
+            <Project {...p} />
           ))}
         </CardContainer>
       )}
