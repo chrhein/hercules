@@ -1,97 +1,73 @@
 import React from 'react';
+import ResumeItem from '../../components/ResumeItem';
 
 const Experience = () => (
   <div className="row work">
     <div className="three columns header-col">
-      <h1 className="resumeTitle">
-        <span>Experience</span>
-      </h1>
+      <h1 className="resumeTitle">Experience</h1>
     </div>
 
     <div className="nine columns main-col">
-      <div className="row item">
-        <div className="twelve columns">
-          <h3 className="resumeHeader">Student Mentor</h3>
-          <p className="info">
-            University of Bergen
-            <span className="bullet">&bull;</span>
-            <em className="date">August 2020 - Present</em>
-          </p>
+      <ResumeItem
+        header="Summer Intern"
+        location="Bekk"
+        startDate="June 2021"
+        endDate="July 2021"
+        info="Summer Intern at Bekk in Oslo. Worked with further development at 
+        Entur's Tavla, a website that allows the users to create a personal transport 
+        information board which collects public transport data from most public 
+        transport companies in Norway and presents this information in a user-friendly 
+        way."
+      />
 
-          <p className="resumeParagraph">
-            Student Mentor for the first-year Computer Security students. Helped
+      <ResumeItem
+        header="Student Mentor"
+        location="University of Bergen"
+        startDate="August 2020"
+        endDate="June 2021"
+        info="Student Mentor for the first-year Computer Security students. Helped
             the students become academically and socially integrated with their
             studies and in the study environment, and made the transition from
-            upper secondary school to the university easier.
-          </p>
-        </div>
-      </div>
+            upper secondary school to the university easier."
+      />
 
-      <div className="row item">
-        <div className="twelve columns">
-          <h3 className="resumeHeader">Teacher Assistant</h3>
-          <p className="info">
-            University of Bergen
-            <span className="bullet">&bull;</span>
-            <em className="date">October 2019 - December 2019</em>
-          </p>
+      <ResumeItem
+        header="Event Staff"
+        location="Natvigs Minde"
+        startDate="April 2013"
+        endDate="July 2020"
+        info="Helped arrange everything from weddings to confirmations and
+            teambuildings."
+      />
 
-          <p className="resumeParagraph">
-            Guided students in the subject &quot;INF102 - Algorithms, Data
-            Structures and, Programming&quot; by helping them program in Java
-            and correct their mandatory assignments.
-          </p>
-        </div>
-      </div>
+      <ResumeItem
+        header="Teacher Assistant"
+        location="University of Bergen"
+        startDate="October 2019"
+        endDate="December 2019"
+        info='Guided students in the subject "INF102 - Algorithms, Data
+            Structures and, Programming" by helping them program in Java
+            and correct their mandatory assignments.'
+      />
 
-      <div className="row item">
-        <div className="twelve columns">
-          <h3 className="resumeHeader">Class Leader</h3>
-          <p className="info">
-            University of Bergen
-            <span className="bullet">&bull;</span>
-            <em className="date">August 2018</em>
-          </p>
+      <ResumeItem
+        header="Class Leader"
+        location="University of Bergen"
+        startDate="August 2018"
+        endDate="August 2018"
+        info="Class Leader for the first-year Computer Security students. Gave the
+            students a good and relevant start to their studies."
+      />
 
-          <p className="resumeParagraph">
-            Class Leader for the first-year Computer Security students. Gave the
-            students a good and relevant start to their studies.
-          </p>
-        </div>
-      </div>
-
-      <div className="row item">
-        <div className="twelve columns">
-          <h3 className="resumeHeader">Student Representative</h3>
-          <p className="info">
-            University of Bergen
-            <span className="bullet">&bull;</span>
-            <em className="date">February 2018 - March 2018</em>
-          </p>
-
-          <p className="resumeParagraph">
-            I taught students from secondary schools visiting the university to
+      <ResumeItem
+        header="Student Representative"
+        location="University of Bergen"
+        startDate="February 2018"
+        endDate="March 2018"
+        info='I taught students from secondary schools visiting the university to
             program robots using simple code blocks and tablets during the
-            &quot;Åpen dag 2018&quot; events.
-          </p>
-        </div>
-      </div>
-
-      <div className="row item">
-        <div className="twelve columns">
-          <h3 className="resumeHeader">Event Staff</h3>
-          <p className="info">
-            Natvigs Minde
-            <span className="bullet">&bull;</span>
-            <em className="date">April 2013 - July 2020</em>
-          </p>
-
-          <p className="resumeParagraph">
-            Helped arrange everything from weddings to confirmations and
-            teambuildings.
-          </p>
-        </div>
-      </div>
+            "Åpen dag 2018" events.'
+      />
     </div>
   </div>
 );

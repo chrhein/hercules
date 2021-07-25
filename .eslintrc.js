@@ -9,5 +9,6 @@ module.exports = {
     browser: true,
     node: true,
     jest: true,
+    JSX: true,
   },
 };

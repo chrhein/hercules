@@ -71,5 +71,3 @@ about.json
 .idea/
 bin
 cypress
-
-yarn.lock
