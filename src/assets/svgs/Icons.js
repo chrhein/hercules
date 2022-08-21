@@ -290,6 +290,7 @@ export const LandingPageSVG = (theme) => (
       fill={theme.primary}
       fillOpacity="1"
       stroke="none"
+      cursor="pointer"
       onClick={theme.toggler}
     />
     <path

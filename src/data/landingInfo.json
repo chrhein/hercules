@@ -2,23 +2,18 @@
   {
     "name": "Christian",
     "roles": [
-      "Visualization Student 👨🏻‍🎓",
+      "Software Developer 🧑🏻‍💻",
       "Hiking Enthusiast 🏔",
-      "Outgoing and Positive 😄",
-      "Collaborative 👥",
-      "Energetic ⚡️",
-      "Willing to Learn 👨🏻‍🏫",
-      "Passionate 🧑🏻‍💻",
-      "Planespotter ✈️",
+      "Aviation Enthusiast ✈️",
       "Have an Eye for Details 🔍",
       "Hobby Photographer 📷",
-      "Hard Working 👨🏻‍💼",
-      "Helpful 🦸🏻‍♂️"
+      "Coffee Enthusiast ☕️",
+      "Beer Enthusiast 🍺"
     ],
     "socialLinks": [
       {
         "id": "1",
-        "url": "mailto:scheiehein@gmail.com",
+        "url": "mailto:christian.hein@bekk.no",
         "name": "Mail",
         "fontAwesomeIcon": "envelope-o"
       },

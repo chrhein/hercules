@@ -14,6 +14,14 @@ const Experience = () => (
 
           <div className="nine columns main-col">
             <ResumeItem
+              header="Software Developer"
+              location="Bekk"
+              startDate="August 2022"
+              endDate="Present"
+              info=""
+            />
+
+            <ResumeItem
               header="Summer Intern"
               location="Bekk"
               startDate="June 2021"

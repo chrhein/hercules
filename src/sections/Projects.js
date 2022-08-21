@@ -152,7 +152,7 @@ const Project = ({
                 </Box>
                 <ImageSubtitle
                   bg="none"
-                  color="black"
+                  color="primaryText"
                   y="bottom"
                   x="right"
                   round

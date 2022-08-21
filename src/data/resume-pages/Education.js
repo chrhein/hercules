@@ -38,7 +38,7 @@ const Education = () => (
               header="Master's Degree in Informatics specializing in Visualization"
               location="University of Bergen"
               startDate="August 2020"
-              endDate="Present"
+              endDate="August 2022"
               info="A Master's Degree that results in great knowledge and advanced
             skills in visualization, computer graphics, and interactive
             techniques, as well as good skills in related programming."

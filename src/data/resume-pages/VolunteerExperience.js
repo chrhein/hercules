@@ -55,7 +55,7 @@ const VolunteerExperience = ({ theme }) => {
                 header="Developer"
                 location="echo karriere"
                 startDate="September 2020"
-                endDate="Present"
+                endDate="December 2021"
                 info="echo karriere is the student organization behind the career day for
             IT students in Bergen. Develops a full-stack solution for handling
             the career day, as well as the website for echo karriere."
@@ -65,7 +65,7 @@ const VolunteerExperience = ({ theme }) => {
                 header="Member"
                 location="Bedkom"
                 startDate="March 2020"
-                endDate="Present"
+                endDate="June 2022"
                 info="Bedkom is a sub-group of the student association echo and offers
             assistance with planning, marketing, and organizing various
             corporate events for the students."
@@ -75,7 +75,7 @@ const VolunteerExperience = ({ theme }) => {
                 header="Student Representative"
                 location="@informatikk_uib on Instagram"
                 startDate="November 2019"
-                endDate="Present"
+                endDate="June 2022"
                 info="Posting photos to show present and future students what it is like
             to be a student."
               />
@@ -84,7 +84,7 @@ const VolunteerExperience = ({ theme }) => {
                 header="Member"
                 location="echo Tilde"
                 startDate="January 2019"
-                endDate="Present"
+                endDate="January 2022"
                 info="echo Tilde is a sub-group of the student association echo and is
             responsible for events for the students at the Institute of
             Informatics. My job is to plan and conduct events and achieve our

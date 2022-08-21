@@ -12,7 +12,7 @@ export const lightTheme = {
     cloud: '#f4f4f4',
 
     primaryText: '#080b11',
-    secondaryText: '#737a7e',
+    secondaryText: '#383B3D',
     header: '#f4f4f4',
     footer: '#393e46',
 
